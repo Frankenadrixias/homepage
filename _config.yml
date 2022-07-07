@@ -1,6 +1,13 @@
+theme: jekyll-theme-minimal
+
 title: Rui Xu
 description: Chinese Academy of Sciences, Beijing, P.R.China.
+
 logo: /assets/img/logo.png
 show_downloads: true
 google_analytics: 
-theme: jekyll-theme-minimal
+url: https://Frankenadrixias.github.io/
+email: xurui22@mails.ucas.ac.cn
+RSS: false
+
+timezone: Asia/Shanghai
