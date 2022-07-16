@@ -18,9 +18,9 @@ title: Frankenadrixias
 description: # this means to ignore newlines until "baseurl:"
   Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
 baseurl: "/homepage"
-url: "https://frankenadrixias.github.io/"
+url: "https://frankenadrixias.github.io"
 permalink: /:year/:month/:day/:title
-repository: Frankenadrixias/Frankenadrixias.GitHub.io
+repository: Frankenadrixias/homepage
 paginate: 5
 
 # MatJek specific configurations
