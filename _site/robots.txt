@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/matjek/sitemap.xml
+Sitemap: http://localhost:4000/homepage/sitemap.xml
