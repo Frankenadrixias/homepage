@@ -68,6 +68,5 @@ The theme is available as open source under the terms of the [GPL v3 License](ht
 
 ## References
 
-* https://github.com/DONGChuan/Yummy-Jekyll/
-* https://github.com/codinfox/codinfox-lanyon/
-
+* <https://github.com/DONGChuan/Yummy-Jekyll/>
+* <https://github.com/codinfox/codinfox-lanyon/>
