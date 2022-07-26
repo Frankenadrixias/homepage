@@ -1,6 +1,8 @@
-# MatJek
+# Frankenadrixias Homepage
 
 A responsive [Material](https://material.io/) theme based on [Materialize.css](http://materializecss.com/) for jekyll sites.
+
+[![OSCS Status](https://www.oscs1024.com/platform/badge/Frankenadrixias/homepage.svg?size=small)](https://www.oscs1024.com/project/Frankenadrixias/homepage?ref=badge_small)
 
 ## Features
 
@@ -45,7 +47,7 @@ tags: test test2
 
 ## Contributing
 
-Bug reports and pull requests are welcomed on GitHub at https://github.com/shawnteoh/matjek. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcomed on GitHub at <https://github.com/shawnteoh/matjek>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
@@ -58,11 +60,14 @@ To test your theme, run `bundle exec jekyll serve` and open your browser at `htt
 The theme is available as open source under the terms of the [GPL v3 License](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ## Libraries
+
 * [Materialize.css](http://materializecss.com/)
 * [GeoPattern](https://github.com/btmills/geopattern/)
 * [Animate.css](https://daneden.github.io/animate.css/)
 * [Morphtext](http://morphext.fyianlai.com/)
 
 ## References
+
 * https://github.com/DONGChuan/Yummy-Jekyll/
 * https://github.com/codinfox/codinfox-lanyon/
+
