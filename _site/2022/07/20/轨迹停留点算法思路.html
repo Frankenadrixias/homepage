@@ -112,6 +112,9 @@
   <div class="col s12">
     <p>介绍一下轨迹停留点提取的相关算法</p>
 
+<hr />
+<p><br /></p>
+
 <h4 id="dbscan算法">DBSCAN算法</h4>
 
 <p><strong>DBSCAN</strong>（Density-Based Spatial Clustering of Applications with Noise，
@@ -128,7 +131,9 @@
 以此类推，直到在簇内各核心样本点的 eps 距离内无更多的核心样本点为止。
 之后选取另一个未被访问的点，并重复以上相同的过程。</p>
 
-<p><img src="https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img.png" alt="img.png" /></p>
+<div align="center">
+  <img src="../../../images/img.png" style="max-width:480px; width:80%" />
+</div>
 
 <h5 id="traj-dbscan算法">Traj-DBSCAN算法</h5>
 
@@ -141,9 +146,14 @@
 其子轨迹内部所有点在空间上邻近，距离中心点小于距离阈值Eps，且子轨迹持续时长高于时间阈值MinTime，
 因此判断为轨迹在该处停留。</p>
 
-<p><img src="https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img_1.png" alt="img_1.png" /></p>
+<div align="center">
+  <img src="../../../images/img_1.png" />
+</div>
 
 <p>在此基础上，Traj-DBSCAN还实现了识别多条轨迹的“公共停留点”以及层次化停留点分析。</p>
+
+<hr />
+<p><br /></p>
 
 <h4 id="cb-smot算法">CB-SMoT算法</h4>
 
@@ -155,14 +165,18 @@
 
 <p>下图中的ABC是已知的候选停留点，而XY是实际停留但未标记出的的位置。</p>
 
-<p><img src="https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img_2.png" alt="img_2.png" /></p>
+<div align="center">
+  <img src="../../../images/img_2.png" />
+</div>
 
 <p>CB-SMoT算法是DBSCAN聚类算法的改进，有很多概念类似（如核心点、密度直达、密度可达等），
 其与DBSCAN的不同之处在于对邻域与核心点的定义不同。</p>
 
 <p><strong>CB-SMoT对邻域定义如下：</strong></p>
 
-<p><img src="https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img_3.png" alt="img_3.png" /></p>
+<div align="center">
+  <img src="../../../images/img_3.png" style="max-width:800px" />
+</div>
 
 <p><strong>核心点(Core Point)定义：</strong>
 点集中的某一点，其Eps线性邻域内的轨迹持续时长高于时间阈值MinTime。
@@ -184,7 +198,9 @@
   <li>output: Set of Stationary Points <code class="language-plaintext highlighter-rouge">{Track_Stops}</code></li>
 </ul>
 
-<p><img src="https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img_4.png" alt="img_4.png" /></p>
+<div align="center">
+  <img src="../../../images/img_4.png" />
+</div>
 
 <p><strong>具体python实现代码：</strong></p>
 
@@ -292,6 +308,7 @@
 
   </div>
 </div>
+
 
 </div>
 

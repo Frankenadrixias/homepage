@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/homepage/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/homepage/" rel="alternate" type="text/html" /><updated>2022-07-20T11:05:05+08:00</updated><id>http://localhost:4000/homepage/feed.xml</id><title type="html">Frankenadrixias</title><subtitle>Material theme based on &lt;a href=&quot;http://materializecss.com&quot;&gt;Materialize.css&lt;/a&gt; for jekyll sites</subtitle><entry><title type="html">轨迹停留点算法思路</title><link href="http://localhost:4000/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF" rel="alternate" type="text/html" title="轨迹停留点算法思路" /><published>2022-07-20T18:37:55+08:00</published><updated>2022-07-20T18:37:55+08:00</updated><id>http://localhost:4000/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF</id><content type="html" xml:base="http://localhost:4000/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF">&lt;p&gt;介绍一下轨迹停留点提取的相关算法&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/homepage/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/homepage/" rel="alternate" type="text/html" /><updated>2022-07-26T11:26:59+08:00</updated><id>http://localhost:4000/homepage/feed.xml</id><title type="html">Frankenadrixias</title><subtitle>Material theme based on &lt;a href=&quot;http://materializecss.com&quot;&gt;Materialize.css&lt;/a&gt; for jekyll sites</subtitle><entry><title type="html">轨迹停留点算法思路</title><link href="http://localhost:4000/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF" rel="alternate" type="text/html" title="轨迹停留点算法思路" /><published>2022-07-20T18:37:55+08:00</published><updated>2022-07-20T18:37:55+08:00</updated><id>http://localhost:4000/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF</id><content type="html" xml:base="http://localhost:4000/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF">&lt;p&gt;介绍一下轨迹停留点提取的相关算法&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;dbscan算法&quot;&gt;DBSCAN算法&lt;/h4&gt;
 
@@ -16,7 +19,9 @@
 以此类推，直到在簇内各核心样本点的 eps 距离内无更多的核心样本点为止。
 之后选取另一个未被访问的点，并重复以上相同的过程。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img.png&quot; alt=&quot;img.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../../../images/img.png&quot; style=&quot;max-width:480px; width:80%&quot; /&gt;
+&lt;/div&gt;
 
 &lt;h5 id=&quot;traj-dbscan算法&quot;&gt;Traj-DBSCAN算法&lt;/h5&gt;
 
@@ -29,9 +34,14 @@
 其子轨迹内部所有点在空间上邻近，距离中心点小于距离阈值Eps，且子轨迹持续时长高于时间阈值MinTime，
 因此判断为轨迹在该处停留。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img_1.png&quot; alt=&quot;img_1.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../../../images/img_1.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;在此基础上，Traj-DBSCAN还实现了识别多条轨迹的“公共停留点”以及层次化停留点分析。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;cb-smot算法&quot;&gt;CB-SMoT算法&lt;/h4&gt;
 
@@ -43,14 +53,18 @@
 
 &lt;p&gt;下图中的ABC是已知的候选停留点，而XY是实际停留但未标记出的的位置。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img_2.png&quot; alt=&quot;img_2.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../../../images/img_2.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;CB-SMoT算法是DBSCAN聚类算法的改进，有很多概念类似（如核心点、密度直达、密度可达等），
 其与DBSCAN的不同之处在于对邻域与核心点的定义不同。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;CB-SMoT对邻域定义如下：&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img_3.png&quot; alt=&quot;img_3.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../../../images/img_3.png&quot; style=&quot;max-width:800px&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;核心点(Core Point)定义：&lt;/strong&gt;
 点集中的某一点，其Eps线性邻域内的轨迹持续时长高于时间阈值MinTime。
@@ -72,7 +86,9 @@
   &lt;li&gt;output: Set of Stationary Points &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{Track_Stops}&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/Frankenadrixias/homepage/tree/master/_posts/images/img_4.png&quot; alt=&quot;img_4.png&quot; /&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../../../images/img_4.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;具体python实现代码：&lt;/strong&gt;&lt;/p&gt;
 
