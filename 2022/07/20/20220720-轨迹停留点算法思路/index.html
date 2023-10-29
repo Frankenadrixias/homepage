@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#248"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/homepage/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/homepage/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/homepage/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/homepage/images/logo.svg" color="#248">
+
+<link rel="stylesheet" href="/homepage/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Microsoft+YaHei:300,300italic,400,400italic,700,700italic%7CTimes+New+Roman:300,300italic,400,400italic,700,700italic%7CSTZhongsong:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7Csimsun:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"frankenadrixias.github.io","root":"/homepage/","images":"/homepage/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":280},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/homepage/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/homepage/js/config.js"></script>
+
+    <meta name="description" content="介绍一下轨迹停留点提取的相关算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="轨迹停留点算法思路">
+<meta property="og:url" content="https://frankenadrixias.github.io/homepage/2022/07/20/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/index.html">
+<meta property="og:site_name" content="Frankenadrixias&#39; Homepage">
+<meta property="og:description" content="介绍一下轨迹停留点提取的相关算法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://frankenadrixias.github.io/homepage/2022/images/img.png">
+<meta property="og:image" content="https://frankenadrixias.github.io/homepage/2022/images/img_1.png">
+<meta property="og:image" content="https://frankenadrixias.github.io/homepage/2022/images/img_2.png">
+<meta property="og:image" content="https://frankenadrixias.github.io/homepage/2022/images/img_3.png">
+<meta property="og:image" content="https://frankenadrixias.github.io/homepage/2022/images/img_4.png">
+<meta property="article:published_time" content="2022-07-20T02:37:55.000Z">
+<meta property="article:modified_time" content="2023-10-29T14:04:55.056Z">
+<meta property="article:author" content="Frankenadrixias">
+<meta property="article:tag" content="algorithm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://frankenadrixias.github.io/homepage/2022/images/img.png">
+
+
+<link rel="canonical" href="https://frankenadrixias.github.io/homepage/2022/07/20/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://frankenadrixias.github.io/homepage/2022/07/20/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/","path":"2022/07/20/20220720-轨迹停留点算法思路/","title":"轨迹停留点算法思路"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>轨迹停留点算法思路 | Frankenadrixias' Homepage</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/homepage/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/homepage/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Frankenadrixias' Homepage</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Where there is a will, there is a way.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/homepage/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/homepage/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/homepage/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a></li><li class="menu-item menu-item-categories"><a href="/homepage/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/homepage/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#dbscan%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">DBSCAN算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#traj-dbscan%E7%AE%97%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">Traj-DBSCAN算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cb-smot%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">CB-SMoT算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">算法实现方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E8%BD%A8%E8%BF%B9%E7%9A%84%E5%B9%B3%E5%9D%87%E8%B7%AF%E5%BE%84%E7%82%B9%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB%E4%B8%8E%E5%81%9C%E7%95%99%E6%97%B6%E9%97%B4"><span class="nav-number">2.2.</span> <span class="nav-text">计算轨迹的平均路径点移动距离与停留时间</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Frankenadrixias"
+      src="/homepage/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Frankenadrixias</p>
+  <div class="site-description" itemprop="description">Friedrich 用来写东西的地方</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/homepage/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Frankenadrixias" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Frankenadrixias" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2249307370@qq.com" title="E-Mail → mailto:2249307370@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/7397473" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;7397473" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://frankenadrixias.github.io/homepage/2022/07/20/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/homepage/uploads/avatar.png">
+      <meta itemprop="name" content="Frankenadrixias">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frankenadrixias' Homepage">
+      <meta itemprop="description" content="Friedrich 用来写东西的地方">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="轨迹停留点算法思路 | Frankenadrixias' Homepage">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          轨迹停留点算法思路<a href="https://github.com/Frankenadrixias/homepage/edit/master/source/_posts/_posts/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-20 10:37:55" itemprop="dateCreated datePublished" datetime="2022-07-20T10:37:55+08:00">2022-07-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-29 22:04:55" itemprop="dateModified" datetime="2023-10-29T22:04:55+08:00">2023-10-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/homepage/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="轨迹停留点算法思路" href="/homepage/2022/07/20/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::161b3258c3122a6b9c4705026429782f" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>介绍一下轨迹停留点提取的相关算法 <span id="more"></span></p>
+<hr />
+<p><br></p>
+<h3 id="dbscan算法">DBSCAN算法</h3>
+<p><strong>DBSCAN</strong>（Density-Based Spatial Clustering of
+Applications with Noise， 具有噪声的基于密度的空间聚类方法）
+算法将点集中具有足够密度的区域划分为不同的簇，簇可以为任意形状，定义为密度相连点的最大集合。</p>
+<p><strong>算法实现过程：</strong></p>
+<p>在点集中任选一点，找到距该点距离 ≤ eps 的所有点。 若其数目 &lt;
+min_samples，则该点标记为噪声；
+反之标记为核心样本点，并分配一个新的簇标签。 然后访问该点在距离 eps
+以内的所有邻居：
+若其未被分配簇，则分配新的簇标签；若其为核心样本点，则依次访问其邻居。
+以此类推，直到在簇内各核心样本点的 eps 距离内无更多的核心样本点为止。
+之后选取另一个未被访问的点，并重复以上相同的过程。</p>
+<div data-align="center">
+<p><img src="../../../images/img.png" style="max-width:480px; width:80%"></p>
+</div>
+<h4 id="traj-dbscan算法">Traj-DBSCAN算法</h4>
+<p>Traj-DBSCAN算法出自论文：Robust and Hierarchical Stop Discovery in
+Sparse and Diverse Trajectories.</p>
+<p>其在DBSCAN的基础上，将邻居的计算从空间相邻改为时间线性相邻，
+而核心点计算则用停留时间代替周边点的数目。</p>
+<p>TrajDBSCAN实现了“停留点集是子轨迹”的要求，
+其子轨迹内部所有点在空间上邻近，距离中心点小于距离阈值Eps，且子轨迹持续时长高于时间阈值MinTime，
+因此判断为轨迹在该处停留。</p>
+<div data-align="center">
+<p><img src="../../../images/img_1.png" style="max-width:640px; width:100%"></p>
+</div>
+<p>在此基础上，Traj-DBSCAN还实现了识别多条轨迹的“公共停留点”以及层次化停留点分析。</p>
+<hr />
+<p><br></p>
+<h3 id="cb-smot算法">CB-SMoT算法</h3>
+<p>取自论文：A Clustering-based Approach for Discovering Interesting
+Places in Trajectories</p>
+<p>先前的停留点挖掘思路通常要根据预定义的停留区来做停留检测，
+而该文则提出了一种基于速度的时空聚类方法，识别轨迹中的慢速区域，
+从而实现对轨迹上重要位置的挖掘。</p>
+<p>下图中的ABC是已知的候选停留点，而XY是实际停留但未标记出的的位置。</p>
+<div data-align="center">
+<p><img src="../../../images/img_2.png" style="max-width:640px; width:100%"></p>
+</div>
+<p>CB-SMoT算法是DBSCAN聚类算法的改进，有很多概念类似（如核心点、密度直达、密度可达等），
+其与DBSCAN的不同之处在于对邻域与核心点的定义不同。</p>
+<p><strong>CB-SMoT对邻域定义如下：</strong></p>
+<div data-align="center">
+<p><img src="../../../images/img_3.png" style="max-width:800px; width:100%"></p>
+</div>
+<p><strong>核心点(Core Point)定义：</strong>
+点集中的某一点，其Eps线性邻域内的轨迹持续时长高于时间阈值MinTime。
+该定义的本质上是实现了速度限制条件。</p>
+<h4 id="算法实现方式">算法实现方式</h4>
+<p>1、首先判断该点是否被处理过，若未处理则计算在阈值距离内的邻域点集合，并标记该点为处理过；</p>
+<p>2、判断该邻域点形成的子轨迹的持续时间是否超过阈值，若是则该点加入核心点集；</p>
+<p>3、对于该核心点的邻域点集中的其他未处理点重复步骤1-2，
+同时扩充相应的邻域点集、核心点集，邻域点集内所有点都处理完毕；</p>
+<p>4、将核心点集加入驻留点集中，重新回到步骤1，直到所有点都处理完毕。</p>
+<ul>
+<li>input: Track Point Series <code>&#123;Track_df&#125;</code>, Time Threshold
+<code>Min_Time</code>, Distance Threshold <code>Distance</code></li>
+<li>output: Set of Stationary Points <code>&#123;Track_Stops&#125;</code></li>
+</ul>
+<div data-align="center">
+<p><img src="../../../images/img_4.png" style="max-width:640px; width:100%"></p>
+</div>
+<p><strong>具体python实现代码：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用CB-SMoT算法对轨迹的停留点进行提取</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cbSMoT_cluster</span>(<span class="params">track_df: pd.DataFrame, distance: <span class="built_in">float</span>, min_time: <span class="built_in">float</span></span>):</span><br><span class="line">    X = track_df[[<span class="string">&#x27;timestamp&#x27;</span>, <span class="string">&quot;lng&quot;</span>, <span class="string">&quot;lat&quot;</span>]]    <span class="comment"># 设置聚类基于的属性</span></span><br><span class="line">    track_stops = <span class="built_in">set</span>()             <span class="comment"># 用于保留最终的停留点集</span></span><br><span class="line">    process = np.zeros(<span class="built_in">len</span>(X))      <span class="comment"># 存储当前点是否被处理过</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(X)):         <span class="comment"># 对于轨迹中的所有点</span></span><br><span class="line">        <span class="keyword">if</span> process[i] == <span class="number">0</span>:         <span class="comment"># 如果该点未被处理：</span></span><br><span class="line">            <span class="comment"># 计算该点的线性邻居（基于给定的距离），并标记为处理过</span></span><br><span class="line">            min_Pi, max_Pi = compute_linear_neighbours(X, i, distance)</span><br><span class="line">            Neighbour = <span class="built_in">set</span>(<span class="built_in">range</span>(min_Pi, max_Pi + <span class="number">1</span>))</span><br><span class="line">            process[i] = <span class="number">1</span></span><br><span class="line">            <span class="comment"># 如果停留时间超过阈值</span></span><br><span class="line">            <span class="keyword">if</span> compute_time(X.iloc[max_Pi], X.iloc[min_Pi]) &gt;= min_time:</span><br><span class="line">                cluster = &#123;i&#125;               <span class="comment"># 该点加入核心点集</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> Neighbour:         <span class="comment"># 对该邻域点集中的其他未处理点重复上述步骤</span></span><br><span class="line">                    <span class="keyword">if</span> process[j] == <span class="number">0</span>:     <span class="comment"># 如果该点未被处理：</span></span><br><span class="line">                        cluster.union(&#123;j&#125;)  <span class="comment"># 扩充相应的核心点集</span></span><br><span class="line">                        <span class="comment"># 计算该点的线性邻居</span></span><br><span class="line">                        min_Pj, max_Pj = compute_linear_neighbours(X, i, distance)</span><br><span class="line">                        Neighbour_1 = <span class="built_in">set</span>(<span class="built_in">range</span>(min_Pj, max_Pj + <span class="number">1</span>))</span><br><span class="line">                        <span class="comment"># 如果停留时间超过阈值</span></span><br><span class="line">                        <span class="keyword">if</span> compute_time(X.iloc[max_Pj], X.iloc[min_Pj]) &gt;= min_time:</span><br><span class="line">                            <span class="comment"># 扩充相应的邻域点集</span></span><br><span class="line">                            Neighbour = Neighbour.union(Neighbour_1)</span><br><span class="line">                <span class="comment"># 将核心点集加入驻留点集中</span></span><br><span class="line">                track_stops = track_stops.union(cluster)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">    <span class="comment"># 直到所有点都处理完毕</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span>(track_stops)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找与路径点Ti的累计轨迹距离在D以内的近邻</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_linear_neighbours</span>(<span class="params">track_df: pd.DataFrame, index: <span class="built_in">int</span>, distance: <span class="built_in">float</span></span>):</span><br><span class="line">    <span class="comment"># 初始起终路径点</span></span><br><span class="line">    min_index, max_index = <span class="number">0</span>, <span class="built_in">len</span>(track_df) - <span class="number">1</span></span><br><span class="line">    total_dis = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 计算最小路径点</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(index, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">        <span class="comment"># 计算相邻点之间的距离</span></span><br><span class="line">        dis = compute_distance(track_df.iloc[i], track_df.iloc[i-<span class="number">1</span>])</span><br><span class="line">        total_dis += dis</span><br><span class="line">        <span class="comment"># 如果小于距离阈值则继续，否则终止循环并记录最小路径点</span></span><br><span class="line">        <span class="keyword">if</span> total_dis &lt;= distance: <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            min_index = i + <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 计算最大路径点</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(index, <span class="built_in">len</span>(track_df) - <span class="number">1</span>, <span class="number">1</span>):</span><br><span class="line">        <span class="comment"># 计算相邻点之间的距离</span></span><br><span class="line">        dis = compute_distance(track_df.iloc[i], track_df.iloc[i+<span class="number">1</span>])</span><br><span class="line">        total_dis += dis</span><br><span class="line">        <span class="comment"># 如果小于距离阈值则继续，否则终止循环并记录最小路径点</span></span><br><span class="line">        <span class="keyword">if</span> total_dis &lt;= distance: <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            max_index = i - <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> min_index, max_index</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算两点之间欧氏距离</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_distance</span>(<span class="params">tp1, tp2</span>):</span><br><span class="line">    dis = ((tp1.lng - tp2.lng) ** <span class="number">2</span> + (tp1.lat - tp2.lat) ** <span class="number">2</span>) ** <span class="number">0.5</span></span><br><span class="line">    <span class="keyword">return</span> dis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算两点之间时间差</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_time</span>(<span class="params">tp1, tp2</span>):</span><br><span class="line">    <span class="keyword">return</span> tp1.timestamp - tp2.timestamp</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4
+id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的平均路径点移动距离与停留时间</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算平均打点时间</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mean_point_time</span>(<span class="params">track_df: pd.DataFrame</span>):</span><br><span class="line">    length = <span class="built_in">len</span>(track_df)</span><br><span class="line">    time_arr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length - <span class="number">1</span>):</span><br><span class="line">        local_time = compute_time(track_df.iloc[i+<span class="number">1</span>], track_df.iloc[i])</span><br><span class="line">        time_arr = np.append(time_arr, local_time)</span><br><span class="line">    mean_value = data_mean(time_arr)</span><br><span class="line">    <span class="keyword">return</span> mean_value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算平均移动距离</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mean_point_distance</span>(<span class="params">track_df: pd.DataFrame</span>):</span><br><span class="line">    length = <span class="built_in">len</span>(track_df)</span><br><span class="line">    distance_arr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length - <span class="number">1</span>):</span><br><span class="line">        local_distance = compute_distance(track_df.iloc[i+<span class="number">1</span>], track_df.iloc[i])</span><br><span class="line">        distance_arr = np.append(distance_arr, local_distance)</span><br><span class="line">    mean_value = data_mean(distance_arr)</span><br><span class="line">    <span class="keyword">return</span> mean_value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算数组的三个标准差内均值</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">data_mean</span>(<span class="params">data_arr: np.array</span>):</span><br><span class="line">    mean = np.mean(data_arr, axis=<span class="number">0</span>)</span><br><span class="line">    std = np.std(data_arr, axis=<span class="number">0</span>)</span><br><span class="line">    data_array_proc = [x <span class="keyword">for</span> x <span class="keyword">in</span> data_arr <span class="keyword">if</span> (x &gt; mean-<span class="number">3</span>*std) &amp; (x &lt; mean+<span class="number">3</span>*std)]</span><br><span class="line">    mean_proc = np.mean(data_array_proc, axis=<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> mean_proc</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/homepage/tags/algorithm/" rel="tag"><i class="fa fa-tag"></i> algorithm</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/homepage/2022/07/17/20220717-%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/" rel="prev" title="一些闲聊">
+                  <i class="fa fa-angle-left"></i> 一些闲聊
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/homepage/2022/07/27/20220727-%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" rel="next" title="代码教程与注意事项">
+                  代码教程与注意事项 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="SOHUCS" sid="161b3258c3122a6b9c4705026429782f"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>简体中文</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="选择语言">
+      
+        <option value="zh-CN" data-href="/homepage/2022/07/20/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/homepage/en/2022/07/20/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/" selected="">
+          English
+        </option>
+      
+    </select>
+  </div>
+
+  <div class="copyright">
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-star"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Frankenadrixias</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">4k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">13 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/Frankenadrixias" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/homepage/js/comments.js"></script><script src="/homepage/js/utils.js"></script><script src="/homepage/js/motion.js"></script><script src="/homepage/js/next-boot.js"></script><script src="/homepage/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/homepage/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  <script src="/homepage/js/third-party/addtoany.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/homepage/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cywX74Ykh","appkey":"prod_798266b60eaba0c2fb58a0af5de8de5c","count":true}</script>
+<script src="/homepage/js/third-party/comments/changyan.js"></script>
+
+</body>
+</html>
