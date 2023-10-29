@@ -1,129 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/2022/07/17/20220717-%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<h5 id="这是五级标题">这是五级标题</h5>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>代码教程与注意事项</title>
-    <url>/homepage/2022/07/27/20220727-%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
-    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
-<hr />
-<h3 id="opencv-python">Opencv-python</h3>
-<h4 id="读写图片">读写图片</h4>
-<p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
-<p>读取图片：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若路径有中文则该方法不成功</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以读取包含中文的路径</span></span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<p>保存图片：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若路径有中文则该方法不成功</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
-<h3 id="jekyll">jekyll</h3>
-<p>如果在本地构建 jekyll 项目，执行
-<code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get local issuer certificate) in projects.md</span><br></pre></td></tr></table></figure>
-<p>请检查自己的所有代理/梯子/vpn，确保关闭后再重新执行
-<code>bundle exec jekyll serve</code></p>
-<p>成功执行后的结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle exec jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed for posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    done in 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled for &#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
-<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
-就可以在本地预览 jekyll
-的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多元回归分析</title>
-    <url>/homepage/2023/03/10/20230310-%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
-<span id="more"></span></p>
-<hr />
-<h3 id="多元线性回归">多元线性回归</h3>
-<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
-<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
-<span class="math inline">\(X\)</span>
-表示）的取值来估计另一个变量（因变量，用 <span
-class="math inline">\(Y\)</span> 表示）的值。</p>
-<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
-往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
-\,(p&gt;1)\)</span> 有关。对于自变量 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
-class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
-class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
-<span class="math inline">\(Y\)</span> 的分布函数。</p>
-<p>如果能够发掘 <span class="math inline">\(F(Y \vert
-x_1,x_2,...,x_p)\)</span> 随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span>
-取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
-<span class="math inline">\(X\)</span>
-之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
-<span class="math inline">\(Y\)</span> 的数学期望 <span
-class="math inline">\(E(Y)\)</span>。即若 <span
-class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
-class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
-class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
-class="math inline">\(Y\)</span> 关于 <span
-class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
-class="math inline">\(Y\)</span> 和 <span
-class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
-class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
-<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span>
-的线性函数时，有：</p>
-<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
-\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
-<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
-均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
-无关的未知参数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>轨迹停留点算法思路</title>
     <url>/homepage/2022/07/20/20220720-%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/</url>
     <content><![CDATA[<p>介绍一下轨迹停留点提取的相关算法 <span id="more"></span></p>
@@ -203,6 +80,129 @@ id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的�
       </categories>
       <tags>
         <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/2022/07/17/20220717-%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<h5 id="这是五级标题">这是五级标题</h5>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多元回归分析</title>
+    <url>/homepage/2023/03/10/20230310-%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
+<span id="more"></span></p>
+<hr />
+<h3 id="多元线性回归">多元线性回归</h3>
+<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
+<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
+<span class="math inline">\(X\)</span>
+表示）的取值来估计另一个变量（因变量，用 <span
+class="math inline">\(Y\)</span> 表示）的值。</p>
+<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
+往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
+\,(p&gt;1)\)</span> 有关。对于自变量 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
+class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
+class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
+<span class="math inline">\(Y\)</span> 的分布函数。</p>
+<p>如果能够发掘 <span class="math inline">\(F(Y \vert
+x_1,x_2,...,x_p)\)</span> 随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span>
+取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
+<span class="math inline">\(X\)</span>
+之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
+<span class="math inline">\(Y\)</span> 的数学期望 <span
+class="math inline">\(E(Y)\)</span>。即若 <span
+class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
+class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
+class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
+class="math inline">\(Y\)</span> 关于 <span
+class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
+class="math inline">\(Y\)</span> 和 <span
+class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
+class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
+<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span>
+的线性函数时，有：</p>
+<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
+\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
+<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
+均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
+无关的未知参数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码教程与注意事项</title>
+    <url>/homepage/2022/07/27/20220727-%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
+    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
+<hr />
+<h3 id="opencv-python">Opencv-python</h3>
+<h4 id="读写图片">读写图片</h4>
+<p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
+<p>读取图片：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若路径有中文则该方法不成功</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以读取包含中文的路径</span></span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>保存图片：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若路径有中文则该方法不成功</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
+<h3 id="jekyll">jekyll</h3>
+<p>如果在本地构建 jekyll 项目，执行
+<code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get local issuer certificate) in projects.md</span><br></pre></td></tr></table></figure>
+<p>请检查自己的所有代理/梯子/vpn，确保关闭后再重新执行
+<code>bundle exec jekyll serve</code></p>
+<p>成功执行后的结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle exec jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed for posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    done in 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled for &#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
+<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
+就可以在本地预览 jekyll
+的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
       </tags>
   </entry>
   <entry>
