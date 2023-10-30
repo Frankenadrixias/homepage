@@ -1,88 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/20220717/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/homepage/20220716/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到 <a
-href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
-href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
-时遇到任何问题，你可以在<a
-href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
-中找到答案，也可以在 <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.
-<span id="more"></span></p>
-<h2 id="quick-start">Quick Start</h2>
-<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<p>安装公式渲染器，然后再安装 <a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
-<p>部署到服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CMIP6数据下载相关</title>
     <url>/homepage/20230829/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
@@ -174,6 +92,88 @@ E:/Data/cmip6/ssp245-day-hurs</p>
       </categories>
       <tags>
         <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/homepage/20220716/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到 <a
+href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
+href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
+时遇到任何问题，你可以在<a
+href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
+中找到答案，也可以在 <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.
+<span id="more"></span></p>
+<h2 id="quick-start">Quick Start</h2>
+<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>安装公式渲染器，然后再安装 <a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
+<p>部署到服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/20220717/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
