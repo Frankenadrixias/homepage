@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/homepage/2022/07/16/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到 <a
+href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
+href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
+时遇到任何问题，你可以在<a
+href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
+中找到答案，也可以在 <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.
+<span id="more"></span></p>
+<h2 id="quick-start">Quick Start</h2>
+<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>安装公式渲染器，然后再<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">安装
+pandoc</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
+<p>创建公钥，安装 git 部署插件，部署到 github 服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h2 id="具体细节">具体细节</h2>
+<p>新建博文 Create a new post<br />
+More info: <a href="https://hexo.io/docs/writing.html">Writing</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>运行本地服务器 Run server<br />
+More info: <a href="https://hexo.io/docs/server.html">Server</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
+<p>生成静态页面 Generate static files<br />
+More info: <a href="https://hexo.io/docs/generating.html">Generating</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
+<p>部署到远程服务器 Deploy to remote sites<br />
+More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CMIP6数据下载相关</title>
     <url>/homepage/2023/08/29/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
@@ -69,52 +115,6 @@ E:/Data/cmip6/ssp245-day-hurs</p>
       </categories>
       <tags>
         <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/homepage/2022/07/16/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到 <a
-href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
-href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
-时遇到任何问题，你可以在<a
-href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
-中找到答案，也可以在 <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.
-<span id="more"></span></p>
-<h2 id="quick-start">Quick Start</h2>
-<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<p>安装公式渲染器，然后再<a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">安装
-pandoc</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
-<p>创建公钥，安装 git 部署插件，部署到 github 服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h2 id="具体细节">具体细节</h2>
-<p>新建博文 Create a new post<br />
-More info: <a href="https://hexo.io/docs/writing.html">Writing</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></p>
-<p>运行本地服务器 Run server<br />
-More info: <a href="https://hexo.io/docs/server.html">Server</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p>生成静态页面 Generate static files<br />
-More info: <a href="https://hexo.io/docs/generating.html">Generating</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>部署到远程服务器 Deploy to remote sites<br />
-More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
