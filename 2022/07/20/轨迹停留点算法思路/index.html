@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://frankenadrixias.github.io/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/img_3.png">
 <meta property="og:image" content="https://frankenadrixias.github.io/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/img_4.png">
 <meta property="article:published_time" content="2022-07-20T02:37:55.000Z">
-<meta property="article:modified_time" content="2023-10-30T06:06:41.970Z">
+<meta property="article:modified_time" content="2023-10-30T08:58:43.243Z">
 <meta property="article:author" content="Frankenadrixias">
 <meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary">
@@ -246,7 +246,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-10-30 14:06:41" itemprop="dateModified" datetime="2023-10-30T14:06:41+08:00">2023-10-30</time>
+      <time title="修改时间：2023-10-30 16:58:43" itemprop="dateModified" datetime="2023-10-30T16:58:43+08:00">2023-10-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -286,7 +286,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -305,6 +305,9 @@
     
     <div class="post-body" itemprop="articleBody"><p>介绍一下轨迹停留点提取的相关算法 <span id="more"></span></p>
 <hr />
+<style>
+    img{min-width: 400px}
+</style>
 <h2 id="dbscan算法">DBSCAN算法</h2>
 <p><strong>DBSCAN</strong>（Density-Based Spatial Clustering of
 Applications with
@@ -318,19 +321,13 @@ Noise，具有噪声的基于密度的空间聚类方法）算法将点集中具
 以此类推，直到在簇内各核心样本点的 eps
 距离内无更多的核心样本点为止。<br />
 之后选取另一个未被访问的点，并重复以上相同的过程。</p>
-<figure>
-<img src="img.png" style="width:66.0%" alt="pic1" />
-<figcaption aria-hidden="true">pic1</figcaption>
-</figure>
+<p><img src="img.png" width=60% align=center alt="pic1"></p>
 <h3 id="traj-dbscan算法">Traj-DBSCAN算法</h3>
 <p>Traj-DBSCAN算法出自论文：Robust and Hierarchical Stop Discovery in
 Sparse and Diverse Trajectories.</p>
 <p>其在DBSCAN的基础上，将邻居的计算从空间相邻改为时间线性相邻，而核心点计算则用停留时间代替周边点的数目。</p>
 <p>TrajDBSCAN实现了“停留点集是子轨迹”的要求，其子轨迹内部所有点在空间上邻近，距离中心点小于距离阈值Eps，且子轨迹持续时长高于时间阈值MinTime，因此判断为轨迹在该处停留。</p>
-<figure>
-<img src="img_1.png" style="width:75.0%" alt="pic2" />
-<figcaption aria-hidden="true">pic2</figcaption>
-</figure>
+<p><img src="img_1.png" width=75% align=center alt="pic2"></p>
 <p>在此基础上，Traj-DBSCAN还实现了识别多条轨迹的“公共停留点”以及层次化停留点分析。</p>
 <hr />
 <h2 id="cb-smot算法">CB-SMoT算法</h2>
@@ -338,16 +335,10 @@ Sparse and Diverse Trajectories.</p>
 Places in Trajectories</p>
 <p>先前的停留点挖掘思路通常要根据预定义的停留区来做停留检测，而该文则提出了一种基于速度的时空聚类方法，识别轨迹中的慢速区域，从而实现对轨迹上重要位置的挖掘。</p>
 <p>下图中的ABC是已知的候选停留点，而XY是实际停留但未标记出的的位置。</p>
-<figure>
-<img src="img_2.png" alt="pic3" />
-<figcaption aria-hidden="true">pic3</figcaption>
-</figure>
+<p><img src="img_2.png" width=75% align=center alt="pic3"></p>
 <p>CB-SMoT算法是DBSCAN聚类算法的改进，有很多概念类似（如核心点、密度直达、密度可达等），其与DBSCAN的不同之处在于对邻域与核心点的定义不同。</p>
 <p><strong>CB-SMoT对邻域定义如下：</strong></p>
-<figure>
-<img src="img_3.png" alt="pic4" />
-<figcaption aria-hidden="true">pic4</figcaption>
-</figure>
+<p><img src="img_3.png" width=100% align=center alt="pic4"></p>
 <p><strong>核心点(Core Point)定义：</strong><br />
 点集中的某一点，其Eps线性邻域内的轨迹持续时长高于时间阈值MinTime。该定义的本质上是实现了速度限制条件。</p>
 <h3 id="算法实现方式">算法实现方式</h3>
@@ -360,10 +351,7 @@ Places in Trajectories</p>
 <code>Min_Time</code>, Distance Threshold <code>Distance</code></li>
 <li>output: Set of Stationary Points <code>&#123;Track_Stops&#125;</code></li>
 </ul>
-<figure>
-<img src="img_4.png" style="width:66.0%" alt="pic5" />
-<figcaption aria-hidden="true">pic5</figcaption>
-</figure>
+<p><img src="img_4.png" width=75% align=center alt="pic5"></p>
 <p><strong>具体python实现代码：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用CB-SMoT算法对轨迹的停留点进行提取</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cbSMoT_cluster</span>(<span class="params">track_df: pd.DataFrame, distance: <span class="built_in">float</span>, min_time: <span class="built_in">float</span></span>):</span><br><span class="line">    X = track_df[[<span class="string">&#x27;timestamp&#x27;</span>, <span class="string">&quot;lng&quot;</span>, <span class="string">&quot;lat&quot;</span>]]    <span class="comment"># 设置聚类基于的属性</span></span><br><span class="line">    track_stops = <span class="built_in">set</span>()             <span class="comment"># 用于保留最终的停留点集</span></span><br><span class="line">    process = np.zeros(<span class="built_in">len</span>(X))      <span class="comment"># 存储当前点是否被处理过</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(X)):         <span class="comment"># 对于轨迹中的所有点</span></span><br><span class="line">        <span class="keyword">if</span> process[i] == <span class="number">0</span>:         <span class="comment"># 如果该点未被处理：</span></span><br><span class="line">            <span class="comment"># 计算该点的线性邻居（基于给定的距离），并标记为处理过</span></span><br><span class="line">            min_Pi, max_Pi = compute_linear_neighbours(X, i, distance)</span><br><span class="line">            Neighbour = <span class="built_in">set</span>(<span class="built_in">range</span>(min_Pi, max_Pi + <span class="number">1</span>))</span><br><span class="line">            process[i] = <span class="number">1</span></span><br><span class="line">            <span class="comment"># 如果停留时间超过阈值</span></span><br><span class="line">            <span class="keyword">if</span> compute_time(X.iloc[max_Pi], X.iloc[min_Pi]) &gt;= min_time:</span><br><span class="line">                cluster = &#123;i&#125;               <span class="comment"># 该点加入核心点集</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> Neighbour:         <span class="comment"># 对该邻域点集中的其他未处理点重复上述步骤</span></span><br><span class="line">                    <span class="keyword">if</span> process[j] == <span class="number">0</span>:     <span class="comment"># 如果该点未被处理：</span></span><br><span class="line">                        cluster.union(&#123;j&#125;)  <span class="comment"># 扩充相应的核心点集</span></span><br><span class="line">                        <span class="comment"># 计算该点的线性邻居</span></span><br><span class="line">                        min_Pj, max_Pj = compute_linear_neighbours(X, i, distance)</span><br><span class="line">                        Neighbour_1 = <span class="built_in">set</span>(<span class="built_in">range</span>(min_Pj, max_Pj + <span class="number">1</span>))</span><br><span class="line">                        <span class="comment"># 如果停留时间超过阈值</span></span><br><span class="line">                        <span class="keyword">if</span> compute_time(X.iloc[max_Pj], X.iloc[min_Pj]) &gt;= min_time:</span><br><span class="line">                            <span class="comment"># 扩充相应的邻域点集</span></span><br><span class="line">                            Neighbour = Neighbour.union(Neighbour_1)</span><br><span class="line">                <span class="comment"># 将核心点集加入驻留点集中</span></span><br><span class="line">                track_stops = track_stops.union(cluster)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">    <span class="comment"># 直到所有点都处理完毕</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span>(track_stops)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找与路径点Ti的累计轨迹距离在D以内的近邻</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_linear_neighbours</span>(<span class="params">track_df: pd.DataFrame, index: <span class="built_in">int</span>, distance: <span class="built_in">float</span></span>):</span><br><span class="line">    <span class="comment"># 初始起终路径点</span></span><br><span class="line">    min_index, max_index = <span class="number">0</span>, <span class="built_in">len</span>(track_df) - <span class="number">1</span></span><br><span class="line">    total_dis = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 计算最小路径点</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(index, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">        <span class="comment"># 计算相邻点之间的距离</span></span><br><span class="line">        dis = compute_distance(track_df.iloc[i], track_df.iloc[i-<span class="number">1</span>])</span><br><span class="line">        total_dis += dis</span><br><span class="line">        <span class="comment"># 如果小于距离阈值则继续，否则终止循环并记录最小路径点</span></span><br><span class="line">        <span class="keyword">if</span> total_dis &lt;= distance: <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            min_index = i + <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 计算最大路径点</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(index, <span class="built_in">len</span>(track_df) - <span class="number">1</span>, <span class="number">1</span>):</span><br><span class="line">        <span class="comment"># 计算相邻点之间的距离</span></span><br><span class="line">        dis = compute_distance(track_df.iloc[i], track_df.iloc[i+<span class="number">1</span>])</span><br><span class="line">        total_dis += dis</span><br><span class="line">        <span class="comment"># 如果小于距离阈值则继续，否则终止循环并记录最小路径点</span></span><br><span class="line">        <span class="keyword">if</span> total_dis &lt;= distance: <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            max_index = i - <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> min_index, max_index</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算两点之间欧氏距离</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_distance</span>(<span class="params">tp1, tp2</span>):</span><br><span class="line">    dis = ((tp1.lng - tp2.lng) ** <span class="number">2</span> + (tp1.lat - tp2.lat) ** <span class="number">2</span>) ** <span class="number">0.5</span></span><br><span class="line">    <span class="keyword">return</span> dis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算两点之间时间差</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_time</span>(<span class="params">tp1, tp2</span>):</span><br><span class="line">    <span class="keyword">return</span> tp1.timestamp - tp2.timestamp</span><br></pre></td></tr></table></figure>
 <h3
@@ -437,7 +425,7 @@ id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的�
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
