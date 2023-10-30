@@ -1,112 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CMIP6数据下载相关</title>
-    <url>/homepage/2023/08/29/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
-<span id="more"></span></p>
-<hr />
-<h2 id="数据背景介绍">数据背景介绍</h2>
-<p>CMIP6，即第6次国际耦合模式比较计划（Coupled Model Inter-comparison
-Project,
-CMIP），是由世界气候研究计划耦合模拟工作组（WGCM）发起和组织。其最初目的是对当时数量有限的全球耦合气候模式的模拟性能进行比较。但此后全球海-气耦合模式进入了快速发展阶段，全球各大气候模拟中心相继发布大量的大气和海洋模拟数据。因此，产生了对这些模拟结果进行系统分析的需求。为适应这一需求，CMIP
-逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。</p>
-<p>1995年，WGCM 发起和组织了 AMIP
-计划，对当时数量有限的全球耦合气候模式的性能进行比较。此后，全球海气耦合模式进入了快速发展阶段，模式数量迅速增加，模式数据爆发式增长。全球各大气候模拟中心相继发布大量的大气和海洋模拟数据，科学界迫切需要有专门的组织对这些模拟结果进行系统的分析。为适应这一需求，CMIP
-逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。为了实现该目标，CMIP
-在设计气候模式试验标准、制定共享数据格式、制定向全球科学界共享气候模拟数据的机制等方面开展了卓有成效的工作。</p>
-<p>WGCM 设立了两个工作小组：一是 CMIP 工作组（CMIP Panel），直接负责
-CMIP 的组织协调工作；二是 WGCM 基础设施工作组（Infrastructure
-Panel），负责制定模式数据共享政策和技术标准。CMIP
-试验数据通过地球系统网格联盟（Earth System Grid
-Federation，ESGF）面向国际科学界提供。</p>
-<p>CMIP6 计划介绍：<a
-href="https://pcmdi.llnl.gov/CMIP6/">https://pcmdi.llnl.gov/CMIP6/</a><br />
-CMIP6 数据下载地址：<a
-href="https://esgf-node.llnl.gov/search/cmip6/">https://esgf-node.llnl.gov/search/cmip6/</a><br />
-建议使用英国源：https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/</p>
-<h2 id="数据筛选">数据筛选</h2>
-<p>CMIP6
-各变量及对应缩写介绍：https://clipc-services.ceda.ac.uk/dreq/mipVars.html
-可以通过输入关键词搜索自己想要的变量的缩写，或者在官网下载缩写对应表的
-excel 文件。</p>
-<figure>
-<img src="img.png" alt="pic1" />
-<figcaption aria-hidden="true">pic1</figcaption>
-</figure>
-<p>这里对一般情况下，我们用到的检索条件做个简要的介绍</p>
-<p>MIP Era：即MIP代际数，这里只有一个可选，即最新的MIP6；<br />
-Activity：项目计划；<br />
-Product：研究产品，即模型输出，这里依旧是只有一个model-output可选；</p>
-<p>Variable：研究的变量，如降雨、降雪、均温等等；<br />
-Frequency：研究的时间尺度，如日尺度、月尺度，小时尺度等等；<br />
-Experiment
-ID：研究的实验场景，如历史模拟(historical)，各种ssp情景等等。</p>
-<ul>
-<li>其中，ssp后的数字含义为共享的社会经济路径 (Shared Socioeconomic
-Pathways, SSP) + 代表性浓度路径 (Representative Concentration Pathways,
-RCP)。</li>
-<li>举例来说，ssp245指的是在ssp2路径下（即“中间路线”世界），温室气体等辐射强迫控制在
-<span class="math inline">\(4.5W/m^2\)</span> 的情景</li>
-</ul>
-<p><strong>一般来说，选了以上三个检索条件后，就可以点击search了。</strong><br />
-在结果中再点击Source
-ID，查看有哪些模型符合这个检索条件。需根据实际情况进行调整。
-注意：有的时候search会显示没有对应文件或者文件失效，这个时候可以把Show
-All Replicas选中再search就有文件了。</p>
-<figure>
-<img src="img1.png" alt="pic2" />
-<figcaption aria-hidden="true">pic2</figcaption>
-</figure>
-<p>一些指令：<br />
-wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-tasmax.txt -P
-E:/Data/cmip6/ssp245-day-tasmax --no-check-certificate<br />
-wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-hurs.txt -P
-E:/Data/cmip6/ssp245-day-hurs</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/2022/07/17/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/homepage/2022/07/16/hello-world/</url>
     <content><![CDATA[<p>欢迎来到 <a
@@ -173,62 +67,6 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a>
 <p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
 就可以在本地预览 jekyll
 的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多元回归分析</title>
-    <url>/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
-<span id="more"></span></p>
-<hr />
-<h3 id="多元线性回归">多元线性回归</h3>
-<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
-<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
-<span class="math inline">\(X\)</span>
-表示）的取值来估计另一个变量（因变量，用 <span
-class="math inline">\(Y\)</span> 表示）的值。</p>
-<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
-往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
-\,(p&gt;1)\)</span> 有关。对于自变量 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
-class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
-class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
-<span class="math inline">\(Y\)</span> 的分布函数。</p>
-<p>如果能够发掘 <span class="math inline">\(F(Y \vert
-x_1,x_2,...,x_p)\)</span> 随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span>
-取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
-<span class="math inline">\(X\)</span>
-之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
-<span class="math inline">\(Y\)</span> 的数学期望 <span
-class="math inline">\(E(Y)\)</span>。即若 <span
-class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
-class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
-class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
-class="math inline">\(Y\)</span> 关于 <span
-class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
-class="math inline">\(Y\)</span> 和 <span
-class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
-class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
-<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span>
-的线性函数时，有：</p>
-<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
-\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
-<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
-均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
-无关的未知参数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>blog</category>
@@ -306,6 +144,168 @@ id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的�
       </categories>
       <tags>
         <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/2022/07/17/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多元回归分析</title>
+    <url>/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
+<span id="more"></span></p>
+<hr />
+<h3 id="多元线性回归">多元线性回归</h3>
+<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
+<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
+<span class="math inline">\(X\)</span>
+表示）的取值来估计另一个变量（因变量，用 <span
+class="math inline">\(Y\)</span> 表示）的值。</p>
+<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
+往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
+\,(p&gt;1)\)</span> 有关。对于自变量 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
+class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
+class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
+<span class="math inline">\(Y\)</span> 的分布函数。</p>
+<p>如果能够发掘 <span class="math inline">\(F(Y \vert
+x_1,x_2,...,x_p)\)</span> 随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span>
+取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
+<span class="math inline">\(X\)</span>
+之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
+<span class="math inline">\(Y\)</span> 的数学期望 <span
+class="math inline">\(E(Y)\)</span>。即若 <span
+class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
+class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
+class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
+class="math inline">\(Y\)</span> 关于 <span
+class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
+class="math inline">\(Y\)</span> 和 <span
+class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
+class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
+<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span>
+的线性函数时，有：</p>
+<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
+\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
+<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
+均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
+无关的未知参数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CMIP6数据下载相关</title>
+    <url>/homepage/2023/08/29/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
+<span id="more"></span></p>
+<hr />
+<h2 id="数据背景介绍">数据背景介绍</h2>
+<p>CMIP6，即第6次国际耦合模式比较计划（Coupled Model Inter-comparison
+Project,
+CMIP），是由世界气候研究计划耦合模拟工作组（WGCM）发起和组织。其最初目的是对当时数量有限的全球耦合气候模式的模拟性能进行比较。但此后全球海-气耦合模式进入了快速发展阶段，全球各大气候模拟中心相继发布大量的大气和海洋模拟数据。因此，产生了对这些模拟结果进行系统分析的需求。为适应这一需求，CMIP
+逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。</p>
+<p>1995年，WGCM 发起和组织了 AMIP
+计划，对当时数量有限的全球耦合气候模式的性能进行比较。此后，全球海气耦合模式进入了快速发展阶段，模式数量迅速增加，模式数据爆发式增长。全球各大气候模拟中心相继发布大量的大气和海洋模拟数据，科学界迫切需要有专门的组织对这些模拟结果进行系统的分析。为适应这一需求，CMIP
+逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。为了实现该目标，CMIP
+在设计气候模式试验标准、制定共享数据格式、制定向全球科学界共享气候模拟数据的机制等方面开展了卓有成效的工作。</p>
+<p>WGCM 设立了两个工作小组：一是 CMIP 工作组（CMIP Panel），直接负责
+CMIP 的组织协调工作；二是 WGCM 基础设施工作组（Infrastructure
+Panel），负责制定模式数据共享政策和技术标准。CMIP
+试验数据通过地球系统网格联盟（Earth System Grid
+Federation，ESGF）面向国际科学界提供。</p>
+<p>CMIP6 计划介绍：<a
+href="https://pcmdi.llnl.gov/CMIP6/">https://pcmdi.llnl.gov/CMIP6/</a><br />
+CMIP6 数据下载地址：<a
+href="https://esgf-node.llnl.gov/search/cmip6/">https://esgf-node.llnl.gov/search/cmip6/</a><br />
+建议使用英国源：https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/</p>
+<h2 id="数据筛选">数据筛选</h2>
+<p>CMIP6
+各变量及对应缩写介绍：https://clipc-services.ceda.ac.uk/dreq/mipVars.html
+可以通过输入关键词搜索自己想要的变量的缩写，或者在官网下载缩写对应表的
+excel 文件。</p>
+<figure>
+<img src="img.png" alt="pic1" />
+<figcaption aria-hidden="true">pic1</figcaption>
+</figure>
+<p>这里对一般情况下，我们用到的检索条件做个简要的介绍</p>
+<p>MIP Era：即MIP代际数，这里只有一个可选，即最新的MIP6；<br />
+Activity：项目计划；<br />
+Product：研究产品，即模型输出，这里依旧是只有一个model-output可选；</p>
+<p>Variable：研究的变量，如降雨、降雪、均温等等；<br />
+Frequency：研究的时间尺度，如日尺度、月尺度，小时尺度等等；<br />
+Experiment
+ID：研究的实验场景，如历史模拟(historical)，各种ssp情景等等。</p>
+<ul>
+<li>其中，ssp后的数字含义为共享的社会经济路径 (Shared Socioeconomic
+Pathways, SSP) + 代表性浓度路径 (Representative Concentration Pathways,
+RCP)。</li>
+<li>举例来说，ssp245指的是在ssp2路径下（即“中间路线”世界），温室气体等辐射强迫控制在
+<span class="math inline">\(4.5W/m^2\)</span> 的情景</li>
+</ul>
+<p><strong>一般来说，选了以上三个检索条件后，就可以点击search了。</strong><br />
+在结果中再点击Source
+ID，查看有哪些模型符合这个检索条件。需根据实际情况进行调整。
+注意：有的时候search会显示没有对应文件或者文件失效，这个时候可以把Show
+All Replicas选中再search就有文件了。</p>
+<figure>
+<img src="img1.png" alt="pic2" />
+<figcaption aria-hidden="true">pic2</figcaption>
+</figure>
+<p>一些指令：<br />
+wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-tasmax.txt -P
+E:/Data/cmip6/ssp245-day-tasmax --no-check-certificate<br />
+wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-hurs.txt -P
+E:/Data/cmip6/ssp245-day-hurs</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
       </tags>
   </entry>
 </search>
