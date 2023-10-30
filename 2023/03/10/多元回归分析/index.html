@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-number">1.</span> <span class="nav-text">多元线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">1、多元线性回归的相关概念</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-number">1.</span> <span class="nav-text">多元线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">1、多元线性回归的相关概念</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -297,50 +297,16 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
-<span id="more"></span></p>
-<hr />
-<h3 id="多元线性回归">多元线性回归</h3>
-<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
-<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
-<span class="math inline">\(X\)</span>
-表示）的取值来估计另一个变量（因变量，用 <span
-class="math inline">\(Y\)</span> 表示）的值。</p>
-<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
-往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
-\,(p&gt;1)\)</span> 有关。对于自变量 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
-class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
-class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
-<span class="math inline">\(Y\)</span> 的分布函数。</p>
-<p>如果能够发掘 <span class="math inline">\(F(Y \vert
-x_1,x_2,...,x_p)\)</span> 随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span>
-取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
-<span class="math inline">\(X\)</span>
-之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
-<span class="math inline">\(Y\)</span> 的数学期望 <span
-class="math inline">\(E(Y)\)</span>。即若 <span
-class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
-class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
-class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
-class="math inline">\(Y\)</span> 关于 <span
-class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
-class="math inline">\(Y\)</span> 和 <span
-class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
-class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
-<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span>
-的线性函数时，有：</p>
-<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
-\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
-<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
-均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
-无关的未知参数。</p>
+    <div class="post-body" itemprop="articleBody"><p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。</p>
+<span id="more"></span>
+
+<hr>
+<h3 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h3><h4 id="1、多元线性回归的相关概念"><a href="#1、多元线性回归的相关概念" class="headerlink" title="1、多元线性回归的相关概念"></a>1、多元线性回归的相关概念</h4><p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个&#x2F;组变量（自变量，用 $X$ 表示）的取值来估计另一个变量（因变量，用 $Y$ 表示）的值。</p>
+<p>在实际问题中，随机变量 $Y$ 往往与多个普通变量 $x_1,x_2,…,x_p ,(p&gt;1)$ 有关。对于自变量 $x_1,x_2,…,x_p$ 的一组确定的值，$Y$ 有它的分布。我们可以用 $F(Y \vert x_1,x_2,…,x_p)$ 来表示当 $x_1,x_2,…,x_p$ 取确定值时，所对应的 $Y$ 的分布函数。</p>
+<p>如果能够发掘 $F(Y \vert x_1,x_2,…,x_p)$ 随 $x_1,x_2,…,x_p$ 取值的变化规律，就可以完全确定 $Y$ 和 $X$ 之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察 $Y$ 的数学期望 $E(Y)$。即若 $Y$ 的数学期望存在，则其值随 $x_1,x_2,…,x_p$ 的取值而定，因而它是 $x_1,x_2,…,x_p$ 的函数，记为 $\mu_{Y \vert x_1,x_2,…,x_p}$ 或 $\mu(x_1,x_2,…,x_p)$ 即为 $Y$ 关于 $x$ 的回归函数，从而将讨论 $Y$ 和 $X$ 之间的相关关系问题转化为讨论 $E(Y) &#x3D; \mu(x_1,x_2,…,x_p)$ 与 $x_1,x_2,…,x_p$ 的函数关系问题。</p>
+<p>当 $\mu (x_1,x_2,…,x_p)$ 是 $x_1,x_2,…,x_p$ 的线性函数时，有：</p>
+<p>$$ Y &#x3D; b_0 + b_1x_1 + … + b_px_p + \epsilon, , \epsilon \sim N(0, \sigma^2) \tag{1} $$</p>
+<p>其中 $b_0,b_1,…,b_p, \sigma^2$ 均为与 $x_1,x_2,…,x_p$ 无关的未知参数。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
     </div>
@@ -428,7 +394,7 @@ class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">18 分钟</span>
+    <span title="站点阅读时长">19 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

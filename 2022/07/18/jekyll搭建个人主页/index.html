@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#248"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/homepage/uploads/avatar.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/homepage/uploads/avatar.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/homepage/uploads/avatar.png">
+  <link rel="mask-icon" href="/homepage/images/logo.svg" color="#248">
+
+<link rel="stylesheet" href="/homepage/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Microsoft+YaHei:300,300italic,400,400italic,700,700italic%7CTimes+New+Roman:300,300italic,400,400italic,700,700italic%7CSTZhongsong:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7Csimsun:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"frankenadrixias.github.io","root":"/homepage/","images":"/homepage/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":280},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/homepage/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/homepage/js/config.js"></script>
+
+    <meta name="description" content="Jekyll 搭建个人主页的步骤与注意事项。 之前我的个人主页是基于 Jekyll + minimal 模板搭建的，23年10月改为了 Hexo + NexT。这里把之前用 jekyll 搭建个人网站的步骤与注意事项重新写一下，大家如果有需求可以自行查阅。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jekyll搭建个人主页">
+<meta property="og:url" content="https://frankenadrixias.github.io/homepage/2022/07/18/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/index.html">
+<meta property="og:site_name" content="Frankenadrixias&#39; Homepage">
+<meta property="og:description" content="Jekyll 搭建个人主页的步骤与注意事项。 之前我的个人主页是基于 Jekyll + minimal 模板搭建的，23年10月改为了 Hexo + NexT。这里把之前用 jekyll 搭建个人网站的步骤与注意事项重新写一下，大家如果有需求可以自行查阅。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-18T11:30:13.000Z">
+<meta property="article:modified_time" content="2023-10-30T07:33:24.044Z">
+<meta property="article:author" content="Frankenadrixias">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://frankenadrixias.github.io/homepage/2022/07/18/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://frankenadrixias.github.io/homepage/2022/07/18/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/","path":"2022/07/18/jekyll搭建个人主页/","title":"jekyll搭建个人主页"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>jekyll搭建个人主页 | Frankenadrixias' Homepage</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/homepage/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/homepage/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Frankenadrixias' Homepage</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Where there is a will, there is a way.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/homepage/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/homepage/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/homepage/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a></li><li class="menu-item menu-item-categories"><a href="/homepage/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/homepage/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll%E7%9A%84%E5%AE%98%E6%96%B9%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">Jekyll的官方介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll-Matjek-%E6%A8%A1%E6%9D%BF"><span class="nav-number">2.</span> <span class="nav-text">Jekyll Matjek 模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Features"><span class="nav-number">2.1.</span> <span class="nav-text">Features</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installation"><span class="nav-number">2.2.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuration"><span class="nav-number">2.3.</span> <span class="nav-text">Configuration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Contributing"><span class="nav-number">2.4.</span> <span class="nav-text">Contributing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Development"><span class="nav-number">2.5.</span> <span class="nav-text">Development</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#License"><span class="nav-number">2.6.</span> <span class="nav-text">License</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Libraries"><span class="nav-number">2.7.</span> <span class="nav-text">Libraries</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#References"><span class="nav-number">2.8.</span> <span class="nav-text">References</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">Jekyll安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.2.</span> <span class="nav-text">注意事项</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Frankenadrixias"
+      src="/homepage/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">Frankenadrixias</p>
+  <div class="site-description" itemprop="description">Friedrich 用来写东西的地方</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/homepage/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/homepage/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/homepage/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Frankenadrixias" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Frankenadrixias" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2249307370@qq.com" title="E-Mail → mailto:2249307370@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/7397473" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;7397473" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/homepage/2022/07/16/hello-world/" rel="bookmark">
+        <time class="popular-posts-time">2022-07-16</time>
+        <br>
+      Hello World
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://frankenadrixias.github.io/homepage/2022/07/18/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/homepage/uploads/avatar.png">
+      <meta itemprop="name" content="Frankenadrixias">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frankenadrixias' Homepage">
+      <meta itemprop="description" content="Friedrich 用来写东西的地方">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="jekyll搭建个人主页 | Frankenadrixias' Homepage">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          jekyll搭建个人主页<a href="https://github.com/Frankenadrixias/homepage/edit/master/source/_posts/_posts/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-18 19:30:13" itemprop="dateCreated datePublished" datetime="2022-07-18T19:30:13+08:00">2022-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-30 15:33:24" itemprop="dateModified" datetime="2023-10-30T15:33:24+08:00">2023-10-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/homepage/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="jekyll搭建个人主页" href="/homepage/2022/07/18/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::0683bb1be976683d6637a05a76156c84" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Jekyll 搭建个人主页的步骤与注意事项。</p>
+<p>之前我的个人主页是基于 Jekyll + minimal 模板搭建的，23年10月改为了 Hexo + NexT。这里把之前用 jekyll 搭建个人网站的步骤与注意事项重新写一下，大家如果有需求可以自行查阅。</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="Jekyll的官方介绍"><a href="#Jekyll的官方介绍" class="headerlink" title="Jekyll的官方介绍"></a>Jekyll的官方介绍</h2><p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.<br>您可以在 <code>_posts</code> 目录中找到这篇文章。继续编辑并重新构建网站以查看您的更改。你可以用很多不同的方式重建网站，但最常见的方式是运行 <code>jekyll serve</code>，它启动一个 web 服务器，并在文件更新时自动重新生成你的网站。</p>
+<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.<br>要添加新的帖子，只需在 <code>_posts</code> 目录中添加一个文件，该文件遵循惯例 <code>YYYY-MM-DD-name-of-post.ext</code>，并包含必要的前置内容。看看这篇文章的来源，了解一下它是如何工作的。</p>
+<p>Jekyll also offers powerful support for code snippets. It uses Rouge by default for syntax highlighting, here are some tests.<br>Jekyll 还提供了对代码片段的强大支持。默认情况下，它使用 Rouge 进行语法高亮显示，下面是一些测试。（为了符合现有的框架，改用了 Hexo 的高亮显示模板）</p>
+<p><strong>Ruby</strong> with line numbers:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">print_hi</span>(<span class="params">name</span>)</span><br><span class="line">  puts <span class="string">&quot;Hi, <span class="subst">#&#123;name&#125;</span>&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">print_hi(<span class="string">&#x27;Tom&#x27;</span>)</span><br><span class="line"><span class="comment">#=&gt; prints &#x27;Hi, Tom&#x27; to STDOUT.</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Python</strong> with line numbers:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">print_hi</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hi, &#123;&#125;&quot;</span>.<span class="built_in">format</span>(name))</span><br><span class="line"></span><br><span class="line">print_hi(<span class="string">&#x27;Tom&#x27;</span>)</span><br><span class="line"><span class="comment"># prints &#x27;Hi, Tom&#x27; to STDOUT.</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>C</strong> with line numbers:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">print_hi</span><span class="params">(<span class="built_in">string</span> name)</span> &#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Hi, %s&quot;</span>, name);</span><br><span class="line">&#125;</span><br><span class="line">print_hi(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line"><span class="comment">/* prints &#x27;Hi, Tom&#x27; to STDOUT. */</span></span><br></pre></td></tr></table></figure>
+
+<p>Check out the <a target="_blank" rel="noopener" href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs&#x2F;feature requests at <a target="_blank" rel="noopener" href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a target="_blank" rel="noopener" href="https://talk.jekyllrb.com/">Jekyll Talk</a>. <br>查看 <a target="_blank" rel="noopener" href="https://jekyllrb.com/docs/home">Jekyll 文档</a> 了解更多关于如何充分利用 Jekyll 的信息。在 Jekyll 的 <a target="_blank" rel="noopener" href="https://github.com/jekyll/jekyll">GitHub repo</a> 中提交所有错误&#x2F;功能请求。如果你有问题，可以在 <a target="_blank" rel="noopener" href="https://talk.jekyllrb.com/">Jekyll Talk</a> 上提问。</p>
+<h2 id="Jekyll-Matjek-模板"><a href="#Jekyll-Matjek-模板" class="headerlink" title="Jekyll Matjek 模板"></a>Jekyll Matjek 模板</h2><h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul>
+<li>Google Analytics</li>
+<li>Disqus</li>
+<li><a target="_blank" rel="noopener" href="https://shawnteoh.github.io/matjek/projects/">GitHub project page</a></li>
+<li><a target="_blank" rel="noopener" href="https://shawnteoh.github.io/matjek/tags/">Tags</a> and <a target="_blank" rel="noopener" href="https://shawnteoh.github.io/matjek/categories/">Categories</a></li>
+<li>Modular CSS and JS includes (<a target="_blank" rel="noopener" href="https://github.com/ShawnTeoh/matjek/blob/gh-pages/projects.md/">example</a>)</li>
+<li><a target="_blank" rel="noopener" href="https://shawnteoh.github.io/matjek/about">Fancy “About” page</a></li>
+</ul>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>Clone or fork this repo and edit <code>_config.yml</code> as needed.<br>根据需要克隆或分支此 repo 并编辑 _config.yml。</p>
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>Most of the configurations can be found in <code>_config.yml</code>. The configurations listed below are specific to MatJek. If you are not using <code>google_tracking_id</code> or <code>disqus_shortname</code>, just remove them completely. <br>大多数配置可以在 <code>_config.yml</code> 中找到。下面列出的配置是 MatJek 特有的。如果您没有使用<code>google_tracking_id</code> 或 <code>disqus_shortname</code>，只需将它们完全删除即可。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">github_profile:</span> <span class="string">&quot;github_profile_url&quot;</span></span><br><span class="line"><span class="attr">user:</span> <span class="string">&quot;your_name&quot;</span> <span class="comment"># Appears at sidebar</span></span><br><span class="line"><span class="attr">user_email:</span> <span class="string">&quot;your_email&quot;</span> <span class="comment"># Appears at sidebar, remove whole variable if unwanted</span></span><br><span class="line"><span class="attr">contact_url:</span> <span class="string">&quot;google_form_link&quot;</span></span><br><span class="line"><span class="attr">google_tracking_id:</span> <span class="string">&quot;google_analytics_ID&quot;</span></span><br><span class="line"><span class="attr">disqus_shortname:</span> <span class="string">&quot;shortname_given_by_Disqus&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Edit the images in <code>assets/res</code> to suit your liking, but try to stick to the original resolutions. If you would like to enable comments in a post (disqus_shortname must be provided), add this line to the front matter of the post.<br>编辑 <code>assets/res</code> 中的图像以满足您的喜好，但尽量保持原始分辨率。如果你想在帖子中启用评论（必须提供disqus_shortname），请将这一行添加到帖子的首页。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">comments:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>Add tags and categories to your posts in the front matter as well. Multiple tags&#x2F;categories can be assigned but need to be separated by spaces.<br>在文章的前面添加标签和类别。可以指定多个标记&#x2F;类别，但需要用空格分隔。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span> <span class="string">default</span> <span class="string">default2</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">test</span> <span class="string">test2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h3><p>Bug reports and pull requests are welcomed on GitHub at <a target="_blank" rel="noopener" href="https://github.com/shawnteoh/matjek">https://github.com/shawnteoh/matjek</a>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a target="_blank" rel="noopener" href="http://contributor-covenant.org/">Contributor Covenant</a> code of conduct.<br>GitHub 上欢迎 Bug 报告和拉取请求，网址为 <a target="_blank" rel="noopener" href="https://github.com/shawnteoh/matjek">https://github.com/shawnteoh/matjek</a> .该项目旨在成为一个安全、受欢迎的合作空间，参与者应遵守<a target="_blank" rel="noopener" href="http://contributor-covenant.org/">《参与者公约》</a>的行为准则。</p>
+<h3 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h3><p>To set up your environment to develop this theme, clone&#x2F;fork the repo and run <code>bundle install</code>.<br>To test your theme, run <code>bundle exec jekyll serve</code> and open your browser at <code>http://localhost:4000/matjek/</code>. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme’s contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.<br>要设置环境以开发此主题，请克隆&#x2F;分支 repo 并运行 <code>bundle install</code>。<br>要测试您的主题，请运行 <code>bundle exec jekyll serve</code> 并在浏览器中启动 <a target="_blank" rel="noopener" href="http://localhost:4000/matjek/">http://localhost:4000/matjek/</a> .这将使用您的主题启动 Jekyll 服务器。像往常一样添加页面、文档、数据等来测试主题的内容。当你修改你的主题和内容时，你的网站会重新生成，你应该在刷新后在浏览器中看到更改，就像正常情况一样。</p>
+<h3 id="License"><a href="#License" class="headerlink" title="License"></a>License</h3><p>The theme is available as open source under the terms of the <a target="_blank" rel="noopener" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3 License</a>.</p>
+<h3 id="Libraries"><a href="#Libraries" class="headerlink" title="Libraries"></a>Libraries</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://materializecss.com/">Materialize.css</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/btmills/geopattern/">GeoPattern</a></li>
+<li><a target="_blank" rel="noopener" href="https://daneden.github.io/animate.css/">Animate.css</a></li>
+<li><a target="_blank" rel="noopener" href="http://morphext.fyianlai.com/">Morphtext</a></li>
+</ul>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/DONGChuan/Yummy-Jekyll/">https://github.com/DONGChuan/Yummy-Jekyll/</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/codinfox/codinfox-lanyon/">https://github.com/codinfox/codinfox-lanyon/</a></li>
+</ul>
+<hr>
+<h2 id="Jekyll安装"><a href="#Jekyll安装" class="headerlink" title="Jekyll安装"></a>Jekyll安装</h2><p>jekyll相当于一个编译工具，安装好jekyll后可以创建一个网站模板，通过 <a target="_blank" rel="noopener" href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a> 访问网站。</p>
+<p>利用jekyll可以实时修改刚刚创建的模板里的内容，并可以实时通过本地url预览改动后的效果。<br>预览完成后，将博客推送到代码仓库里，再通过 <a href="https://frankenadrixias.github.io/">https://frankenadrixias.github.io/</a> 就可以访问到博客里面的内容了。<br>有了 Jekyll，可以不用每次改动一点点就把代码推送到仓库中进行预览，而是本地就可以预览。<br>GitHub 支持 jekyll，hexo等语法解析。</p>
+<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><p><strong>Windows 下的 jekyll 安装步骤：</strong></p>
+<p>1、首先安装 <a target="_blank" rel="noopener" href="https://rubyinstaller.org/downloads/">Ruby installer</a>，<strong>版本选择3.1.x（更高版本目前有不兼容情况！）</strong><br>按提示安装即可，除了路径以外可以一律默认，注意安装路径中不能有空格！</p>
+<p>检查是否成功安装：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -v</span><br></pre></td></tr></table></figure>
+
+<p>2、安装完成后会弹出一个窗口，此时输入3，再按回车。<br>打开命令行执行：</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>如果在本地构建 jekyll 项目，执行 <code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get <span class="built_in">local</span> issuer certificate) <span class="keyword">in</span> projects.md</span><br></pre></td></tr></table></figure>
+
+<p>请检查自己的所有代理&#x2F;梯子&#x2F;vpn，确保关闭后再重新执行 <code>bundle exec jekyll serve</code><br>成功执行后的结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle <span class="built_in">exec</span> jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed <span class="keyword">for</span> posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    <span class="keyword">done</span> <span class="keyword">in</span> 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled <span class="keyword">for</span> <span class="string">&#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span></span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
+
+<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code> 就可以在本地预览 jekyll 的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/homepage/tags/blog/" rel="tag"><i class="fa fa-tag"></i> blog</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/homepage/2022/07/17/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/" rel="prev" title="一些闲聊">
+                  <i class="fa fa-angle-left"></i> 一些闲聊
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/" rel="next" title="轨迹停留点算法思路">
+                  轨迹停留点算法思路 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="SOHUCS" sid="0683bb1be976683d6637a05a76156c84"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>简体中文</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="选择语言">
+      
+        <option value="zh-CN" data-href="/homepage/2022/07/18/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/homepage/en/2022/07/18/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" selected="">
+          English
+        </option>
+      
+    </select>
+  </div>
+
+  <div class="copyright">
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-star"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Frankenadrixias</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">5k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">19 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/Frankenadrixias" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/homepage/js/comments.js"></script><script src="/homepage/js/utils.js"></script><script src="/homepage/js/motion.js"></script><script src="/homepage/js/next-boot.js"></script><script src="/homepage/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/homepage/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  <script src="/homepage/js/third-party/addtoany.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/homepage/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cywX74Ykh","appkey":"prod_798266b60eaba0c2fb58a0af5de8de5c","count":true}</script>
+<script src="/homepage/js/third-party/comments/changyan.js"></script>
+
+</body>
+</html>
