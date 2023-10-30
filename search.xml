@@ -3,26 +3,66 @@
   <entry>
     <title>CMIP6数据下载相关</title>
     <url>/homepage/2023/08/29/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。</p>
-<span id="more"></span>
-
-<hr>
-<h2 id="数据背景介绍"><a href="#数据背景介绍" class="headerlink" title="数据背景介绍"></a>数据背景介绍</h2><p>CMIP6，即第6次国际耦合模式比较计划（Coupled Model Inter-comparison Project, CMIP），是由世界气候研究计划耦合模拟工作组（WGCM）发起和组织。其最初目的是对当时数量有限的全球耦合气候模式的模拟性能进行比较。但此后全球海-气耦合模式进入了快速发展阶段，全球各大气候模拟中心相继发布大量的大气和海洋模拟数据。因此，产生了对这些模拟结果进行系统分析的需求。为适应这一需求，CMIP 逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。</p>
-<p>1995年，WGCM 发起和组织了 AMIP 计划，对当时数量有限的全球耦合气候模式的性能进行比较。此后，全球海气耦合模式进入了快速发展阶段，模式数量迅速增加，模式数据爆发式增长。全球各大气候模拟中心相继发布大量的大气和海洋模拟数据，科学界迫切需要有专门的组织对这些模拟结果进行系统的分析。为适应这一需求，CMIP 逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。为了实现该目标，CMIP 在设计气候模式试验标准、制定共享数据格式、制定向全球科学界共享气候模拟数据的机制等方面开展了卓有成效的工作。</p>
-<p>WGCM 设立了两个工作小组：一是 CMIP 工作组（CMIP Panel），直接负责 CMIP 的组织协调工作；二是 WGCM 基础设施工作组（Infrastructure Panel），负责制定模式数据共享政策和技术标准。CMIP 试验数据通过地球系统网格联盟（Earth System Grid Federation，ESGF）面向国际科学界提供。</p>
-<p>CMIP6 计划介绍：<a href="https://pcmdi.llnl.gov/CMIP6/">https://pcmdi.llnl.gov/CMIP6/</a> <br>CMIP6 数据下载地址：<a href="https://esgf-node.llnl.gov/search/cmip6/">https://esgf-node.llnl.gov/search/cmip6/</a> <br>建议使用英国源：<a href="https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/">https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/</a></p>
-<h2 id="数据筛选"><a href="#数据筛选" class="headerlink" title="数据筛选"></a>数据筛选</h2><p>CMIP6 各变量及对应缩写介绍：<a href="https://clipc-services.ceda.ac.uk/dreq/mipVars.html">https://clipc-services.ceda.ac.uk/dreq/mipVars.html</a><br>可以通过输入关键词搜索自己想要的变量的缩写，或者在官网下载缩写对应表的 excel 文件。</p>
-<p><img src="/homepage/pic/202308/img.png" alt="pic1"></p>
+    <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
+<span id="more"></span></p>
+<hr />
+<h2 id="数据背景介绍">数据背景介绍</h2>
+<p>CMIP6，即第6次国际耦合模式比较计划（Coupled Model Inter-comparison
+Project,
+CMIP），是由世界气候研究计划耦合模拟工作组（WGCM）发起和组织。其最初目的是对当时数量有限的全球耦合气候模式的模拟性能进行比较。但此后全球海-气耦合模式进入了快速发展阶段，全球各大气候模拟中心相继发布大量的大气和海洋模拟数据。因此，产生了对这些模拟结果进行系统分析的需求。为适应这一需求，CMIP
+逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。</p>
+<p>1995年，WGCM 发起和组织了 AMIP
+计划，对当时数量有限的全球耦合气候模式的性能进行比较。此后，全球海气耦合模式进入了快速发展阶段，模式数量迅速增加，模式数据爆发式增长。全球各大气候模拟中心相继发布大量的大气和海洋模拟数据，科学界迫切需要有专门的组织对这些模拟结果进行系统的分析。为适应这一需求，CMIP
+逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。为了实现该目标，CMIP
+在设计气候模式试验标准、制定共享数据格式、制定向全球科学界共享气候模拟数据的机制等方面开展了卓有成效的工作。</p>
+<p>WGCM 设立了两个工作小组：一是 CMIP 工作组（CMIP Panel），直接负责
+CMIP 的组织协调工作；二是 WGCM 基础设施工作组（Infrastructure
+Panel），负责制定模式数据共享政策和技术标准。CMIP
+试验数据通过地球系统网格联盟（Earth System Grid
+Federation，ESGF）面向国际科学界提供。</p>
+<p>CMIP6 计划介绍：<a
+href="https://pcmdi.llnl.gov/CMIP6/">https://pcmdi.llnl.gov/CMIP6/</a><br />
+CMIP6 数据下载地址：<a
+href="https://esgf-node.llnl.gov/search/cmip6/">https://esgf-node.llnl.gov/search/cmip6/</a><br />
+建议使用英国源：https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/</p>
+<h2 id="数据筛选">数据筛选</h2>
+<p>CMIP6
+各变量及对应缩写介绍：https://clipc-services.ceda.ac.uk/dreq/mipVars.html
+可以通过输入关键词搜索自己想要的变量的缩写，或者在官网下载缩写对应表的
+excel 文件。</p>
+<figure>
+<img src="/pic/202308/img.png" alt="pic1" />
+<figcaption aria-hidden="true">pic1</figcaption>
+</figure>
 <p>这里对一般情况下，我们用到的检索条件做个简要的介绍</p>
-<p>MIP Era：即MIP代际数，这里只有一个可选，即最新的MIP6；<br>Activity：项目计划；<br>Product：研究产品，即模型输出，这里依旧是只有一个model-output可选；</p>
-<p>Variable：研究的变量，如降雨、降雪、均温等等；<br>Frequency：研究的时间尺度，如日尺度、月尺度，小时尺度等等；<br>Experiment ID：研究的实验场景，如历史模拟(historical)，各种ssp情景等等。</p>
+<p>MIP Era：即MIP代际数，这里只有一个可选，即最新的MIP6；<br />
+Activity：项目计划；<br />
+Product：研究产品，即模型输出，这里依旧是只有一个model-output可选；</p>
+<p>Variable：研究的变量，如降雨、降雪、均温等等；<br />
+Frequency：研究的时间尺度，如日尺度、月尺度，小时尺度等等；<br />
+Experiment
+ID：研究的实验场景，如历史模拟(historical)，各种ssp情景等等。</p>
 <ul>
-<li>其中，ssp后的数字含义为共享的社会经济路径 (Shared Socioeconomic Pathways, SSP) + 代表性浓度路径 (Representative Concentration Pathways, RCP)。</li>
-<li>举例来说，ssp245指的是在ssp2路径下（即“中间路线”世界），温室气体等辐射强迫控制在 $4.5W&#x2F;m^2$ 的情景</li>
+<li>其中，ssp后的数字含义为共享的社会经济路径 (Shared Socioeconomic
+Pathways, SSP) + 代表性浓度路径 (Representative Concentration Pathways,
+RCP)。</li>
+<li>举例来说，ssp245指的是在ssp2路径下（即“中间路线”世界），温室气体等辐射强迫控制在
+<span class="math inline">\(4.5W/m^2\)</span> 的情景</li>
 </ul>
-<p><strong>一般来说，选了以上三个检索条件后，就可以点击search了。</strong><br>在结果中再点击Source ID，查看有哪些模型符合这个检索条件。需根据实际情况进行调整。<br>注意：有的时候search会显示没有对应文件或者文件失效，这个时候可以把Show All Replicas选中再search就有文件了。</p>
-<p><img src="/homepage/pic/202308/img1.png" alt="pic2"></p>
-<p>一些指令： <br>wget -c -i C:&#x2F;Users&#x2F;Lenovo&#x2F;Downloads&#x2F;ssp245-day-tasmax.txt -P E:&#x2F;Data&#x2F;cmip6&#x2F;ssp245-day-tasmax –no-check-certificate <br>wget -c -i C:&#x2F;Users&#x2F;Lenovo&#x2F;Downloads&#x2F;ssp245-day-hurs.txt -P E:&#x2F;Data&#x2F;cmip6&#x2F;ssp245-day-hurs</p>
+<p><strong>一般来说，选了以上三个检索条件后，就可以点击search了。</strong><br />
+在结果中再点击Source
+ID，查看有哪些模型符合这个检索条件。需根据实际情况进行调整。
+注意：有的时候search会显示没有对应文件或者文件失效，这个时候可以把Show
+All Replicas选中再search就有文件了。</p>
+<figure>
+<img src="/pic/202308/img1.png" alt="pic2" />
+<figcaption aria-hidden="true">pic2</figcaption>
+</figure>
+<p>一些指令：<br />
+wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-tasmax.txt -P
+E:/Data/cmip6/ssp245-day-tasmax --no-check-certificate<br />
+wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-hurs.txt -P
+E:/Data/cmip6/ssp245-day-hurs</p>
 ]]></content>
       <categories>
         <category>blog</category>
@@ -32,26 +72,43 @@
       </tags>
   </entry>
   <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/2022/07/17/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题"><a href="#测试一下一级标题" class="headerlink" title="测试一下一级标题"></a>测试一下一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><span id="more"></span>
-
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试"><a href="#列表测试" class="headerlink" title="列表测试"></a>列表测试</h2><ol>
-<li>第1个</li>
-<li>第2个<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul>
-</li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h2><p>行内公式： $a + b &#x3D; c$</p>
-<p>行间公式：</p>
-<p>$$ x &#x3D; \frac{\sqrt{-b \pm b^2-4ac}}{2a} \tag{1} $$</p>
+    <title>Hello World</title>
+    <url>/homepage/2022/07/16/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到 <a
+href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
+href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
+时遇到任何问题，你可以在<a
+href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
+中找到答案，也可以在 <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.
+<span id="more"></span></p>
+<h2 id="quick-start">Quick Start</h2>
+<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>安装公式渲染器，然后再<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">安装
+pandoc</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
+<p>创建公钥，安装 git 部署插件，部署到 github 服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h2 id="具体细节">具体细节</h2>
+<p>新建博文 Create a new post<br />
+More info: <a href="https://hexo.io/docs/writing.html">Writing</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>运行本地服务器 Run server<br />
+More info: <a href="https://hexo.io/docs/server.html">Server</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
+<p>生成静态页面 Generate static files<br />
+More info: <a href="https://hexo.io/docs/generating.html">Generating</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
+<p>部署到远程服务器 Deploy to remote sites<br />
+More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>default</category>
@@ -61,32 +118,32 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/homepage/2022/07/16/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo 时遇到任何问题，你可以在<a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，也可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <title>一些闲聊</title>
+    <url>/homepage/2022/07/17/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
 <span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>安装 nodejs，然后通过 npm 安装 hexo</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>安装公式渲染器，然后再<a href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">安装 pandoc</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure>
-
-<p>创建公钥，安装 git 部署插件，部署到 github 服务器</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
-
-<h2 id="具体细节"><a href="#具体细节" class="headerlink" title="具体细节"></a>具体细节</h2><p>新建博文 Create a new post <br>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>运行本地服务器 Run server <br>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>生成静态页面 Generate static files <br>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>部署到远程服务器 Deploy to remote sites <br>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
 ]]></content>
       <categories>
         <category>default</category>
@@ -98,19 +155,21 @@
   <entry>
     <title>代码教程与注意事项</title>
     <url>/homepage/2022/07/27/%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
-    <content><![CDATA[<p>代码教程与注意事项</p>
-<span id="more"></span>
-<hr>
-<h2 id="Python相关"><a href="#Python相关" class="headerlink" title="Python相关"></a>Python相关</h2><h3 id="Opencv-python"><a href="#Opencv-python" class="headerlink" title="Opencv-python"></a>Opencv-python</h3><p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
+    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span> ***</p>
+<h2 id="python相关">Python相关</h2>
+<h3 id="opencv-python">Opencv-python</h3>
+<p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
-
-<h2 id="jekyll"><a href="#jekyll" class="headerlink" title="jekyll"></a>jekyll</h2><p>如果在本地构建 jekyll 项目，执行 <code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
+<h2 id="jekyll">jekyll</h2>
+<p>如果在本地构建 jekyll 项目，执行
+<code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get local issuer certificate) in projects.md</span><br></pre></td></tr></table></figure>
-
-<p>请检查自己的所有代理&#x2F;梯子&#x2F;vpn，确保关闭后再重新执行 <code>bundle exec jekyll serve</code><br>成功执行后的结果：</p>
+<p>请检查自己的所有代理/梯子/vpn，确保关闭后再重新执行
+<code>bundle exec jekyll serve</code> 成功执行后的结果：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle exec jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed for posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    done in 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled for &#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
-
-<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code> 就可以在本地预览 jekyll 的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
+<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
+就可以在本地预览 jekyll
+的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
 ]]></content>
       <categories>
         <category>blog</category>
@@ -122,16 +181,50 @@
   <entry>
     <title>多元回归分析</title>
     <url>/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。</p>
-<span id="more"></span>
-
-<hr>
-<h3 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h3><h4 id="1、多元线性回归的相关概念"><a href="#1、多元线性回归的相关概念" class="headerlink" title="1、多元线性回归的相关概念"></a>1、多元线性回归的相关概念</h4><p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个&#x2F;组变量（自变量，用 $X$ 表示）的取值来估计另一个变量（因变量，用 $Y$ 表示）的值。</p>
-<p>在实际问题中，随机变量 $Y$ 往往与多个普通变量 $x_1,x_2,…,x_p ,(p&gt;1)$ 有关。对于自变量 $x_1,x_2,…,x_p$ 的一组确定的值，$Y$ 有它的分布。我们可以用 $F(Y \vert x_1,x_2,…,x_p)$ 来表示当 $x_1,x_2,…,x_p$ 取确定值时，所对应的 $Y$ 的分布函数。</p>
-<p>如果能够发掘 $F(Y \vert x_1,x_2,…,x_p)$ 随 $x_1,x_2,…,x_p$ 取值的变化规律，就可以完全确定 $Y$ 和 $X$ 之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察 $Y$ 的数学期望 $E(Y)$。即若 $Y$ 的数学期望存在，则其值随 $x_1,x_2,…,x_p$ 的取值而定，因而它是 $x_1,x_2,…,x_p$ 的函数，记为 $\mu_{Y \vert x_1,x_2,…,x_p}$ 或 $\mu(x_1,x_2,…,x_p)$ 即为 $Y$ 关于 $x$ 的回归函数，从而将讨论 $Y$ 和 $X$ 之间的相关关系问题转化为讨论 $E(Y) &#x3D; \mu(x_1,x_2,…,x_p)$ 与 $x_1,x_2,…,x_p$ 的函数关系问题。</p>
-<p>当 $\mu (x_1,x_2,…,x_p)$ 是 $x_1,x_2,…,x_p$ 的线性函数时，有：</p>
-<p>$$ Y &#x3D; b_0 + b_1x_1 + … + b_px_p + \epsilon, , \epsilon \sim N(0, \sigma^2) \tag{1} $$</p>
-<p>其中 $b_0,b_1,…,b_p, \sigma^2$ 均为与 $x_1,x_2,…,x_p$ 无关的未知参数。</p>
+    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
+<span id="more"></span></p>
+<hr />
+<h3 id="多元线性回归">多元线性回归</h3>
+<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
+<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
+<span class="math inline">\(X\)</span>
+表示）的取值来估计另一个变量（因变量，用 <span
+class="math inline">\(Y\)</span> 表示）的值。</p>
+<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
+往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
+\,(p&gt;1)\)</span> 有关。对于自变量 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
+class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
+class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
+<span class="math inline">\(Y\)</span> 的分布函数。</p>
+<p>如果能够发掘 <span class="math inline">\(F(Y \vert
+x_1,x_2,...,x_p)\)</span> 随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span>
+取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
+<span class="math inline">\(X\)</span>
+之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
+<span class="math inline">\(Y\)</span> 的数学期望 <span
+class="math inline">\(E(Y)\)</span>。即若 <span
+class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
+class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
+class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
+class="math inline">\(Y\)</span> 关于 <span
+class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
+class="math inline">\(Y\)</span> 和 <span
+class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
+class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
+<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span>
+的线性函数时，有：</p>
+<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
+\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
+<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
+均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
+无关的未知参数。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -144,32 +237,66 @@
   <entry>
     <title>轨迹停留点算法思路</title>
     <url>/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/</url>
-    <content><![CDATA[<p>介绍一下轨迹停留点提取的相关算法</p>
-<span id="more"></span>
-<hr>
-<h2 id="DBSCAN算法"><a href="#DBSCAN算法" class="headerlink" title="DBSCAN算法"></a>DBSCAN算法</h2><p><strong>DBSCAN</strong>（Density-Based Spatial Clustering of Applications with Noise，具有噪声的基于密度的空间聚类方法）算法将点集中具有足够密度的区域划分为不同的簇，簇可以为任意形状，定义为密度相连点的最大集合。</p>
-<p><strong>算法实现过程：</strong><br>在点集中任选一点，找到距该点距离 ≤ eps 的所有点。<br>若其数目 &lt; min_samples，则该点标记为噪声；<br>反之标记为核心样本点，并分配一个新的簇标签。<br>然后访问该点在距离 eps 以内的所有邻居：<br>若其未被分配簇，则分配新的簇标签；若其为核心样本点，则依次访问其邻居。<br>以此类推，直到在簇内各核心样本点的 eps 距离内无更多的核心样本点为止。<br>之后选取另一个未被访问的点，并重复以上相同的过程。<br><img src="/homepage/pic/202207/img.png" alt="pic0"></p>
-<h3 id="Traj-DBSCAN算法"><a href="#Traj-DBSCAN算法" class="headerlink" title="Traj-DBSCAN算法"></a>Traj-DBSCAN算法</h3><p>Traj-DBSCAN算法出自论文：Robust and Hierarchical Stop Discovery in Sparse and Diverse Trajectories.<br>其在DBSCAN的基础上，将邻居的计算从空间相邻改为时间线性相邻，而核心点计算则用停留时间代替周边点的数目。<br>TrajDBSCAN实现了“停留点集是子轨迹”的要求，其子轨迹内部所有点在空间上邻近，距离中心点小于距离阈值Eps，且子轨迹持续时长高于时间阈值MinTime，因此判断为轨迹在该处停留。</p>
-<p><img src="/homepage/pic/202207/img_1.png" alt="pic1"></p>
-<p>在此基础上，Traj-DBSCAN还实现了识别多条轨迹的“公共停留点”以及层次化停留点分析。</p>
-<hr>
-<h2 id="CB-SMoT算法"><a href="#CB-SMoT算法" class="headerlink" title="CB-SMoT算法"></a>CB-SMoT算法</h2><p>取自论文：A Clustering-based Approach for Discovering Interesting Places in Trajectories<br>先前的停留点挖掘思路通常要根据预定义的停留区来做停留检测，而该文则提出了一种基于速度的时空聚类方法，识别轨迹中的慢速区域，从而实现对轨迹上重要位置的挖掘。</p>
+    <content><![CDATA[<p>介绍一下轨迹停留点提取的相关算法 <span id="more"></span> ***</p>
+<h2 id="dbscan算法">DBSCAN算法</h2>
+<p><strong>DBSCAN</strong>（Density-Based Spatial Clustering of
+Applications with
+Noise，具有噪声的基于密度的空间聚类方法）算法将点集中具有足够密度的区域划分为不同的簇，簇可以为任意形状，定义为密度相连点的最大集合。</p>
+<p><strong>算法实现过程：</strong> 在点集中任选一点，找到距该点距离 ≤
+eps 的所有点。 若其数目 &lt; min_samples，则该点标记为噪声；
+反之标记为核心样本点，并分配一个新的簇标签。 然后访问该点在距离 eps
+以内的所有邻居：
+若其未被分配簇，则分配新的簇标签；若其为核心样本点，则依次访问其邻居。
+以此类推，直到在簇内各核心样本点的 eps 距离内无更多的核心样本点为止。
+之后选取另一个未被访问的点，并重复以上相同的过程。 <img
+src="/pic/202207/img.png" alt="pic0" /></p>
+<h3 id="traj-dbscan算法">Traj-DBSCAN算法</h3>
+<p>Traj-DBSCAN算法出自论文：Robust and Hierarchical Stop Discovery in
+Sparse and Diverse Trajectories.
+其在DBSCAN的基础上，将邻居的计算从空间相邻改为时间线性相邻，而核心点计算则用停留时间代替周边点的数目。
+TrajDBSCAN实现了“停留点集是子轨迹”的要求，其子轨迹内部所有点在空间上邻近，距离中心点小于距离阈值Eps，且子轨迹持续时长高于时间阈值MinTime，因此判断为轨迹在该处停留。</p>
+<figure>
+<img src="/pic/202207/img_1.png" alt="pic1" />
+<figcaption aria-hidden="true">pic1</figcaption>
+</figure>
+<p>在此基础上，Traj-DBSCAN还实现了识别多条轨迹的“公共停留点”以及层次化停留点分析。
+***</p>
+<h2 id="cb-smot算法">CB-SMoT算法</h2>
+<p>取自论文：A Clustering-based Approach for Discovering Interesting
+Places in Trajectories
+先前的停留点挖掘思路通常要根据预定义的停留区来做停留检测，而该文则提出了一种基于速度的时空聚类方法，识别轨迹中的慢速区域，从而实现对轨迹上重要位置的挖掘。</p>
 <p>下图中的ABC是已知的候选停留点，而XY是实际停留但未标记出的的位置。</p>
-<p><img src="/homepage/pic/202207/img_2.png" alt="pic2"></p>
+<figure>
+<img src="/pic/202207/img_2.png" alt="pic2" />
+<figcaption aria-hidden="true">pic2</figcaption>
+</figure>
 <p>CB-SMoT算法是DBSCAN聚类算法的改进，有很多概念类似（如核心点、密度直达、密度可达等），其与DBSCAN的不同之处在于对邻域与核心点的定义不同。</p>
 <p><strong>CB-SMoT对邻域定义如下：</strong></p>
-<p><img src="/homepage/pic/202207/img_3.png" alt="pic3"></p>
-<p><strong>核心点(Core Point)定义：</strong><br>点集中的某一点，其Eps线性邻域内的轨迹持续时长高于时间阈值MinTime。该定义的本质上是实现了速度限制条件。</p>
-<h3 id="算法实现方式"><a href="#算法实现方式" class="headerlink" title="算法实现方式"></a>算法实现方式</h3><p>1、首先判断该点是否被处理过，若未处理则计算在阈值距离内的邻域点集合，并标记该点为处理过；<br>2、判断该邻域点形成的子轨迹的持续时间是否超过阈值，若是则该点加入核心点集；<br>3、对于该核心点的邻域点集中的其他未处理点重复步骤1-2，同时扩充相应的邻域点集、核心点集，邻域点集内所有点都处理完毕；<br>4、将核心点集加入驻留点集中，重新回到步骤1，直到所有点都处理完毕。</p>
+<figure>
+<img src="/pic/202207/img_3.png" alt="pic3" />
+<figcaption aria-hidden="true">pic3</figcaption>
+</figure>
+<p><strong>核心点(Core Point)定义：</strong>
+点集中的某一点，其Eps线性邻域内的轨迹持续时长高于时间阈值MinTime。该定义的本质上是实现了速度限制条件。</p>
+<h3 id="算法实现方式">算法实现方式</h3>
+<p>1、首先判断该点是否被处理过，若未处理则计算在阈值距离内的邻域点集合，并标记该点为处理过；
+2、判断该邻域点形成的子轨迹的持续时间是否超过阈值，若是则该点加入核心点集；
+3、对于该核心点的邻域点集中的其他未处理点重复步骤1-2，同时扩充相应的邻域点集、核心点集，邻域点集内所有点都处理完毕；
+4、将核心点集加入驻留点集中，重新回到步骤1，直到所有点都处理完毕。</p>
 <ul>
-<li>input: Track Point Series <code>&#123;Track_df&#125;</code>, Time Threshold <code>Min_Time</code>, Distance Threshold <code>Distance</code></li>
+<li>input: Track Point Series <code>&#123;Track_df&#125;</code>, Time Threshold
+<code>Min_Time</code>, Distance Threshold <code>Distance</code></li>
 <li>output: Set of Stationary Points <code>&#123;Track_Stops&#125;</code></li>
 </ul>
-<p><img src="/homepage/pic/202207/img_4.png" alt="pic4"></p>
+<figure>
+<img src="/pic/202207/img_4.png" alt="pic4" />
+<figcaption aria-hidden="true">pic4</figcaption>
+</figure>
 <p><strong>具体python实现代码：</strong></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用CB-SMoT算法对轨迹的停留点进行提取</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cbSMoT_cluster</span>(<span class="params">track_df: pd.DataFrame, distance: <span class="built_in">float</span>, min_time: <span class="built_in">float</span></span>):</span><br><span class="line">    X = track_df[[<span class="string">&#x27;timestamp&#x27;</span>, <span class="string">&quot;lng&quot;</span>, <span class="string">&quot;lat&quot;</span>]]    <span class="comment"># 设置聚类基于的属性</span></span><br><span class="line">    track_stops = <span class="built_in">set</span>()             <span class="comment"># 用于保留最终的停留点集</span></span><br><span class="line">    process = np.zeros(<span class="built_in">len</span>(X))      <span class="comment"># 存储当前点是否被处理过</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(X)):         <span class="comment"># 对于轨迹中的所有点</span></span><br><span class="line">        <span class="keyword">if</span> process[i] == <span class="number">0</span>:         <span class="comment"># 如果该点未被处理：</span></span><br><span class="line">            <span class="comment"># 计算该点的线性邻居（基于给定的距离），并标记为处理过</span></span><br><span class="line">            min_Pi, max_Pi = compute_linear_neighbours(X, i, distance)</span><br><span class="line">            Neighbour = <span class="built_in">set</span>(<span class="built_in">range</span>(min_Pi, max_Pi + <span class="number">1</span>))</span><br><span class="line">            process[i] = <span class="number">1</span></span><br><span class="line">            <span class="comment"># 如果停留时间超过阈值</span></span><br><span class="line">            <span class="keyword">if</span> compute_time(X.iloc[max_Pi], X.iloc[min_Pi]) &gt;= min_time:</span><br><span class="line">                cluster = &#123;i&#125;               <span class="comment"># 该点加入核心点集</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> Neighbour:         <span class="comment"># 对该邻域点集中的其他未处理点重复上述步骤</span></span><br><span class="line">                    <span class="keyword">if</span> process[j] == <span class="number">0</span>:     <span class="comment"># 如果该点未被处理：</span></span><br><span class="line">                        cluster.union(&#123;j&#125;)  <span class="comment"># 扩充相应的核心点集</span></span><br><span class="line">                        <span class="comment"># 计算该点的线性邻居</span></span><br><span class="line">                        min_Pj, max_Pj = compute_linear_neighbours(X, i, distance)</span><br><span class="line">                        Neighbour_1 = <span class="built_in">set</span>(<span class="built_in">range</span>(min_Pj, max_Pj + <span class="number">1</span>))</span><br><span class="line">                        <span class="comment"># 如果停留时间超过阈值</span></span><br><span class="line">                        <span class="keyword">if</span> compute_time(X.iloc[max_Pj], X.iloc[min_Pj]) &gt;= min_time:</span><br><span class="line">                            <span class="comment"># 扩充相应的邻域点集</span></span><br><span class="line">                            Neighbour = Neighbour.union(Neighbour_1)</span><br><span class="line">                <span class="comment"># 将核心点集加入驻留点集中</span></span><br><span class="line">                track_stops = track_stops.union(cluster)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">    <span class="comment"># 直到所有点都处理完毕</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span>(track_stops)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找与路径点Ti的累计轨迹距离在D以内的近邻</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_linear_neighbours</span>(<span class="params">track_df: pd.DataFrame, index: <span class="built_in">int</span>, distance: <span class="built_in">float</span></span>):</span><br><span class="line">    <span class="comment"># 初始起终路径点</span></span><br><span class="line">    min_index, max_index = <span class="number">0</span>, <span class="built_in">len</span>(track_df) - <span class="number">1</span></span><br><span class="line">    total_dis = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 计算最小路径点</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(index, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">        <span class="comment"># 计算相邻点之间的距离</span></span><br><span class="line">        dis = compute_distance(track_df.iloc[i], track_df.iloc[i-<span class="number">1</span>])</span><br><span class="line">        total_dis += dis</span><br><span class="line">        <span class="comment"># 如果小于距离阈值则继续，否则终止循环并记录最小路径点</span></span><br><span class="line">        <span class="keyword">if</span> total_dis &lt;= distance: <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            min_index = i + <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 计算最大路径点</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(index, <span class="built_in">len</span>(track_df) - <span class="number">1</span>, <span class="number">1</span>):</span><br><span class="line">        <span class="comment"># 计算相邻点之间的距离</span></span><br><span class="line">        dis = compute_distance(track_df.iloc[i], track_df.iloc[i+<span class="number">1</span>])</span><br><span class="line">        total_dis += dis</span><br><span class="line">        <span class="comment"># 如果小于距离阈值则继续，否则终止循环并记录最小路径点</span></span><br><span class="line">        <span class="keyword">if</span> total_dis &lt;= distance: <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            max_index = i - <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> min_index, max_index</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算两点之间欧氏距离</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_distance</span>(<span class="params">tp1, tp2</span>):</span><br><span class="line">    dis = ((tp1.lng - tp2.lng) ** <span class="number">2</span> + (tp1.lat - tp2.lat) ** <span class="number">2</span>) ** <span class="number">0.5</span></span><br><span class="line">    <span class="keyword">return</span> dis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算两点之间时间差</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_time</span>(<span class="params">tp1, tp2</span>):</span><br><span class="line">    <span class="keyword">return</span> tp1.timestamp - tp2.timestamp</span><br></pre></td></tr></table></figure>
-
-<h3 id="计算轨迹的平均路径点移动距离与停留时间"><a href="#计算轨迹的平均路径点移动距离与停留时间" class="headerlink" title="计算轨迹的平均路径点移动距离与停留时间"></a>计算轨迹的平均路径点移动距离与停留时间</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 计算平均打点时间</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mean_point_time</span>(<span class="params">track_df: pd.DataFrame</span>):</span><br><span class="line">    length = <span class="built_in">len</span>(track_df)</span><br><span class="line">    time_arr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length - <span class="number">1</span>):</span><br><span class="line">        local_time = compute_time(track_df.iloc[i+<span class="number">1</span>], track_df.iloc[i])</span><br><span class="line">        time_arr = np.append(time_arr, local_time)</span><br><span class="line">    mean_value = data_mean(time_arr)</span><br><span class="line">    <span class="keyword">return</span> mean_value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算平均移动距离</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mean_point_distance</span>(<span class="params">track_df: pd.DataFrame</span>):</span><br><span class="line">    length = <span class="built_in">len</span>(track_df)</span><br><span class="line">    distance_arr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length - <span class="number">1</span>):</span><br><span class="line">        local_distance = compute_distance(track_df.iloc[i+<span class="number">1</span>], track_df.iloc[i])</span><br><span class="line">        distance_arr = np.append(distance_arr, local_distance)</span><br><span class="line">    mean_value = data_mean(distance_arr)</span><br><span class="line">    <span class="keyword">return</span> mean_value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算数组的三个标准差内均值</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">data_mean</span>(<span class="params">data_arr: np.array</span>):</span><br><span class="line">    mean = np.mean(data_arr, axis=<span class="number">0</span>)</span><br><span class="line">    std = np.std(data_arr, axis=<span class="number">0</span>)</span><br><span class="line">    data_array_proc = [x <span class="keyword">for</span> x <span class="keyword">in</span> data_arr <span class="keyword">if</span> (x &gt; mean-<span class="number">3</span>*std) &amp; (x &lt; mean+<span class="number">3</span>*std)]</span><br><span class="line">    mean_proc = np.mean(data_array_proc, axis=<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> mean_proc</span><br></pre></td></tr></table></figure>
+<h3
+id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的平均路径点移动距离与停留时间</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 计算平均打点时间</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mean_point_time</span>(<span class="params">track_df: pd.DataFrame</span>):</span><br><span class="line">    length = <span class="built_in">len</span>(track_df)</span><br><span class="line">    time_arr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length - <span class="number">1</span>):</span><br><span class="line">        local_time = compute_time(track_df.iloc[i+<span class="number">1</span>], track_df.iloc[i])</span><br><span class="line">        time_arr = np.append(time_arr, local_time)</span><br><span class="line">    mean_value = data_mean(time_arr)</span><br><span class="line">    <span class="keyword">return</span> mean_value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算平均移动距离</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mean_point_distance</span>(<span class="params">track_df: pd.DataFrame</span>):</span><br><span class="line">    length = <span class="built_in">len</span>(track_df)</span><br><span class="line">    distance_arr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length - <span class="number">1</span>):</span><br><span class="line">        local_distance = compute_distance(track_df.iloc[i+<span class="number">1</span>], track_df.iloc[i])</span><br><span class="line">        distance_arr = np.append(distance_arr, local_distance)</span><br><span class="line">    mean_value = data_mean(distance_arr)</span><br><span class="line">    <span class="keyword">return</span> mean_value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算数组的三个标准差内均值</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">data_mean</span>(<span class="params">data_arr: np.array</span>):</span><br><span class="line">    mean = np.mean(data_arr, axis=<span class="number">0</span>)</span><br><span class="line">    std = np.std(data_arr, axis=<span class="number">0</span>)</span><br><span class="line">    data_array_proc = [x <span class="keyword">for</span> x <span class="keyword">in</span> data_arr <span class="keyword">if</span> (x &gt; mean-<span class="number">3</span>*std) &amp; (x &lt; mean+<span class="number">3</span>*std)]</span><br><span class="line">    mean_proc = np.mean(data_array_proc, axis=<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> mean_proc</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>blog</category>
