@@ -27,7 +27,7 @@
 <meta property="og:description" content="代码教程与注意事项">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-27T02:59:23.000Z">
-<meta property="article:modified_time" content="2023-10-30T07:16:53.447Z">
+<meta property="article:modified_time" content="2023-10-30T07:16:53.000Z">
 <meta property="article:author" content="Frankenadrixias">
 <meta property="article:tag" content="code">
 <meta name="twitter:card" content="summary">
@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E7%9B%B8%E5%85%B3"><span class="nav-number">1.</span> <span class="nav-text">Python相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Opencv-python"><span class="nav-number">1.1.</span> <span class="nav-text">Opencv-python</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#python%E7%9B%B8%E5%85%B3"><span class="nav-number">1.</span> <span class="nav-text">Python相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#opencv-python"><span class="nav-number">1.1.</span> <span class="nav-text">Opencv-python</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -297,11 +297,11 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>代码教程与注意事项</p>
-<span id="more"></span>
-
-<hr>
-<h2 id="Python相关"><a href="#Python相关" class="headerlink" title="Python相关"></a>Python相关</h2><h3 id="Opencv-python"><a href="#Opencv-python" class="headerlink" title="Opencv-python"></a>Opencv-python</h3><p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
+    <div class="post-body" itemprop="articleBody"><p>代码教程与注意事项 <span id="more"></span></p>
+<hr />
+<h2 id="python相关">Python相关</h2>
+<h3 id="opencv-python">Opencv-python</h3>
+<p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
 
     </div>
