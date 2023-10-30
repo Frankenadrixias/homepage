@@ -1,55 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/homepage/20220716/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到 <a
-href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
-href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
-时遇到任何问题，你可以在<a
-href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
-中找到答案，也可以在 <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.
-<span id="more"></span></p>
-<h2 id="quick-start">Quick Start</h2>
-<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<p>安装公式渲染器，然后再安装 <a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
-<p>创建公钥，安装git部署插件，部署到github服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CMIP6数据下载相关</title>
-    <url>/homepage/20230829/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
+    <url>/homepage/2023/0829/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
 <span id="more"></span> ***</p>
 <h2 id="数据背景介绍">数据背景介绍</h2>
@@ -116,8 +69,55 @@ E:/Data/cmip6/ssp245-day-hurs</p>
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/homepage/2022/0716/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到 <a
+href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
+href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
+时遇到任何问题，你可以在<a
+href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
+中找到答案，也可以在 <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.
+<span id="more"></span></p>
+<h2 id="quick-start">Quick Start</h2>
+<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>安装公式渲染器，然后再安装 <a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
+<p>创建公钥，安装git部署插件，部署到github服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一些闲聊</title>
-    <url>/homepage/20220717/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
+    <url>/homepage/2022/0717/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
     <content><![CDATA[<p>随便写点东西</p>
 <h1 id="测试一下一级标题">测试一下一级标题</h1>
 <h2 id="这是二级标题">这是二级标题</h2>
@@ -152,7 +152,7 @@ E:/Data/cmip6/ssp245-day-hurs</p>
   </entry>
   <entry>
     <title>多元回归分析</title>
-    <url>/homepage/20230310/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
+    <url>/homepage/2023/0310/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
 <span id="more"></span></p>
 <hr />
@@ -207,34 +207,8 @@ class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
       </tags>
   </entry>
   <entry>
-    <title>代码教程与注意事项</title>
-    <url>/homepage/20220727/%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
-    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span> ***</p>
-<h2 id="python相关">Python相关</h2>
-<h3 id="opencv-python">Opencv-python</h3>
-<p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
-<h2 id="jekyll">jekyll</h2>
-<p>如果在本地构建 jekyll 项目，执行
-<code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get local issuer certificate) in projects.md</span><br></pre></td></tr></table></figure>
-<p>请检查自己的所有代理/梯子/vpn，确保关闭后再重新执行
-<code>bundle exec jekyll serve</code> 成功执行后的结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle exec jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed for posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    done in 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled for &#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
-<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
-就可以在本地预览 jekyll
-的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>轨迹停留点算法思路</title>
-    <url>/homepage/20220720/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/</url>
+    <url>/homepage/2022/0720/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/</url>
     <content><![CDATA[<p>介绍一下轨迹停留点提取的相关算法 <span id="more"></span> ***</p>
 <h2 id="dbscan算法">DBSCAN算法</h2>
 <p><strong>DBSCAN</strong>（Density-Based Spatial Clustering of
@@ -301,6 +275,32 @@ id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的�
       </categories>
       <tags>
         <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码教程与注意事项</title>
+    <url>/homepage/2022/0727/%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
+    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span> ***</p>
+<h2 id="python相关">Python相关</h2>
+<h3 id="opencv-python">Opencv-python</h3>
+<p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
+<h2 id="jekyll">jekyll</h2>
+<p>如果在本地构建 jekyll 项目，执行
+<code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get local issuer certificate) in projects.md</span><br></pre></td></tr></table></figure>
+<p>请检查自己的所有代理/梯子/vpn，确保关闭后再重新执行
+<code>bundle exec jekyll serve</code> 成功执行后的结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle exec jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed for posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    done in 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled for &#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
+<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
+就可以在本地预览 jekyll
+的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
       </tags>
   </entry>
 </search>
