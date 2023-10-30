@@ -69,29 +69,38 @@ E:/Data/cmip6/ssp245-day-hurs</p>
       </tags>
   </entry>
   <entry>
-    <title>代码教程与注意事项</title>
-    <url>/homepage/20220727/%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
-    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span> ***</p>
-<h2 id="python相关">Python相关</h2>
-<h3 id="opencv-python">Opencv-python</h3>
-<p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
-<h2 id="jekyll">jekyll</h2>
-<p>如果在本地构建 jekyll 项目，执行
-<code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get local issuer certificate) in projects.md</span><br></pre></td></tr></table></figure>
-<p>请检查自己的所有代理/梯子/vpn，确保关闭后再重新执行
-<code>bundle exec jekyll serve</code> 成功执行后的结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle exec jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed for posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    done in 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled for &#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
-<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
-就可以在本地预览 jekyll
-的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
+    <title>一些闲聊</title>
+    <url>/homepage/20220717/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
 ]]></content>
       <categories>
-        <category>blog</category>
+        <category>default</category>
       </categories>
       <tags>
-        <tag>code</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -133,41 +142,6 @@ href="https://hexo.io/docs/generating.html">Generating</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a
 href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/20220717/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
 ]]></content>
       <categories>
         <category>default</category>
@@ -224,6 +198,32 @@ class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
 均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
 无关的未知参数。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码教程与注意事项</title>
+    <url>/homepage/20220727/%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
+    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span> ***</p>
+<h2 id="python相关">Python相关</h2>
+<h3 id="opencv-python">Opencv-python</h3>
+<p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
+<h2 id="jekyll">jekyll</h2>
+<p>如果在本地构建 jekyll 项目，执行
+<code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get local issuer certificate) in projects.md</span><br></pre></td></tr></table></figure>
+<p>请检查自己的所有代理/梯子/vpn，确保关闭后再重新执行
+<code>bundle exec jekyll serve</code> 成功执行后的结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle exec jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed for posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    done in 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled for &#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
+<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
+就可以在本地预览 jekyll
+的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
 ]]></content>
       <categories>
         <category>blog</category>
