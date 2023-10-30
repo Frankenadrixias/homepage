@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E7%9B%B8%E5%85%B3"><span class="nav-number">1.</span> <span class="nav-text">Python相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Opencv-python"><span class="nav-number">1.1.</span> <span class="nav-text">Opencv-python</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jekyll"><span class="nav-number">2.</span> <span class="nav-text">jekyll</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#python%E7%9B%B8%E5%85%B3"><span class="nav-number">1.</span> <span class="nav-text">Python相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#opencv-python"><span class="nav-number">1.1.</span> <span class="nav-text">Opencv-python</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jekyll"><span class="nav-number">2.</span> <span class="nav-text">jekyll</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -295,19 +295,21 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>代码教程与注意事项</p>
-<span id="more"></span>
-<hr>
-<h2 id="Python相关"><a href="#Python相关" class="headerlink" title="Python相关"></a>Python相关</h2><h3 id="Opencv-python"><a href="#Opencv-python" class="headerlink" title="Opencv-python"></a>Opencv-python</h3><p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
+    <div class="post-body" itemprop="articleBody"><p>代码教程与注意事项 <span id="more"></span> ***</p>
+<h2 id="python相关">Python相关</h2>
+<h3 id="opencv-python">Opencv-python</h3>
+<p>由于imwrite使用编码在python3中已经不适用，可用imencode代替</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
-
-<h2 id="jekyll"><a href="#jekyll" class="headerlink" title="jekyll"></a>jekyll</h2><p>如果在本地构建 jekyll 项目，执行 <code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
+<h2 id="jekyll">jekyll</h2>
+<p>如果在本地构建 jekyll 项目，执行
+<code>bundle exec jekyll serve</code> 时遇到以下报错情况：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">Liquid Exception: SSL_connect returned=1 errno=0 peeraddr=[::1]:443 state=error: certificate verify failed (unable to get local issuer certificate) in projects.md</span><br></pre></td></tr></table></figure>
-
-<p>请检查自己的所有代理&#x2F;梯子&#x2F;vpn，确保关闭后再重新执行 <code>bundle exec jekyll serve</code><br>成功执行后的结果：</p>
+<p>请检查自己的所有代理/梯子/vpn，确保关闭后再重新执行
+<code>bundle exec jekyll serve</code> 成功执行后的结果：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">D:\Documents\PycharmProjects\Frankenadrixias&gt;bundle exec jekyll serve</span><br><span class="line">Configuration file: D:/Documents/PycharmProjects/Frankenadrixias/_config.yml</span><br><span class="line">To use retry middleware with Faraday v2.0+, install `faraday-retry` gem</span><br><span class="line">            Source: D:/Documents/PycharmProjects/Frankenadrixias</span><br><span class="line">       Destination: D:/Documents/PycharmProjects/Frankenadrixias/_site</span><br><span class="line"> Incremental build: disabled. Enable with --incremental</span><br><span class="line">      Generating...</span><br><span class="line">       Jekyll Feed: Generating feed for posts</span><br><span class="line">   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.</span><br><span class="line">                    done in 2.42 seconds.</span><br><span class="line"> Auto-regeneration: enabled for &#x27;D:/Documents/PycharmProjects/Frankenadrixias&#x27;</span><br><span class="line">    Server address: http://127.0.0.1:4000/homepage/</span><br><span class="line">  Server running... press ctrl-c to stop.</span><br></pre></td></tr></table></figure>
-
-<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code> 就可以在本地预览 jekyll 的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
+<p>此时在浏览器内输入网址 <code>http://127.0.0.1:4000/homepage/</code>
+就可以在本地预览 jekyll
+的构建结果了，同时可以更新本地内容，在浏览器端刷新即可。</p>
 
     </div>
 
