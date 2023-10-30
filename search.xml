@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/2022/07/17/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题"><a href="#测试一下一级标题" class="headerlink" title="测试一下一级标题"></a>测试一下一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><span id="more"></span>
-
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试"><a href="#列表测试" class="headerlink" title="列表测试"></a>列表测试</h2><ol>
-<li>第1个</li>
-<li>第2个<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul>
-</li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h2><p>行内公式： $a + b &#x3D; c$</p>
-<p>行间公式：</p>
-<p>$$ x &#x3D; \frac{\sqrt{-b \pm b^2-4ac}}{2a} \tag{1} $$</p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/homepage/2022/07/16/hello-world/</url>
     <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo 时遇到任何问题，你可以在<a href="https://hexo.io/docs/troubleshooting.html">故障排除</a> 中找到答案，也可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
@@ -43,7 +14,13 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure>
 
 <p>安装图片渲染器</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-img --save</span><br><span class="line"></span><br><span class="line">_config.yml</span><br><span class="line">post_asset_folder: <span class="literal">true</span></span><br><span class="line">marked:</span><br><span class="line">  prependRoot: <span class="literal">true</span></span><br><span class="line">  postAsset: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">创建公钥，安装 git 部署插件，部署到 github 服务器</span><br><span class="line">``` bash</span><br><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-img --save</span><br></pre></td></tr></table></figure>
+
+<p>启用下列设置，资源图片将会被自动解析为其对应文章的路径。<br>例如：image.jpg 位置为 &#x2F;2022&#x2F;01&#x2F;02&#x2F;blog-test&#x2F;img.jpg，<img src="/homepage/imag.jpg"> 将会被解析为 <img src="/2022/01/02/blog-test/img.jpg"> 。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">_config.yml</span></span><br><span class="line"><span class="emphasis">post_</span>asset<span class="emphasis">_folder: true</span></span><br><span class="line"><span class="emphasis">marked:</span></span><br><span class="line"><span class="emphasis">  prependRoot: true</span></span><br><span class="line"><span class="emphasis">  postAsset: true</span></span><br></pre></td></tr></table></figure>
+
+<p>创建公钥，安装 git 部署插件，部署到 github 服务器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
 
 <h2 id="具体细节"><a href="#具体细节" class="headerlink" title="具体细节"></a>具体细节</h2><p>新建博文 Create a new post <br>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
@@ -89,6 +66,35 @@
       </tags>
   </entry>
   <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/2022/07/17/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题"><a href="#测试一下一级标题" class="headerlink" title="测试一下一级标题"></a>测试一下一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><span id="more"></span>
+
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试"><a href="#列表测试" class="headerlink" title="列表测试"></a>列表测试</h2><ol>
+<li>第1个</li>
+<li>第2个<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul>
+</li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h2><p>行内公式： $a + b &#x3D; c$</p>
+<p>行间公式：</p>
+<p>$$ x &#x3D; \frac{\sqrt{-b \pm b^2-4ac}}{2a} \tag{1} $$</p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CMIP6数据下载相关</title>
     <url>/homepage/2023/08/29/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。</p>
@@ -111,6 +117,28 @@
 <p><strong>一般来说，选了以上三个检索条件后，就可以点击search了。</strong><br>在结果中再点击Source ID，查看有哪些模型符合这个检索条件。需根据实际情况进行调整。<br>注意：有的时候search会显示没有对应文件或者文件失效，这个时候可以把Show All Replicas选中再search就有文件了。</p>
 <p><img src="/homepage/2023/08/29/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/img1.png" alt="pic2"></p>
 <p>一些指令： <br>wget -c -i C:&#x2F;Users&#x2F;Lenovo&#x2F;Downloads&#x2F;ssp245-day-tasmax.txt -P E:&#x2F;Data&#x2F;cmip6&#x2F;ssp245-day-tasmax –no-check-certificate <br>wget -c -i C:&#x2F;Users&#x2F;Lenovo&#x2F;Downloads&#x2F;ssp245-day-hurs.txt -P E:&#x2F;Data&#x2F;cmip6&#x2F;ssp245-day-hurs</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多元回归分析</title>
+    <url>/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。</p>
+<span id="more"></span>
+
+<hr>
+<h3 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h3><h4 id="1、多元线性回归的相关概念"><a href="#1、多元线性回归的相关概念" class="headerlink" title="1、多元线性回归的相关概念"></a>1、多元线性回归的相关概念</h4><p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个&#x2F;组变量（自变量，用 $X$ 表示）的取值来估计另一个变量（因变量，用 $Y$ 表示）的值。</p>
+<p>在实际问题中，随机变量 $Y$ 往往与多个普通变量 $x_1,x_2,…,x_p ,(p&gt;1)$ 有关。对于自变量 $x_1,x_2,…,x_p$ 的一组确定的值，$Y$ 有它的分布。我们可以用 $F(Y \vert x_1,x_2,…,x_p)$ 来表示当 $x_1,x_2,…,x_p$ 取确定值时，所对应的 $Y$ 的分布函数。</p>
+<p>如果能够发掘 $F(Y \vert x_1,x_2,…,x_p)$ 随 $x_1,x_2,…,x_p$ 取值的变化规律，就可以完全确定 $Y$ 和 $X$ 之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察 $Y$ 的数学期望 $E(Y)$。即若 $Y$ 的数学期望存在，则其值随 $x_1,x_2,…,x_p$ 的取值而定，因而它是 $x_1,x_2,…,x_p$ 的函数，记为 $\mu_{Y \vert x_1,x_2,…,x_p}$ 或 $\mu(x_1,x_2,…,x_p)$ 即为 $Y$ 关于 $x$ 的回归函数，从而将讨论 $Y$ 和 $X$ 之间的相关关系问题转化为讨论 $E(Y) &#x3D; \mu(x_1,x_2,…,x_p)$ 与 $x_1,x_2,…,x_p$ 的函数关系问题。</p>
+<p>当 $\mu (x_1,x_2,…,x_p)$ 是 $x_1,x_2,…,x_p$ 的线性函数时，有：</p>
+<p>$$ Y &#x3D; b_0 + b_1x_1 + … + b_px_p + \epsilon, , \epsilon \sim N(0, \sigma^2) \tag{1} $$</p>
+<p>其中 $b_0,b_1,…,b_p, \sigma^2$ 均为与 $x_1,x_2,…,x_p$ 无关的未知参数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>blog</category>
@@ -154,28 +182,6 @@
       </categories>
       <tags>
         <tag>algorithm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多元回归分析</title>
-    <url>/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。</p>
-<span id="more"></span>
-
-<hr>
-<h3 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h3><h4 id="1、多元线性回归的相关概念"><a href="#1、多元线性回归的相关概念" class="headerlink" title="1、多元线性回归的相关概念"></a>1、多元线性回归的相关概念</h4><p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个&#x2F;组变量（自变量，用 $X$ 表示）的取值来估计另一个变量（因变量，用 $Y$ 表示）的值。</p>
-<p>在实际问题中，随机变量 $Y$ 往往与多个普通变量 $x_1,x_2,…,x_p ,(p&gt;1)$ 有关。对于自变量 $x_1,x_2,…,x_p$ 的一组确定的值，$Y$ 有它的分布。我们可以用 $F(Y \vert x_1,x_2,…,x_p)$ 来表示当 $x_1,x_2,…,x_p$ 取确定值时，所对应的 $Y$ 的分布函数。</p>
-<p>如果能够发掘 $F(Y \vert x_1,x_2,…,x_p)$ 随 $x_1,x_2,…,x_p$ 取值的变化规律，就可以完全确定 $Y$ 和 $X$ 之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察 $Y$ 的数学期望 $E(Y)$。即若 $Y$ 的数学期望存在，则其值随 $x_1,x_2,…,x_p$ 的取值而定，因而它是 $x_1,x_2,…,x_p$ 的函数，记为 $\mu_{Y \vert x_1,x_2,…,x_p}$ 或 $\mu(x_1,x_2,…,x_p)$ 即为 $Y$ 关于 $x$ 的回归函数，从而将讨论 $Y$ 和 $X$ 之间的相关关系问题转化为讨论 $E(Y) &#x3D; \mu(x_1,x_2,…,x_p)$ 与 $x_1,x_2,…,x_p$ 的函数关系问题。</p>
-<p>当 $\mu (x_1,x_2,…,x_p)$ 是 $x_1,x_2,…,x_p$ 的线性函数时，有：</p>
-<p>$$ Y &#x3D; b_0 + b_1x_1 + … + b_px_p + \epsilon, , \epsilon \sim N(0, \sigma^2) \tag{1} $$</p>
-<p>其中 $b_0,b_1,…,b_p, \sigma^2$ 均为与 $x_1,x_2,…,x_p$ 无关的未知参数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
       </tags>
   </entry>
 </search>
