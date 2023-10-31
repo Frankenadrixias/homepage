@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"frankenadrixias.github.io","root":"/homepage/","images":"/homepage/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":280},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/homepage/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/homepage/js/config.js"></script>
 
-    <meta name="description" content="最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。">
+    <meta name="description" content="随便写点东西 测试一下一级标题 这是二级标题 这是三级标题 这是四级标题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多元回归分析">
-<meta property="og:url" content="https://frankenadrixias.github.io/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/index.html">
+<meta property="og:title" content="一些闲聊">
+<meta property="og:url" content="https://frankenadrixias.github.io/homepage/posts/933a2506/index.html">
 <meta property="og:site_name" content="Frankenadrixias&#39; Homepage">
-<meta property="og:description" content="最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。">
+<meta property="og:description" content="随便写点东西 测试一下一级标题 这是二级标题 这是三级标题 这是四级标题">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-10T07:31:39.000Z">
-<meta property="article:modified_time" content="2023-10-29T14:04:46.187Z">
+<meta property="article:published_time" content="2022-07-17T08:50:13.000Z">
+<meta property="article:modified_time" content="2023-10-31T02:30:16.770Z">
 <meta property="article:author" content="Frankenadrixias">
-<meta property="article:tag" content="code">
+<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://frankenadrixias.github.io/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/">
+<link rel="canonical" href="https://frankenadrixias.github.io/homepage/posts/933a2506/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://frankenadrixias.github.io/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/","path":"2023/03/10/多元回归分析/","title":"多元回归分析"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://frankenadrixias.github.io/homepage/posts/933a2506/","path":"posts/933a2506/","title":"一些闲聊"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>多元回归分析 | Frankenadrixias' Homepage</title>
+<title>一些闲聊 | Frankenadrixias' Homepage</title>
   
 
 
@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-number">1.</span> <span class="nav-text">多元线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">1、多元线性回归的相关概念</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">测试一下一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">这是二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">这是三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">这是四级标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%B5%8B%E8%AF%95"><span class="nav-number">1.2.</span> <span class="nav-text">列表测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95"><span class="nav-number">1.3.</span> <span class="nav-text">代码测试</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -182,6 +182,9 @@
         <a href="https://space.bilibili.com/7397473" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;7397473" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
       </span>
   </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
 
         </div>
       </div>
@@ -204,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://frankenadrixias.github.io/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/">
+    <link itemprop="mainEntityOfPage" href="https://frankenadrixias.github.io/homepage/posts/933a2506/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/homepage/uploads/avatar.png">
@@ -217,12 +220,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="多元回归分析 | Frankenadrixias' Homepage">
+      <meta itemprop="name" content="一些闲聊 | Frankenadrixias' Homepage">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          多元回归分析<a href="https://github.com/Frankenadrixias/homepage/edit/master/source/_posts/_posts/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          一些闲聊<a href="https://github.com/Frankenadrixias/homepage/edit/master/source/_posts/_posts/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
         </h1>
 
         <div class="post-meta-container">
@@ -233,14 +236,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-03-10 15:31:39" itemprop="dateCreated datePublished" datetime="2023-03-10T15:31:39+08:00">2023-03-10</time>
+      <time title="创建时间：2022-07-17 16:50:13" itemprop="dateCreated datePublished" datetime="2022-07-17T16:50:13+08:00">2022-07-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-10-29 22:04:46" itemprop="dateModified" datetime="2023-10-29T22:04:46+08:00">2023-10-29</time>
+      <time title="修改时间：2023-10-31 10:30:16" itemprop="dateModified" datetime="2023-10-31T10:30:16+08:00">2023-10-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -248,7 +251,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/homepage/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
+          <a href="/homepage/categories/default/" itemprop="url" rel="index"><span itemprop="name">default</span></a>
         </span>
     </span>
 
@@ -268,8 +271,8 @@
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="多元回归分析" href="/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::874b1334b8c4596702901640e46190e0" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="一些闲聊" href="/homepage/posts/933a2506/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::350641a74a1bb809a74280e0aecafbbb" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -280,14 +283,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>496</span>
+      <span>123</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -297,51 +300,30 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
-<span id="more"></span></p>
-<hr />
-<h3 id="多元线性回归">多元线性回归</h3>
-<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
-<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
-<span class="math inline">\(X\)</span>
-表示）的取值来估计另一个变量（因变量，用 <span
-class="math inline">\(Y\)</span> 表示）的值。</p>
-<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
-往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
-\,(p&gt;1)\)</span> 有关。对于自变量 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
-class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
-class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
-<span class="math inline">\(Y\)</span> 的分布函数。</p>
-<p>如果能够发掘 <span class="math inline">\(F(Y \vert
-x_1,x_2,...,x_p)\)</span> 随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span>
-取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
-<span class="math inline">\(X\)</span>
-之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
-<span class="math inline">\(Y\)</span> 的数学期望 <span
-class="math inline">\(E(Y)\)</span>。即若 <span
-class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
-class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
-class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
-class="math inline">\(Y\)</span> 关于 <span
-class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
-class="math inline">\(Y\)</span> 和 <span
-class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
-class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
-<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span>
-的线性函数时，有：</p>
-<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
-\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
-<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
-均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
-无关的未知参数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
 
     </div>
 
@@ -350,8 +332,25 @@ class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Frankenadrixias
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://frankenadrixias.github.io/homepage/posts/933a2506/" title="一些闲聊">https://frankenadrixias.github.io/homepage/posts/933a2506/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
           <div class="post-tags">
-              <a href="/homepage/tags/code/" rel="tag"><i class="fa fa-tag"></i> code</a>
+              <a href="/homepage/tags/blog/" rel="tag"><i class="fa fa-tag"></i> blog</a>
           </div>
 
         
@@ -365,13 +364,13 @@ class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/homepage/2022/07/27/%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" rel="prev" title="代码教程与注意事项">
-                  <i class="fa fa-angle-left"></i> 代码教程与注意事项
+                <a href="/homepage/posts/4a17b156/" rel="prev" title="Hello World">
+                  <i class="fa fa-angle-left"></i> Hello World
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/homepage/2023/08/29/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/" rel="next" title="CMIP6数据下载相关">
-                  CMIP6数据下载相关 <i class="fa fa-angle-right"></i>
+                <a href="/homepage/posts/df9e0963/" rel="next" title="jekyll搭建个人主页">
+                  jekyll搭建个人主页 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -384,7 +383,7 @@ class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
 
 
 
-    <div class="comments" id="SOHUCS" sid="874b1334b8c4596702901640e46190e0"></div>
+    <div class="comments" id="SOHUCS" sid="350641a74a1bb809a74280e0aecafbbb"></div>
 </div>
   </main>
 

@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/posts/933a2506/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CMIP6数据下载相关</title>
-    <url>/homepage/2023/08/29/CMIP6%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9B%B8%E5%85%B3/</url>
+    <url>/homepage/posts/b9f1380d/</url>
     <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
 <span id="more"></span></p>
 <hr />
@@ -58,7 +93,7 @@ class="math inline">\(4.5W/m^2\)</span> 的情景</li>
 ID，查看有哪些模型符合这个检索条件。需根据实际情况进行调整。
 注意：有的时候 search 会显示没有对应文件或者文件失效，这个时候可以把
 Show All Replicas 选中再 search 就有文件了。</p>
-<p><img class="image" src="img1.png" width="100%" alt="pic1"></p>
+<p><img class="image" src="img1.png" width="100%" alt="pic2"></p>
 <p>一些指令：<br />
 wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-tasmax.txt -P
 E:/Data/cmip6/ssp245-day-tasmax --no-check-certificate<br />
@@ -74,7 +109,7 @@ E:/Data/cmip6/ssp245-day-hurs</p>
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/homepage/2022/07/16/hello-world/</url>
+    <url>/homepage/posts/4a17b156/</url>
     <content><![CDATA[<h2 id="frankenadrixiashomepage">Frankenadrixias'Homepage</h2>
 <p>欢迎来到 <a
 href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
@@ -102,7 +137,7 @@ pandoc</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span
 <p>安装图片渲染器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-img --save</span><br></pre></td></tr></table></figure></p>
 <p>启用下列设置，资源图片将会被自动解析为其对应文章的路径。
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">marked<span class="punctuation">:</span></span><br><span class="line">  prependRoot<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">  postAsset<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如：image.jpg 位置为 /2022/01/02/blog-test/image.jpg，</span><br><span class="line">![](image.jpg) 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span>&gt;</span></span><br><span class="line">同时也可以用html方法：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span> 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">如果像设置图像的最小缩放宽度，可以用 style 样式：</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">img</span>&#123;<span class="attribute">min-width</span>: <span class="number">400px</span>; <span class="attribute">object-fit</span>:scale-down&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如：image.jpg 位置为 /2022/01/02/blog-test/image.jpg，</span><br><span class="line">![](image.jpg) 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span>&gt;</span></span><br><span class="line">同时也可以用html方法：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span> 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">如果像设置图像的最小缩放宽度，可以用 style 样式：</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.image</span>&#123;<span class="attribute">min-width</span>: <span class="number">600px</span>&#125;    </span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">img</span>&#123;<span class="attribute">object-fit</span>: scale-down&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>创建公钥，安装 git 部署插件，部署到 github 服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure></p>
 <h2 id="具体细节">具体细节</h2>
 <p>新建博文 Create a new post<br />
@@ -127,8 +162,81 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a>
       </tags>
   </entry>
   <entry>
+    <title>代码教程与注意事项</title>
+    <url>/homepage/posts/c880c6a1/</url>
+    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
+<hr />
+<h2 id="python相关">Python相关</h2>
+<h3 id="opencv-python">Opencv-python</h3>
+<p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多元回归分析</title>
+    <url>/homepage/posts/4ba92e57/</url>
+    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
+<span id="more"></span></p>
+<hr />
+<h3 id="多元线性回归">多元线性回归</h3>
+<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
+<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
+<span class="math inline">\(X\)</span>
+表示）的取值来估计另一个变量（因变量，用 <span
+class="math inline">\(Y\)</span> 表示）的值。</p>
+<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
+往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
+\,(p&gt;1)\)</span> 有关。对于自变量 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
+class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
+class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
+<span class="math inline">\(Y\)</span> 的分布函数。</p>
+<p>如果能够发掘 <span class="math inline">\(F(Y \vert
+x_1,x_2,...,x_p)\)</span> 随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span>
+取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
+<span class="math inline">\(X\)</span>
+之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
+<span class="math inline">\(Y\)</span> 的数学期望 <span
+class="math inline">\(E(Y)\)</span>。即若 <span
+class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
+class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
+class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
+class="math inline">\(Y\)</span> 关于 <span
+class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
+class="math inline">\(Y\)</span> 和 <span
+class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
+class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
+<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span>
+的线性函数时，有：</p>
+<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
+\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
+<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
+均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
+无关的未知参数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>jekyll搭建个人主页</title>
-    <url>/homepage/2022/07/18/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</url>
+    <url>/homepage/posts/df9e0963/</url>
     <content><![CDATA[<p>Jekyll 搭建个人主页的步骤与注意事项。</p>
 <p>之前我的个人主页是基于 Jekyll + minimal 模板搭建的，23年10月改为了
 Hexo + NexT。这里把之前用 jekyll
@@ -291,60 +399,8 @@ installer</a>，<strong>版本选择3.1.x（更高版本目前有不兼容情况
       </tags>
   </entry>
   <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/2022/07/17/%E4%B8%80%E4%BA%9B%E9%97%B2%E8%81%8A/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>代码教程与注意事项</title>
-    <url>/homepage/2022/07/27/%E4%BB%A3%E7%A0%81%E6%95%99%E7%A8%8B%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
-    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
-<hr />
-<h2 id="python相关">Python相关</h2>
-<h3 id="opencv-python">Opencv-python</h3>
-<p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>轨迹停留点算法思路</title>
-    <url>/homepage/2022/07/20/%E8%BD%A8%E8%BF%B9%E5%81%9C%E7%95%99%E7%82%B9%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/</url>
+    <url>/homepage/posts/e3e98ef4/</url>
     <content><![CDATA[<p>介绍一下轨迹停留点提取的相关算法 <span id="more"></span></p>
 <hr />
 <style>
@@ -406,62 +462,6 @@ id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的�
       </categories>
       <tags>
         <tag>algorithm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多元回归分析</title>
-    <url>/homepage/2023/03/10/%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
-<span id="more"></span></p>
-<hr />
-<h3 id="多元线性回归">多元线性回归</h3>
-<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
-<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
-<span class="math inline">\(X\)</span>
-表示）的取值来估计另一个变量（因变量，用 <span
-class="math inline">\(Y\)</span> 表示）的值。</p>
-<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
-往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
-\,(p&gt;1)\)</span> 有关。对于自变量 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
-class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
-class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
-<span class="math inline">\(Y\)</span> 的分布函数。</p>
-<p>如果能够发掘 <span class="math inline">\(F(Y \vert
-x_1,x_2,...,x_p)\)</span> 随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span>
-取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
-<span class="math inline">\(X\)</span>
-之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
-<span class="math inline">\(Y\)</span> 的数学期望 <span
-class="math inline">\(E(Y)\)</span>。即若 <span
-class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
-class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
-class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
-class="math inline">\(Y\)</span> 关于 <span
-class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
-class="math inline">\(Y\)</span> 和 <span
-class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
-class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
-<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span>
-的线性函数时，有：</p>
-<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
-\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
-<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
-均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
-无关的未知参数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
       </tags>
   </entry>
 </search>
