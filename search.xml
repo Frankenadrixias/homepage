@@ -181,41 +181,6 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a>
       </tags>
   </entry>
   <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/posts/933a2506/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>jekyll搭建个人主页</title>
     <url>/homepage/posts/df9e0963/</url>
     <content><![CDATA[<p>Jekyll 搭建个人主页的步骤与注意事项。</p>
@@ -374,6 +339,41 @@ installer</a>，<strong>版本选择3.1.x（更高版本目前有不兼容情况
 ]]></content>
       <categories>
         <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/posts/933a2506/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
+]]></content>
+      <categories>
+        <category>default</category>
       </categories>
       <tags>
         <tag>blog</tag>
