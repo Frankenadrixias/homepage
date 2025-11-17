@@ -1,6 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CMIP6数据下载相关</title>
+    <url>/homepage/posts/b9f1380d/</url>
+    <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
+<span id="more"></span></p>
+<hr />
+<style>
+    img{object-fit: scale-down}
+</style>
+<h2 id="数据背景介绍">数据背景介绍</h2>
+<p>CMIP6，即第6次国际耦合模式比较计划（Coupled Model Inter-comparison
+Project,
+CMIP），是由世界气候研究计划耦合模拟工作组（WGCM）发起和组织。其最初目的是对当时数量有限的全球耦合气候模式的模拟性能进行比较。但此后全球海-气耦合模式进入了快速发展阶段，全球各大气候模拟中心相继发布大量的大气和海洋模拟数据。因此，产生了对这些模拟结果进行系统分析的需求。为适应这一需求，CMIP
+逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。</p>
+<p>1995年，WGCM 发起和组织了 AMIP
+计划，对当时数量有限的全球耦合气候模式的性能进行比较。此后，全球海气耦合模式进入了快速发展阶段，模式数量迅速增加，模式数据爆发式增长。全球各大气候模拟中心相继发布大量的大气和海洋模拟数据，科学界迫切需要有专门的组织对这些模拟结果进行系统的分析。为适应这一需求，CMIP
+逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。为了实现该目标，CMIP
+在设计气候模式试验标准、制定共享数据格式、制定向全球科学界共享气候模拟数据的机制等方面开展了卓有成效的工作。</p>
+<p>WGCM 设立了两个工作小组：一是 CMIP 工作组（CMIP Panel），直接负责
+CMIP 的组织协调工作；二是 WGCM 基础设施工作组（Infrastructure
+Panel），负责制定模式数据共享政策和技术标准。CMIP
+试验数据通过地球系统网格联盟（Earth System Grid
+Federation，ESGF）面向国际科学界提供。</p>
+<p>CMIP6 计划介绍：<a
+href="https://pcmdi.llnl.gov/CMIP6/">https://pcmdi.llnl.gov/CMIP6/</a><br />
+CMIP6 数据下载地址：<a
+href="https://esgf-node.llnl.gov/search/cmip6/">https://esgf-node.llnl.gov/search/cmip6/</a><br />
+建议使用英国源：<a
+href="https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/">https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/</a>
+(2023.11.01更新：现在英国源似乎有问题不让下载，还是走官方地址吧)</p>
+<h2 id="数据筛选">数据筛选</h2>
+<p>CMIP6 各变量及对应缩写介绍：<a
+href="https://clipc-services.ceda.ac.uk/dreq/mipVars.html">https://clipc-services.ceda.ac.uk/dreq/mipVars.html</a><br />
+可以通过输入关键词搜索自己想要的变量的缩写，或者在官网下载缩写对应表的
+excel 文件。</p>
+<p><img src="img.png" width="30%" alt="pic1"></p>
+<p>这里对一般情况下，我们用到的检索条件做个简要的介绍</p>
+<p>MIP Era：即 MIP 代际数，这里只有一个可选，即最新的 MIP6；<br />
+Activity：项目计划；<br />
+Product：研究产品，即模型输出，这里依旧是只有一个 model-output
+可选；</p>
+<p>Source ID：各种评估模式的名称，CMIP6 有 9 个模式来自中国；<br />
+Institution ID：各个评估机构的名称；<br />
+Source Type：数据源类型，一般是某种大气动力学模型；<br />
+Nominal Resolution：空间分辨率，一般有 100km、250km 等；</p>
+<p>Experiment ID：研究的实验场景，如历史模拟(historical)，各种 ssp
+情景等等；<br />
+Sub-Experiment：子实验名称；<br />
+Variant Label：变量标签，一般选 r1i1p1f1；<br />
+Grid Label：网格标签，一般选 gn，即原始网格；</p>
+<p>Table ID：研究的时间尺度代码；<br />
+Frequency：研究的时间尺度，如日尺度、月尺度，小时尺度等等；<br />
+Realm：数据领域，如 atmos 代表大气；<br />
+Variable：研究的变量，如降雨、降雪、均温等等；<br />
+CF Standard Name：变量的标准名称；</p>
+<p>Data Node：数据节点，即数据来源。</p>
+<ul>
+<li>其中，ssp 后面的数字含义为<strong>共享的社会经济路径</strong>
+(Shared Socioeconomic Pathways, SSP) + <strong>代表性浓度路径</strong>
+(Representative Concentration Pathways, RCP)。</li>
+<li>举例来说，ssp245 指的是在 ssp2
+路径下（即“中间路线”世界），温室气体等辐射强迫控制在 <span
+class="math inline">\(4.5W/m^2\)</span> 的情景</li>
+</ul>
+<p><strong>一般来说，选了以上三个检索条件后，就可以点击search了。</strong><br />
+在结果中再点击 Source
+ID，查看有哪些模型符合这个检索条件。需根据实际情况进行调整。
+注意：有的时候 search 会显示没有对应文件或者文件失效，这个时候可以把
+Show All Replicas 选中再 search 就有文件了。</p>
+<p><img src="img1.png" width="100%" alt="pic2"></p>
+<p>根据需求筛选好条目之后，点开所有条目的 List
+Files，可以看到每一个对应文件的文件名、checksum 值、文件大小以及 id
+号，还有最重要的下载链接。</p>
+<p><img src="img2.png" width="100%" alt="pic3"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">条目命名规则：&#123;MIP_Era&#125;.&#123;Activity&#125;.&#123;Institution_ID&#125;.&#123;Source_ID&#125;.&#123;Experiment_ID&#125;.&#123;Variant_Label&#125;.&#123;Table_ID&#125;.&#123;Variable&#125;.&#123;Grid_Label&#125;</span><br><span class="line">文件命名规则：&#123;Variable&#125;_&#123;Table_ID&#125;_&#123;Source_ID&#125;_&#123;Experiment_ID&#125;_&#123;Variant_Label&#125;_&#123;Grid_Label&#125;_&#123;Time&#125;.nc</span><br></pre></td></tr></table></figure>
+<h2 id="数据下载">数据下载</h2>
+<p>一般来说 CMIP6 的数据都是 .nc
+文件，且大多都需要连续下载很多的文件，这时候可以使用两个工具：<br />
+</p>
+<ul>
+<li>第一个是 Simple Mass
+Downloader，这是一个浏览器插件，可以实现网页内的下载链接的查找与筛选，也可以实现链接的批量下载
+  <a
+href="https://microsoftedge.microsoft.com/addons/detail/simple-mass-downloader/dbhdfkiddhdhmcikjdgblfjbenjfjlfh">Microsoft
+Edge 链接</a> <a
+href="https://chrome.google.com/webstore/detail/simple-mass-downloader/abdkkegmcbiomijcbdaodaflgehfffed">Google
+Chrome 链接</a></li>
+<li>第二个是 <a
+href="https://eternallybored.org/misc/wget/">Wget</a>，这个工具可以实现批量下载一个
+.txt 文件中的所有下载链接，且具有断点续传功能，非常实用。</li>
+</ul>
+<p>在上述筛选和全部条目 List File
+步骤完成以后（<strong>文件多的条目一定要点击 Show All
+Files</strong>），点击浏览器的 Simple mass downloader
+插件，依次执行下图中的6个步骤，即可得到⼀个包含本页所有下载链接的 txt
+文件并保存到本地。</p>
+<p><img src="img3.png" width="75%" alt="pic4">
+<img src="img4.png" width="100%" alt="pic5"></p>
+<p>之后使用 Wget 批量下载文件，打开命令行输入指令： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-tasmax.txt -P E:/Data/cmip6/ssp245-day-tasmax --no-check-certificate</span><br></pre></td></tr></table></figure>
+其含义是按照 "C:/Users/Lenovo/Downloads/ssp245-day-tasmax.txt"
+中的下载链接，将文件下载到文件夹 "E:/Data/cmip6/ssp245-day-tasmax"
+中，同时不检查网站证书。</p>
+<p>Wget的常用命令可参考：<a
+href="https://hscyber.github.io/posts/a53b1b2b">https://hscyber.github.io/posts/a53b1b2b</a></p>
+<h2 id="数据读取与处理">数据读取与处理</h2>
+<p>根据给定空间范围/坐标数据提取 nc 文件中的数据到 pickle 文件：
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> xarray <span class="keyword">as</span> xr</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">import</span> gc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据给定空间范围 / 坐标数据提取nc文件（L0级）中的数据到 pickle 文件（L1级）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">L0_extract</span>(<span class="params">nc_folder: <span class="built_in">str</span>, lat: <span class="built_in">list</span>, lon: <span class="built_in">list</span>, out_folder: <span class="built_in">str</span>, method: <span class="built_in">str</span></span>):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 数据提取到本地保存</span></span><br><span class="line">    nc_file_col = glob.glob(nc_folder + <span class="string">&#x27;/*.nc&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> nc_file <span class="keyword">in</span> nc_file_col:</span><br><span class="line"></span><br><span class="line">        t1 = time.time()    <span class="comment"># 计时</span></span><br><span class="line">        infile_name = nc_file[nc_file.rfind(<span class="string">&#x27;\\&#x27;</span>) + <span class="number">1</span>:nc_file.rfind(<span class="string">&#x27;.&#x27;</span>)]   <span class="comment"># 输入输出文件</span></span><br><span class="line">        outfile_name = out_folder + <span class="string">&#x27;\\&#x27;</span> + infile_name + <span class="string">&#x27;_CN.zip&#x27;</span></span><br><span class="line">        <span class="keyword">if</span> outfile_name <span class="keyword">in</span> glob.glob(out_folder + <span class="string">&#x27;/*.zip&#x27;</span>):     <span class="comment"># 跳过已经完成的文件</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        dx = xr.open_dataset(nc_file)</span><br><span class="line">        dx[<span class="string">&#x27;time&#x27;</span>] = dx[<span class="string">&#x27;time&#x27;</span>].dt.strftime(<span class="string">&#x27;%Y-%m-%d&#x27;</span>) <span class="comment"># 日期</span></span><br><span class="line">        df = dx.to_dataframe()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 按经纬度范围和时间范围检索数据</span></span><br><span class="line">        <span class="keyword">if</span> method == <span class="string">&#x27;by_region&#x27;</span>:   <span class="comment"># 根据给定空间范围</span></span><br><span class="line">            region_cond = <span class="string">&#x27;lat &gt;= &#x27;</span> + <span class="built_in">str</span>(lat[<span class="number">0</span>]) + <span class="string">&#x27; and lat &lt;= &#x27;</span> + <span class="built_in">str</span>(lat[<span class="number">1</span>]) + \</span><br><span class="line">                          <span class="string">&#x27; and lon &gt;=&#x27;</span> + <span class="built_in">str</span>(lon[<span class="number">0</span>]) + <span class="string">&#x27; and lon &lt;= &#x27;</span> + <span class="built_in">str</span>(lon[<span class="number">1</span>])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">else</span>:   <span class="comment"># 根据给定坐标数据</span></span><br><span class="line">            region_cond = <span class="string">&#x27;lat == &#x27;</span> + <span class="built_in">str</span>(lat[<span class="number">0</span>]) + <span class="string">&#x27; and lon ==&#x27;</span> + <span class="built_in">str</span>(lon[<span class="number">1</span>])</span><br><span class="line">        df_sel = df.query(region_cond).copy()</span><br><span class="line"></span><br><span class="line">        df_sel.to_pickle(outfile_name)  <span class="comment"># 导出为pickle文件</span></span><br><span class="line">        gc.collect()</span><br><span class="line">        t2 = time.time()</span><br><span class="line">        <span class="built_in">print</span>(infile_name, <span class="string">&#x27;costs &#123;0:.2f&#125; minutes&#x27;</span>.<span class="built_in">format</span>((t2 - t1) / <span class="number">60</span>))</span><br></pre></td></tr></table></figure></p>
+<p>根据 pickle 数据文件，按给定时空条件提取数据到 csv 文件：
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> geopandas <span class="keyword">as</span> gpd</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> griddata</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据L1级数据文件，按给定时空条件提取数据到csv文件（L2级）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">L1_extract</span>(<span class="params">in_folder, out_folder, point_file, var_name</span>):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设定筛选时间范围</span></span><br><span class="line">    sel_date_range = pd.date_range(<span class="string">&#x27;2015-01-01&#x27;</span>, <span class="string">&#x27;2050-12-31&#x27;</span>).astype(<span class="built_in">str</span>).to_list()</span><br><span class="line">    gdf_pnt = gpd.read_file(point_file)[[<span class="string">&#x27;city_code&#x27;</span>, <span class="string">&#x27;city_name&#x27;</span>, <span class="string">&#x27;geometry&#x27;</span>]]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 提取数据</span></span><br><span class="line">    <span class="keyword">for</span> folder_name <span class="keyword">in</span> os.listdir(in_folder):</span><br><span class="line">        </span><br><span class="line">        folder_path = os.path.join(in_folder, folder_name)  <span class="comment"># 进入模型子目录</span></span><br><span class="line">        df_all = pd.DataFrame([])       <span class="comment"># 每一个目录保存为一个dataframe</span></span><br><span class="line">        <span class="keyword">for</span> f_name <span class="keyword">in</span> glob.glob(folder_path + <span class="string">&#x27;/*.zip&#x27;</span>)[:]:</span><br><span class="line"></span><br><span class="line">            length = <span class="built_in">len</span>(var_name) + <span class="number">5</span>  <span class="comment"># 字符串匹配提取模型名称</span></span><br><span class="line">            model = f_name[f_name.rfind(var_name + <span class="string">&#x27;_day_&#x27;</span>) + length:]</span><br><span class="line">            model = model[:model.find(<span class="string">&#x27;_&#x27;</span>)]</span><br><span class="line">            </span><br><span class="line">            df = pd.read_pickle(f_name)[[var_name]]     <span class="comment"># 读取pickle文件</span></span><br><span class="line">            sel_bnds = df.index.get_level_values(<span class="string">&#x27;bnds&#x27;</span>).unique()[<span class="number">0</span>]</span><br><span class="line">            df = df.xs(sel_bnds, level=<span class="string">&#x27;bnds&#x27;</span>)</span><br><span class="line">            date_range = df.index.get_level_values(<span class="string">&#x27;time&#x27;</span>).unique()</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 匹配在筛选时间内的数据</span></span><br><span class="line">            <span class="keyword">for</span> days <span class="keyword">in</span> sel_date_range:</span><br><span class="line">                <span class="keyword">if</span> days <span class="keyword">in</span> date_range:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&#x27;Processing:&#x27;</span>, <span class="built_in">str</span>(model), <span class="built_in">str</span>(days))</span><br><span class="line">                    df_day = df.xs(days, level=<span class="string">&#x27;time&#x27;</span>).reset_index()</span><br><span class="line">                    pnt_val = griddata(df_day.loc[:, [<span class="string">&#x27;lon&#x27;</span>, <span class="string">&#x27;lat&#x27;</span>]].to_numpy(),</span><br><span class="line">                                       df_day[var_name].to_list(),</span><br><span class="line">                                       (gdf_pnt.geometry.x.to_list(), gdf_pnt.geometry.y.to_list()),</span><br><span class="line">                                       method=<span class="string">&#x27;linear&#x27;</span>)</span><br><span class="line">                    </span><br><span class="line">                    df_out = pd.DataFrame([])   <span class="comment"># 设置临时dataframe存储数据</span></span><br><span class="line">                    df_out[<span class="string">&#x27;city_code&#x27;</span>] = gdf_pnt.city_code</span><br><span class="line">                    df_out[var_name + <span class="string">&#x27;_&#x27;</span> + model] = pnt_val</span><br><span class="line">                    df_out[<span class="string">&#x27;date&#x27;</span>] = days</span><br><span class="line">                    df_all = pd.concat([df_all, df_out])    <span class="comment"># dataframe拼接</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 设置保存路径及文件名，保存为csv文件</span></span><br><span class="line">        out_path = os.path.join(out_folder, var_name)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(out_path):</span><br><span class="line">            os.mkdir(out_path)</span><br><span class="line">        out_file = os.path.join(out_path, var_name + <span class="string">&#x27;_&#x27;</span> + folder_name + <span class="string">&#x27;.csv&#x27;</span>)</span><br><span class="line">        df_all.to_csv(out_file, index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="其他相关教程及参考资料">其他相关教程及参考资料</h2>
+<p>CMIP6 简介与数据工具 ACCCMIP6 介绍：<a
+href="https://zhuanlan.zhihu.com/p/599843527">https://zhuanlan.zhihu.com/p/599843527</a></p>
+<p><strong>参考文献：</strong><br />
+王磊, 包庆, 何编. CMIP6 高分辨率模式比较计划（HighResMIP）概况与评述[J].
+气候变化研究进展, 2019, 15(5): 498-502.<br />
+DOI: 10.12006/j.issn.1673-1719.2019.077 周天军, 邹立维, 陈晓龙.
+第六次国际耦合模式比较计划(CMIP6)评述[J]. 气候变化研究进展, 2019,
+15(05): 445-456.</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python-Dataframe SQL教程</title>
     <url>/homepage/posts/e4bc4527/</url>
     <content><![CDATA[<p>在 Python 中，对<code>pandas.Dataframe</code>进行 SQL
@@ -12,12 +138,18 @@ SQL 查询的操作。</p>
 SQL 语句进行查询操作，因此一般还是用上述两种方法来完成 SQL 查询。</p>
 <p><code>sqlite</code>的操作流程：</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line">conn = sqlite3.connect(<span class="string">&#x27;example.db&#x27;</span>)</span><br><span class="line"><span class="comment"># 连接后创建一个 Cursor 对象并调用其 execute() 方法来执行 SQL 命令</span></span><br><span class="line">c = conn.cursor()</span><br><span class="line"><span class="comment"># 创建表</span></span><br><span class="line">c.execute(<span class="string">&#x27;&#x27;&#x27;CREATE TABLE stocks(date text, trans text, symbol text, qty real, price real)&#x27;&#x27;&#x27;</span>)</span><br><span class="line"><span class="comment"># 添加一行数据</span></span><br><span class="line">c.execute(<span class="string">&quot;INSERT INTO stocks VALUES (&#x27;2006-01-05&#x27;,&#x27;BUY&#x27;,&#x27;RHAT&#x27;,100,35.14)&quot;</span>)</span><br><span class="line"><span class="comment"># 保存修改</span></span><br><span class="line">conn.commit()</span><br><span class="line"><span class="comment"># 关闭连接</span></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-<p><strong>两种方式的优缺点：</strong> Pandas 基本操作语句 -
-优点：不需要额外安装第三方库，大多数场景内置函数都可以满足需求 -
-缺点：在有些数据处理计算中不如 SQL
-语言简洁易读（如大量的<code>.groupby()</code>、<code>.sum()</code>或者<code>.count()</code>之类），且无法实现部分复杂功能</p>
-<p>Pandasql 库 - 优点：直接使用 SQL
-语句完成查询操作，易读性高且可移植性好 - 缺点：</p>
+<p><strong>两种方式的优缺点：</strong></p>
+<p>Pandas 基本操作语句</p>
+<ul>
+<li>优点：不需要额外安装第三方库，大多数场景内置函数都可以满足需求</li>
+<li>缺点：在有些数据处理计算中不如 SQL
+语言简洁易读（如大量的<code>.groupby()</code>、<code>.sum()</code>或者<code>.count()</code>之类），且无法实现部分复杂功能</li>
+</ul>
+<p>Pandasql 库</p>
+<ul>
+<li>优点：直接使用 SQL 语句完成查询操作，易读性高且可移植性好</li>
+<li>缺点：</li>
+</ul>
 <h2 id="pandasql-库">Pandasql 库</h2>
 <p><code>pandasql</code>允许您使用 SQL
 语法查询<code>pandas.DataFrame</code>。它的工作原理与<code>R.pandasql</code>中的<code>sqldf</code>类似。<code>pandasql</code>试图为刚接触
@@ -29,8 +161,11 @@ Python
 href="https://pypi.org/project/pandasql/">https://pypi.org/project/pandasql/</a></p>
 <h3 id="使用方法">使用方法</h3>
 <p><code>pandasql</code>中使用的主要函数是<code>sqldf</code>。<code>sqldf</code>接受
-2 个参数： - 一个 SQL 查询字符串 -
-一组会话/环境变量（<code>locals()</code>或<code>globals()</code>）</p>
+2 个参数：</p>
+<ul>
+<li>一个 SQL 查询字符串</li>
+<li>一组会话/环境变量（<code>locals()</code>或<code>globals()</code>）</li>
+</ul>
 <p>一般使用时我们会定义一个简短的 lambda 表达式来使用这个函数：
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pandasql <span class="keyword">import</span> sqldf</span><br><span class="line">pysqldf = <span class="keyword">lambda</span> q: sqldf(q, <span class="built_in">globals</span>())</span><br></pre></td></tr></table></figure></p>
 <h3 id="查询实例">查询实例</h3>
@@ -111,6 +246,129 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a>
 ]]></content>
       <categories>
         <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码教程与注意事项</title>
+    <url>/homepage/posts/c880c6a1/</url>
+    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
+<hr />
+<style>
+    img{object-fit: scale-down}
+</style>
+<h2 id="markdown-相关">Markdown 相关</h2>
+<p>Markdown 中的公式编辑教程：<a
+href="https://www.jianshu.com/p/25f0139637b7">https://www.jianshu.com/p/25f0139637b7</a></p>
+<h2 id="python相关">Python相关</h2>
+<h3 id="matplotlib">Matplotlib</h3>
+<p>默认颜色和对应名称：</p>
+<p><img src="img1.png" width="100%" alt="pic1"></p>
+<p>常用标记点形状：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;.&#x27;</span>：点(point marker)</span><br><span class="line"><span class="string">&#x27;,&#x27;</span>：像素点(pixel marker)</span><br><span class="line"><span class="string">&#x27;o&#x27;</span>：圆形(circle marker)</span><br><span class="line"><span class="string">&#x27;v&#x27;</span>：朝下三角形(triangle_down marker)</span><br><span class="line"><span class="string">&#x27;^&#x27;</span>：朝上三角形(triangle_up marker)</span><br><span class="line"><span class="string">&#x27;&lt;&#x27;</span>：朝左三角形(triangle_left marker)</span><br><span class="line"><span class="string">&#x27;&gt;&#x27;</span>：朝右三角形(triangle_right marker)</span><br><span class="line"><span class="string">&#x27;1&#x27;</span>：朝下三叉(tri_down marker)</span><br><span class="line"><span class="string">&#x27;2&#x27;</span>：朝下三叉(tri_up marker)</span><br><span class="line"><span class="string">&#x27;3&#x27;</span>：朝下三叉(tri_left marker)</span><br><span class="line"><span class="string">&#x27;4&#x27;</span>：朝下三叉(tri_right marker)</span><br><span class="line"><span class="string">&#x27;s&#x27;</span>：正方形(square marker)</span><br><span class="line"><span class="string">&#x27;p&#x27;</span>：五边形(pentagon marker)</span><br><span class="line"><span class="string">&#x27;*&#x27;</span>：五角星(star marker)</span><br><span class="line"><span class="string">&#x27;h&#x27;</span>：竖直六边形(hexagon1 marker)</span><br><span class="line"><span class="string">&#x27;H&#x27;</span>：水平六边形(hexagon2 marker)</span><br><span class="line"><span class="string">&#x27;+&#x27;</span>：加号(plus marker)</span><br><span class="line"><span class="string">&#x27;x&#x27;</span>：乘号(x marker)</span><br><span class="line"><span class="string">&#x27;D&#x27;</span>：菱形(diamond marker)</span><br><span class="line"><span class="string">&#x27;d&#x27;</span>：小型菱形(thin_diamond marker)</span><br><span class="line"><span class="string">&#x27;|&#x27;</span>：垂直线(vline marker)</span><br><span class="line"><span class="string">&#x27;_&#x27;</span>：水平线(hline marker)</span><br></pre></td></tr></table></figure>
+<p>常用线形：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;-&#x27;</span>: 实线(solid line style)</span><br><span class="line"><span class="string">&#x27;--&#x27;</span>: 虚线(dashed line style)</span><br><span class="line"><span class="string">&#x27;-.&#x27;</span>: 点划线(dash-dot line style)</span><br><span class="line"><span class="string">&#x27;:&#x27;</span>: 点线(dotted line style)</span><br></pre></td></tr></table></figure>
+<h4 id="绘制变量相关性图">绘制变量相关性图</h4>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算变量的相关性和p值，展示散点图、直方图和相关系数热力图</span></span><br><span class="line">df_corr = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line">cmap = plt.get_cmap(<span class="string">&#x27;RdBu&#x27;</span>)</span><br><span class="line">new_colors = cmap(np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">2000</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加相关系数和背景颜色</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">draw_corr</span>(<span class="params">x_var, y_var, **kwargs</span>):</span><br><span class="line">    coef, p_val = stats.pearsonr(x_var, y_var)[<span class="number">0</span>], stats.pearsonr(x_var, y_var)[<span class="number">1</span>]  <span class="comment"># 计算相关系数和p值</span></span><br><span class="line">    p_str = <span class="string">&#x27;***&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.001</span> <span class="keyword">else</span> <span class="string">&#x27;**&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.01</span> <span class="keyword">else</span> <span class="string">&#x27;*&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.05</span> <span class="keyword">else</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    label = <span class="string">&#x27;&#123;0:.3f&#125;&#x27;</span>.<span class="built_in">format</span>(coef) + <span class="string">&#x27;\n&#x27;</span> + p_str  <span class="comment"># 添加标签</span></span><br><span class="line">    color = <span class="built_in">tuple</span>(new_colors[<span class="built_in">int</span>((<span class="built_in">round</span>(coef, <span class="number">3</span>) + <span class="number">1</span>) * <span class="number">1000</span>)])  <span class="comment"># 计算并添加颜色</span></span><br><span class="line">    ax = plt.gca()</span><br><span class="line">    ax.annotate(label, xy=(<span class="number">0.3</span>, <span class="number">0.3</span>), size=<span class="number">24</span>, xycoords=ax.transAxes)</span><br><span class="line">    ax.patch.set_facecolor(color)  <span class="comment"># 设置 ax 区域背景颜色</span></span><br><span class="line">    ax.patch.set_alpha(<span class="number">0.7</span>)  <span class="comment"># 设置 ax 区域颜色透明度</span></span><br><span class="line"></span><br><span class="line">pg = sns.PairGrid(data=df_corr, height=<span class="number">2</span>)</span><br><span class="line">pg.map_lower(sns.regplot, color=<span class="string">&#x27;k&#x27;</span>, ci=<span class="number">95</span>, scatter_kws=&#123;<span class="string">&#x27;s&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;lw&#x27;</span>: <span class="number">0.3</span>, <span class="string">&#x27;alpha&#x27;</span>: <span class="number">0.6</span>&#125;,</span><br><span class="line">             line_kws=&#123;<span class="string">&#x27;lw&#x27;</span>: <span class="number">2</span>, <span class="string">&quot;color&quot;</span>: <span class="string">&#x27;firebrick&#x27;</span>&#125;)  <span class="comment"># scatter, regplot, histplot, kdeplot</span></span><br><span class="line">pg.map_diag(sns.histplot, bins=<span class="number">10</span>, edgecolor=<span class="string">&#x27;w&#x27;</span>, kde=<span class="literal">True</span>, line_kws=&#123;<span class="string">&#x27;lw&#x27;</span>: <span class="number">2</span>&#125;)</span><br><span class="line">pg.map_upper(draw_corr)</span><br><span class="line">pg.tight_layout()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置子图的标签字体大小</span></span><br><span class="line">PairGrid_axes = pg.axes</span><br><span class="line"><span class="keyword">for</span> axes <span class="keyword">in</span> PairGrid_axes.flatten():</span><br><span class="line">    axes.tick_params(axis=<span class="string">&#x27;both&#x27;</span>, labelsize=<span class="number">16</span>)</span><br><span class="line">    axes.ticklabel_format(style=<span class="string">&#x27;sci&#x27;</span>, scilimits=(-<span class="number">1</span>, <span class="number">2</span>), axis=<span class="string">&#x27;both&#x27;</span>)</span><br><span class="line">    axes.xaxis.label.set_fontsize(<span class="number">20</span>)</span><br><span class="line">    axes.yaxis.label.set_fontsize(<span class="number">20</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h3 id="opencv-python">Opencv-python</h3>
+<p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多元回归分析</title>
+    <url>/homepage/posts/4ba92e57/</url>
+    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
+<span id="more"></span></p>
+<hr />
+<h3 id="多元线性回归">多元线性回归</h3>
+<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
+<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
+<span class="math inline">\(X\)</span>
+表示）的取值来估计另一个变量（因变量，用 <span
+class="math inline">\(Y\)</span> 表示）的值。</p>
+<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
+往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
+\,(p&gt;1)\)</span> 有关。对于自变量 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
+class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
+class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
+<span class="math inline">\(Y\)</span> 的分布函数。</p>
+<p>如果能够发掘 <span class="math inline">\(F(Y \vert
+x_1,x_2,...,x_p)\)</span> 随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span>
+取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
+<span class="math inline">\(X\)</span>
+之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
+<span class="math inline">\(Y\)</span> 的数学期望 <span
+class="math inline">\(E(Y)\)</span>。即若 <span
+class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
+class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
+class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
+class="math inline">\(Y\)</span> 关于 <span
+class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
+class="math inline">\(Y\)</span> 和 <span
+class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
+class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
+<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span>
+的线性函数时，有：</p>
+<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
+\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
+<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
+均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
+无关的未知参数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/posts/933a2506/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
+]]></content>
+      <categories>
+        <category>default</category>
       </categories>
       <tags>
         <tag>blog</tag>
@@ -278,255 +536,6 @@ installer</a>，<strong>版本选择3.1.x（更高版本目前有不兼容情况
       </categories>
       <tags>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CMIP6数据下载相关</title>
-    <url>/homepage/posts/b9f1380d/</url>
-    <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
-<span id="more"></span></p>
-<hr />
-<style>
-    img{object-fit: scale-down}
-</style>
-<h2 id="数据背景介绍">数据背景介绍</h2>
-<p>CMIP6，即第6次国际耦合模式比较计划（Coupled Model Inter-comparison
-Project,
-CMIP），是由世界气候研究计划耦合模拟工作组（WGCM）发起和组织。其最初目的是对当时数量有限的全球耦合气候模式的模拟性能进行比较。但此后全球海-气耦合模式进入了快速发展阶段，全球各大气候模拟中心相继发布大量的大气和海洋模拟数据。因此，产生了对这些模拟结果进行系统分析的需求。为适应这一需求，CMIP
-逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。</p>
-<p>1995年，WGCM 发起和组织了 AMIP
-计划，对当时数量有限的全球耦合气候模式的性能进行比较。此后，全球海气耦合模式进入了快速发展阶段，模式数量迅速增加，模式数据爆发式增长。全球各大气候模拟中心相继发布大量的大气和海洋模拟数据，科学界迫切需要有专门的组织对这些模拟结果进行系统的分析。为适应这一需求，CMIP
-逐渐发展成为以“推动模式发展和增进对地球气候系统的科学理解”为目标的庞大计划。为了实现该目标，CMIP
-在设计气候模式试验标准、制定共享数据格式、制定向全球科学界共享气候模拟数据的机制等方面开展了卓有成效的工作。</p>
-<p>WGCM 设立了两个工作小组：一是 CMIP 工作组（CMIP Panel），直接负责
-CMIP 的组织协调工作；二是 WGCM 基础设施工作组（Infrastructure
-Panel），负责制定模式数据共享政策和技术标准。CMIP
-试验数据通过地球系统网格联盟（Earth System Grid
-Federation，ESGF）面向国际科学界提供。</p>
-<p>CMIP6 计划介绍：<a
-href="https://pcmdi.llnl.gov/CMIP6/">https://pcmdi.llnl.gov/CMIP6/</a><br />
-CMIP6 数据下载地址：<a
-href="https://esgf-node.llnl.gov/search/cmip6/">https://esgf-node.llnl.gov/search/cmip6/</a><br />
-建议使用英国源：<a
-href="https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/">https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/</a>
-(2023.11.01更新：现在英国源似乎有问题不让下载，还是走官方地址吧)</p>
-<h2 id="数据筛选">数据筛选</h2>
-<p>CMIP6 各变量及对应缩写介绍：<a
-href="https://clipc-services.ceda.ac.uk/dreq/mipVars.html">https://clipc-services.ceda.ac.uk/dreq/mipVars.html</a><br />
-可以通过输入关键词搜索自己想要的变量的缩写，或者在官网下载缩写对应表的
-excel 文件。</p>
-<p><img src="img.png" width="30%" alt="pic1"></p>
-<p>这里对一般情况下，我们用到的检索条件做个简要的介绍</p>
-<p>MIP Era：即 MIP 代际数，这里只有一个可选，即最新的 MIP6；<br />
-Activity：项目计划；<br />
-Product：研究产品，即模型输出，这里依旧是只有一个 model-output
-可选；</p>
-<p>Source ID：各种评估模式的名称，CMIP6 有 9 个模式来自中国；<br />
-Institution ID：各个评估机构的名称；<br />
-Source Type：数据源类型，一般是某种大气动力学模型；<br />
-Nominal Resolution：空间分辨率，一般有 100km、250km 等；</p>
-<p>Experiment ID：研究的实验场景，如历史模拟(historical)，各种 ssp
-情景等等；<br />
-Sub-Experiment：子实验名称；<br />
-Variant Label：变量标签，一般选 r1i1p1f1；<br />
-Grid Label：网格标签，一般选 gn，即原始网格；</p>
-<p>Table ID：研究的时间尺度代码；<br />
-Frequency：研究的时间尺度，如日尺度、月尺度，小时尺度等等；<br />
-Realm：数据领域，如 atmos 代表大气；<br />
-Variable：研究的变量，如降雨、降雪、均温等等；<br />
-CF Standard Name：变量的标准名称；</p>
-<p>Data Node：数据节点，即数据来源。</p>
-<ul>
-<li>其中，ssp 后面的数字含义为<strong>共享的社会经济路径</strong>
-(Shared Socioeconomic Pathways, SSP) + <strong>代表性浓度路径</strong>
-(Representative Concentration Pathways, RCP)。</li>
-<li>举例来说，ssp245 指的是在 ssp2
-路径下（即“中间路线”世界），温室气体等辐射强迫控制在 <span
-class="math inline">\(4.5W/m^2\)</span> 的情景</li>
-</ul>
-<p><strong>一般来说，选了以上三个检索条件后，就可以点击search了。</strong><br />
-在结果中再点击 Source
-ID，查看有哪些模型符合这个检索条件。需根据实际情况进行调整。
-注意：有的时候 search 会显示没有对应文件或者文件失效，这个时候可以把
-Show All Replicas 选中再 search 就有文件了。</p>
-<p><img src="img1.png" width="100%" alt="pic2"></p>
-<p>根据需求筛选好条目之后，点开所有条目的 List
-Files，可以看到每一个对应文件的文件名、checksum 值、文件大小以及 id
-号，还有最重要的下载链接。</p>
-<p><img src="img2.png" width="100%" alt="pic3"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">条目命名规则：&#123;MIP_Era&#125;.&#123;Activity&#125;.&#123;Institution_ID&#125;.&#123;Source_ID&#125;.&#123;Experiment_ID&#125;.&#123;Variant_Label&#125;.&#123;Table_ID&#125;.&#123;Variable&#125;.&#123;Grid_Label&#125;</span><br><span class="line">文件命名规则：&#123;Variable&#125;_&#123;Table_ID&#125;_&#123;Source_ID&#125;_&#123;Experiment_ID&#125;_&#123;Variant_Label&#125;_&#123;Grid_Label&#125;_&#123;Time&#125;.nc</span><br></pre></td></tr></table></figure>
-<h2 id="数据下载">数据下载</h2>
-<p>一般来说 CMIP6 的数据都是 .nc
-文件，且大多都需要连续下载很多的文件，这时候可以使用两个工具：<br />
-</p>
-<ul>
-<li>第一个是 Simple Mass
-Downloader，这是一个浏览器插件，可以实现网页内的下载链接的查找与筛选，也可以实现链接的批量下载
-  <a
-href="https://microsoftedge.microsoft.com/addons/detail/simple-mass-downloader/dbhdfkiddhdhmcikjdgblfjbenjfjlfh">Microsoft
-Edge 链接</a> <a
-href="https://chrome.google.com/webstore/detail/simple-mass-downloader/abdkkegmcbiomijcbdaodaflgehfffed">Google
-Chrome 链接</a></li>
-<li>第二个是 <a
-href="https://eternallybored.org/misc/wget/">Wget</a>，这个工具可以实现批量下载一个
-.txt 文件中的所有下载链接，且具有断点续传功能，非常实用。</li>
-</ul>
-<p>在上述筛选和全部条目 List File
-步骤完成以后（<strong>文件多的条目一定要点击 Show All
-Files</strong>），点击浏览器的 Simple mass downloader
-插件，依次执行下图中的6个步骤，即可得到⼀个包含本页所有下载链接的 txt
-文件并保存到本地。</p>
-<p><img src="img3.png" width="75%" alt="pic4">
-<img src="img4.png" width="100%" alt="pic5"></p>
-<p>之后使用 Wget 批量下载文件，打开命令行输入指令： <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -c -i C:/Users/Lenovo/Downloads/ssp245-day-tasmax.txt -P E:/Data/cmip6/ssp245-day-tasmax --no-check-certificate</span><br></pre></td></tr></table></figure>
-其含义是按照 "C:/Users/Lenovo/Downloads/ssp245-day-tasmax.txt"
-中的下载链接，将文件下载到文件夹 "E:/Data/cmip6/ssp245-day-tasmax"
-中，同时不检查网站证书。</p>
-<p>Wget的常用命令可参考：<a
-href="https://hscyber.github.io/posts/a53b1b2b">https://hscyber.github.io/posts/a53b1b2b</a></p>
-<h2 id="数据读取与处理">数据读取与处理</h2>
-<p>根据给定空间范围/坐标数据提取 nc 文件中的数据到 pickle 文件：
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> xarray <span class="keyword">as</span> xr</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">import</span> gc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据给定空间范围 / 坐标数据提取nc文件（L0级）中的数据到 pickle 文件（L1级）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">L0_extract</span>(<span class="params">nc_folder: <span class="built_in">str</span>, lat: <span class="built_in">list</span>, lon: <span class="built_in">list</span>, out_folder: <span class="built_in">str</span>, method: <span class="built_in">str</span></span>):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 数据提取到本地保存</span></span><br><span class="line">    nc_file_col = glob.glob(nc_folder + <span class="string">&#x27;/*.nc&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> nc_file <span class="keyword">in</span> nc_file_col:</span><br><span class="line"></span><br><span class="line">        t1 = time.time()    <span class="comment"># 计时</span></span><br><span class="line">        infile_name = nc_file[nc_file.rfind(<span class="string">&#x27;\\&#x27;</span>) + <span class="number">1</span>:nc_file.rfind(<span class="string">&#x27;.&#x27;</span>)]   <span class="comment"># 输入输出文件</span></span><br><span class="line">        outfile_name = out_folder + <span class="string">&#x27;\\&#x27;</span> + infile_name + <span class="string">&#x27;_CN.zip&#x27;</span></span><br><span class="line">        <span class="keyword">if</span> outfile_name <span class="keyword">in</span> glob.glob(out_folder + <span class="string">&#x27;/*.zip&#x27;</span>):     <span class="comment"># 跳过已经完成的文件</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        dx = xr.open_dataset(nc_file)</span><br><span class="line">        dx[<span class="string">&#x27;time&#x27;</span>] = dx[<span class="string">&#x27;time&#x27;</span>].dt.strftime(<span class="string">&#x27;%Y-%m-%d&#x27;</span>) <span class="comment"># 日期</span></span><br><span class="line">        df = dx.to_dataframe()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 按经纬度范围和时间范围检索数据</span></span><br><span class="line">        <span class="keyword">if</span> method == <span class="string">&#x27;by_region&#x27;</span>:   <span class="comment"># 根据给定空间范围</span></span><br><span class="line">            region_cond = <span class="string">&#x27;lat &gt;= &#x27;</span> + <span class="built_in">str</span>(lat[<span class="number">0</span>]) + <span class="string">&#x27; and lat &lt;= &#x27;</span> + <span class="built_in">str</span>(lat[<span class="number">1</span>]) + \</span><br><span class="line">                          <span class="string">&#x27; and lon &gt;=&#x27;</span> + <span class="built_in">str</span>(lon[<span class="number">0</span>]) + <span class="string">&#x27; and lon &lt;= &#x27;</span> + <span class="built_in">str</span>(lon[<span class="number">1</span>])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">else</span>:   <span class="comment"># 根据给定坐标数据</span></span><br><span class="line">            region_cond = <span class="string">&#x27;lat == &#x27;</span> + <span class="built_in">str</span>(lat[<span class="number">0</span>]) + <span class="string">&#x27; and lon ==&#x27;</span> + <span class="built_in">str</span>(lon[<span class="number">1</span>])</span><br><span class="line">        df_sel = df.query(region_cond).copy()</span><br><span class="line"></span><br><span class="line">        df_sel.to_pickle(outfile_name)  <span class="comment"># 导出为pickle文件</span></span><br><span class="line">        gc.collect()</span><br><span class="line">        t2 = time.time()</span><br><span class="line">        <span class="built_in">print</span>(infile_name, <span class="string">&#x27;costs &#123;0:.2f&#125; minutes&#x27;</span>.<span class="built_in">format</span>((t2 - t1) / <span class="number">60</span>))</span><br></pre></td></tr></table></figure></p>
-<p>根据 pickle 数据文件，按给定时空条件提取数据到 csv 文件：
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> geopandas <span class="keyword">as</span> gpd</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> griddata</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据L1级数据文件，按给定时空条件提取数据到csv文件（L2级）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">L1_extract</span>(<span class="params">in_folder, out_folder, point_file, var_name</span>):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设定筛选时间范围</span></span><br><span class="line">    sel_date_range = pd.date_range(<span class="string">&#x27;2015-01-01&#x27;</span>, <span class="string">&#x27;2050-12-31&#x27;</span>).astype(<span class="built_in">str</span>).to_list()</span><br><span class="line">    gdf_pnt = gpd.read_file(point_file)[[<span class="string">&#x27;city_code&#x27;</span>, <span class="string">&#x27;city_name&#x27;</span>, <span class="string">&#x27;geometry&#x27;</span>]]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 提取数据</span></span><br><span class="line">    <span class="keyword">for</span> folder_name <span class="keyword">in</span> os.listdir(in_folder):</span><br><span class="line">        </span><br><span class="line">        folder_path = os.path.join(in_folder, folder_name)  <span class="comment"># 进入模型子目录</span></span><br><span class="line">        df_all = pd.DataFrame([])       <span class="comment"># 每一个目录保存为一个dataframe</span></span><br><span class="line">        <span class="keyword">for</span> f_name <span class="keyword">in</span> glob.glob(folder_path + <span class="string">&#x27;/*.zip&#x27;</span>)[:]:</span><br><span class="line"></span><br><span class="line">            length = <span class="built_in">len</span>(var_name) + <span class="number">5</span>  <span class="comment"># 字符串匹配提取模型名称</span></span><br><span class="line">            model = f_name[f_name.rfind(var_name + <span class="string">&#x27;_day_&#x27;</span>) + length:]</span><br><span class="line">            model = model[:model.find(<span class="string">&#x27;_&#x27;</span>)]</span><br><span class="line">            </span><br><span class="line">            df = pd.read_pickle(f_name)[[var_name]]     <span class="comment"># 读取pickle文件</span></span><br><span class="line">            sel_bnds = df.index.get_level_values(<span class="string">&#x27;bnds&#x27;</span>).unique()[<span class="number">0</span>]</span><br><span class="line">            df = df.xs(sel_bnds, level=<span class="string">&#x27;bnds&#x27;</span>)</span><br><span class="line">            date_range = df.index.get_level_values(<span class="string">&#x27;time&#x27;</span>).unique()</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 匹配在筛选时间内的数据</span></span><br><span class="line">            <span class="keyword">for</span> days <span class="keyword">in</span> sel_date_range:</span><br><span class="line">                <span class="keyword">if</span> days <span class="keyword">in</span> date_range:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&#x27;Processing:&#x27;</span>, <span class="built_in">str</span>(model), <span class="built_in">str</span>(days))</span><br><span class="line">                    df_day = df.xs(days, level=<span class="string">&#x27;time&#x27;</span>).reset_index()</span><br><span class="line">                    pnt_val = griddata(df_day.loc[:, [<span class="string">&#x27;lon&#x27;</span>, <span class="string">&#x27;lat&#x27;</span>]].to_numpy(),</span><br><span class="line">                                       df_day[var_name].to_list(),</span><br><span class="line">                                       (gdf_pnt.geometry.x.to_list(), gdf_pnt.geometry.y.to_list()),</span><br><span class="line">                                       method=<span class="string">&#x27;linear&#x27;</span>)</span><br><span class="line">                    </span><br><span class="line">                    df_out = pd.DataFrame([])   <span class="comment"># 设置临时dataframe存储数据</span></span><br><span class="line">                    df_out[<span class="string">&#x27;city_code&#x27;</span>] = gdf_pnt.city_code</span><br><span class="line">                    df_out[var_name + <span class="string">&#x27;_&#x27;</span> + model] = pnt_val</span><br><span class="line">                    df_out[<span class="string">&#x27;date&#x27;</span>] = days</span><br><span class="line">                    df_all = pd.concat([df_all, df_out])    <span class="comment"># dataframe拼接</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 设置保存路径及文件名，保存为csv文件</span></span><br><span class="line">        out_path = os.path.join(out_folder, var_name)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(out_path):</span><br><span class="line">            os.mkdir(out_path)</span><br><span class="line">        out_file = os.path.join(out_path, var_name + <span class="string">&#x27;_&#x27;</span> + folder_name + <span class="string">&#x27;.csv&#x27;</span>)</span><br><span class="line">        df_all.to_csv(out_file, index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="其他相关教程及参考资料">其他相关教程及参考资料</h2>
-<p>CMIP6 简介与数据工具 ACCCMIP6 介绍：<a
-href="https://zhuanlan.zhihu.com/p/599843527">https://zhuanlan.zhihu.com/p/599843527</a></p>
-<p><strong>参考文献：</strong><br />
-王磊, 包庆, 何编. CMIP6 高分辨率模式比较计划（HighResMIP）概况与评述[J].
-气候变化研究进展, 2019, 15(5): 498-502.<br />
-DOI: 10.12006/j.issn.1673-1719.2019.077 周天军, 邹立维, 陈晓龙.
-第六次国际耦合模式比较计划(CMIP6)评述[J]. 气候变化研究进展, 2019,
-15(05): 445-456.</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>代码教程与注意事项</title>
-    <url>/homepage/posts/c880c6a1/</url>
-    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
-<hr />
-<style>
-    img{object-fit: scale-down}
-</style>
-<h2 id="markdown-相关">Markdown 相关</h2>
-<p>Markdown 中的公式编辑教程：<a
-href="https://www.jianshu.com/p/25f0139637b7">https://www.jianshu.com/p/25f0139637b7</a></p>
-<h2 id="python相关">Python相关</h2>
-<h3 id="matplotlib">Matplotlib</h3>
-<p>默认颜色和对应名称：</p>
-<p><img src="img1.png" width="100%" alt="pic1"></p>
-<p>常用标记点形状：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;.&#x27;</span>：点(point marker)</span><br><span class="line"><span class="string">&#x27;,&#x27;</span>：像素点(pixel marker)</span><br><span class="line"><span class="string">&#x27;o&#x27;</span>：圆形(circle marker)</span><br><span class="line"><span class="string">&#x27;v&#x27;</span>：朝下三角形(triangle_down marker)</span><br><span class="line"><span class="string">&#x27;^&#x27;</span>：朝上三角形(triangle_up marker)</span><br><span class="line"><span class="string">&#x27;&lt;&#x27;</span>：朝左三角形(triangle_left marker)</span><br><span class="line"><span class="string">&#x27;&gt;&#x27;</span>：朝右三角形(triangle_right marker)</span><br><span class="line"><span class="string">&#x27;1&#x27;</span>：朝下三叉(tri_down marker)</span><br><span class="line"><span class="string">&#x27;2&#x27;</span>：朝下三叉(tri_up marker)</span><br><span class="line"><span class="string">&#x27;3&#x27;</span>：朝下三叉(tri_left marker)</span><br><span class="line"><span class="string">&#x27;4&#x27;</span>：朝下三叉(tri_right marker)</span><br><span class="line"><span class="string">&#x27;s&#x27;</span>：正方形(square marker)</span><br><span class="line"><span class="string">&#x27;p&#x27;</span>：五边形(pentagon marker)</span><br><span class="line"><span class="string">&#x27;*&#x27;</span>：五角星(star marker)</span><br><span class="line"><span class="string">&#x27;h&#x27;</span>：竖直六边形(hexagon1 marker)</span><br><span class="line"><span class="string">&#x27;H&#x27;</span>：水平六边形(hexagon2 marker)</span><br><span class="line"><span class="string">&#x27;+&#x27;</span>：加号(plus marker)</span><br><span class="line"><span class="string">&#x27;x&#x27;</span>：乘号(x marker)</span><br><span class="line"><span class="string">&#x27;D&#x27;</span>：菱形(diamond marker)</span><br><span class="line"><span class="string">&#x27;d&#x27;</span>：小型菱形(thin_diamond marker)</span><br><span class="line"><span class="string">&#x27;|&#x27;</span>：垂直线(vline marker)</span><br><span class="line"><span class="string">&#x27;_&#x27;</span>：水平线(hline marker)</span><br></pre></td></tr></table></figure>
-<p>常用线形：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;-&#x27;</span>: 实线(solid line style)</span><br><span class="line"><span class="string">&#x27;--&#x27;</span>: 虚线(dashed line style)</span><br><span class="line"><span class="string">&#x27;-.&#x27;</span>: 点划线(dash-dot line style)</span><br><span class="line"><span class="string">&#x27;:&#x27;</span>: 点线(dotted line style)</span><br></pre></td></tr></table></figure>
-<h4 id="绘制变量相关性图">绘制变量相关性图</h4>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算变量的相关性和p值，展示散点图、直方图和相关系数热力图</span></span><br><span class="line">df_corr = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line">cmap = plt.get_cmap(<span class="string">&#x27;RdBu&#x27;</span>)</span><br><span class="line">new_colors = cmap(np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">2000</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加相关系数和背景颜色</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">draw_corr</span>(<span class="params">x_var, y_var, **kwargs</span>):</span><br><span class="line">    coef, p_val = stats.pearsonr(x_var, y_var)[<span class="number">0</span>], stats.pearsonr(x_var, y_var)[<span class="number">1</span>]  <span class="comment"># 计算相关系数和p值</span></span><br><span class="line">    p_str = <span class="string">&#x27;***&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.001</span> <span class="keyword">else</span> <span class="string">&#x27;**&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.01</span> <span class="keyword">else</span> <span class="string">&#x27;*&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.05</span> <span class="keyword">else</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    label = <span class="string">&#x27;&#123;0:.3f&#125;&#x27;</span>.<span class="built_in">format</span>(coef) + <span class="string">&#x27;\n&#x27;</span> + p_str  <span class="comment"># 添加标签</span></span><br><span class="line">    color = <span class="built_in">tuple</span>(new_colors[<span class="built_in">int</span>((<span class="built_in">round</span>(coef, <span class="number">3</span>) + <span class="number">1</span>) * <span class="number">1000</span>)])  <span class="comment"># 计算并添加颜色</span></span><br><span class="line">    ax = plt.gca()</span><br><span class="line">    ax.annotate(label, xy=(<span class="number">0.3</span>, <span class="number">0.3</span>), size=<span class="number">24</span>, xycoords=ax.transAxes)</span><br><span class="line">    ax.patch.set_facecolor(color)  <span class="comment"># 设置 ax 区域背景颜色</span></span><br><span class="line">    ax.patch.set_alpha(<span class="number">0.7</span>)  <span class="comment"># 设置 ax 区域颜色透明度</span></span><br><span class="line"></span><br><span class="line">pg = sns.PairGrid(data=df_corr, height=<span class="number">2</span>)</span><br><span class="line">pg.map_lower(sns.regplot, color=<span class="string">&#x27;k&#x27;</span>, ci=<span class="number">95</span>, scatter_kws=&#123;<span class="string">&#x27;s&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;lw&#x27;</span>: <span class="number">0.3</span>, <span class="string">&#x27;alpha&#x27;</span>: <span class="number">0.6</span>&#125;,</span><br><span class="line">             line_kws=&#123;<span class="string">&#x27;lw&#x27;</span>: <span class="number">2</span>, <span class="string">&quot;color&quot;</span>: <span class="string">&#x27;firebrick&#x27;</span>&#125;)  <span class="comment"># scatter, regplot, histplot, kdeplot</span></span><br><span class="line">pg.map_diag(sns.histplot, bins=<span class="number">10</span>, edgecolor=<span class="string">&#x27;w&#x27;</span>, kde=<span class="literal">True</span>, line_kws=&#123;<span class="string">&#x27;lw&#x27;</span>: <span class="number">2</span>&#125;)</span><br><span class="line">pg.map_upper(draw_corr)</span><br><span class="line">pg.tight_layout()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置子图的标签字体大小</span></span><br><span class="line">PairGrid_axes = pg.axes</span><br><span class="line"><span class="keyword">for</span> axes <span class="keyword">in</span> PairGrid_axes.flatten():</span><br><span class="line">    axes.tick_params(axis=<span class="string">&#x27;both&#x27;</span>, labelsize=<span class="number">16</span>)</span><br><span class="line">    axes.ticklabel_format(style=<span class="string">&#x27;sci&#x27;</span>, scilimits=(-<span class="number">1</span>, <span class="number">2</span>), axis=<span class="string">&#x27;both&#x27;</span>)</span><br><span class="line">    axes.xaxis.label.set_fontsize(<span class="number">20</span>)</span><br><span class="line">    axes.yaxis.label.set_fontsize(<span class="number">20</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<h3 id="opencv-python">Opencv-python</h3>
-<p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/posts/933a2506/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多元回归分析</title>
-    <url>/homepage/posts/4ba92e57/</url>
-    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
-<span id="more"></span></p>
-<hr />
-<h3 id="多元线性回归">多元线性回归</h3>
-<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
-<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
-<span class="math inline">\(X\)</span>
-表示）的取值来估计另一个变量（因变量，用 <span
-class="math inline">\(Y\)</span> 表示）的值。</p>
-<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
-往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
-\,(p&gt;1)\)</span> 有关。对于自变量 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
-class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
-class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
-<span class="math inline">\(Y\)</span> 的分布函数。</p>
-<p>如果能够发掘 <span class="math inline">\(F(Y \vert
-x_1,x_2,...,x_p)\)</span> 随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span>
-取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
-<span class="math inline">\(X\)</span>
-之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
-<span class="math inline">\(Y\)</span> 的数学期望 <span
-class="math inline">\(E(Y)\)</span>。即若 <span
-class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
-class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
-class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
-class="math inline">\(Y\)</span> 关于 <span
-class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
-class="math inline">\(Y\)</span> 和 <span
-class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
-class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
-<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span>
-的线性函数时，有：</p>
-<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
-\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
-<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
-均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
-无关的未知参数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
       </tags>
   </entry>
   <entry>
