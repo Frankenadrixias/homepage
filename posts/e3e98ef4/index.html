@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://frankenadrixias.github.io/homepage/posts/e3e98ef4/img_3.png">
 <meta property="og:image" content="https://frankenadrixias.github.io/homepage/posts/e3e98ef4/img_4.png">
 <meta property="article:published_time" content="2022-07-20T02:37:55.000Z">
-<meta property="article:modified_time" content="2023-10-31T02:30:16.774Z">
+<meta property="article:modified_time" content="2025-11-17T13:54:52.567Z">
 <meta property="article:author" content="Frankenadrixias">
 <meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary">
@@ -95,7 +95,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/homepage/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/homepage/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/homepage/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a></li><li class="menu-item menu-item-categories"><a href="/homepage/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/homepage/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/homepage/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/homepage/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/homepage/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a></li><li class="menu-item menu-item-categories"><a href="/homepage/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/homepage/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/homepage/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,6 +197,23 @@
     </div>
 
     
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/homepage/posts/c880c6a1/" rel="bookmark">
+        <time class="popular-posts-time">2022-07-27</time>
+        <br>
+      代码教程与注意事项
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
   </aside>
 
 
@@ -249,7 +266,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-10-31 10:30:16" itemprop="dateModified" datetime="2023-10-31T10:30:16+08:00">2023-10-31</time>
+      <time title="修改时间：2025-11-17 21:54:52" itemprop="dateModified" datetime="2025-11-17T21:54:52+08:00">2025-11-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,7 +346,7 @@ Noise，具有噪声的基于密度的空间聚类方法）算法将点集中具
 <h3 id="traj-dbscan算法">Traj-DBSCAN算法</h3>
 <p>Traj-DBSCAN算法出自论文：Robust and Hierarchical Stop Discovery in
 Sparse and Diverse Trajectories.</p>
-<p>其在DBSCAN的基础上，将邻居的计算从空间相邻改为时间线性相邻，而核心点计算则用停留时间代替周边点的数目。</p>
+<p>xxxxxxxxxx ​python</p>
 <p>TrajDBSCAN实现了“停留点集是子轨迹”的要求，其子轨迹内部所有点在空间上邻近，距离中心点小于距离阈值Eps，且子轨迹持续时长高于时间阈值MinTime，因此判断为轨迹在该处停留。</p>
 <p><img class="image" src="img_1.png" width=75% alt="pic2"></p>
 <p>在此基础上，Traj-DBSCAN还实现了识别多条轨迹的“公共停留点”以及层次化停留点分析。</p>
@@ -338,7 +355,12 @@ Sparse and Diverse Trajectories.</p>
 <p>取自论文：A Clustering-based Approach for Discovering Interesting
 Places in Trajectories</p>
 <p>先前的停留点挖掘思路通常要根据预定义的停留区来做停留检测，而该文则提出了一种基于速度的时空聚类方法，识别轨迹中的慢速区域，从而实现对轨迹上重要位置的挖掘。</p>
-<p>下图中的ABC是已知的候选停留点，而XY是实际停留但未标记出的的位置。</p>
+<p>xxxxxxxxxx # img_path为读取图片路径，save_path为保存图片路径​#
+读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径im
+= cv2.imread(img_path, 1)img = cv2.imdecode(np.fromfile(img_path,
+dtype=np.uint8), 1)​#
+保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，'.jpg'为保存文件格式cv2.imwrite(save_path,
+img)cv2.imencode('.jpg', img)[1].tofile(save_path)py</p>
 <p><img class="image" src="img_2.png" width="75%" alt="pic3"></p>
 <p>CB-SMoT算法是DBSCAN聚类算法的改进，有很多概念类似（如核心点、密度直达、密度可达等），其与DBSCAN的不同之处在于对邻域与核心点的定义不同。</p>
 <p><strong>CB-SMoT对邻域定义如下：</strong></p>
@@ -351,8 +373,8 @@ Places in Trajectories</p>
 3、对于该核心点的邻域点集中的其他未处理点重复步骤1-2，同时扩充相应的邻域点集、核心点集，邻域点集内所有点都处理完毕；<br />
 4、将核心点集加入驻留点集中，重新回到步骤1，直到所有点都处理完毕。</p>
 <ul>
-<li>input: Track Point Series <code>&#123;Track_df&#125;</code>, Time Threshold
-<code>Min_Time</code>, Distance Threshold <code>Distance</code></li>
+<li>xxxxxxxxxx import pandas as pd​data =
+pd.read_csv('data.csv')print(data.head())python</li>
 <li>output: Set of Stationary Points <code>&#123;Track_Stops&#125;</code></li>
 </ul>
 <p><img class="image" src="img_4.png" width="75%" alt="pic5"></p>
@@ -446,7 +468,7 @@ id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的�
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

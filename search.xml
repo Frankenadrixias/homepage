@@ -146,7 +146,9 @@ Files，可以看到每一个对应文件的文件名、checksum 值、文件大
 号，还有最重要的下载链接。</p>
 <p><img src="img2.png" width="100%" alt="pic3"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">条目命名规则：&#123;MIP_Era&#125;.&#123;Activity&#125;.&#123;Institution_ID&#125;.&#123;Source_ID&#125;.&#123;Experiment_ID&#125;.&#123;Variant_Label&#125;.&#123;Table_ID&#125;.&#123;Variable&#125;.&#123;Grid_Label&#125;</span><br><span class="line">文件命名规则：&#123;Variable&#125;_&#123;Table_ID&#125;_&#123;Source_ID&#125;_&#123;Experiment_ID&#125;_&#123;Variant_Label&#125;_&#123;Grid_Label&#125;_&#123;Time&#125;.nc</span><br></pre></td></tr></table></figure>
-<h2 id="数据下载">数据下载</h2>
+<h2
+id="xxxxxxxxxx-import-pandas-as-pddata-pd.read_csvdata.csvprintdata.headpython">xxxxxxxxxx import
+pandas as pd​data = pd.read_csv('data.csv')print(data.head())python</h2>
 <p>一般来说 CMIP6 的数据都是 .nc
 文件，且大多都需要连续下载很多的文件，这时候可以使用两个工具：<br />
 </p>
@@ -198,101 +200,40 @@ DOI: 10.12006/j.issn.1673-1719.2019.077 周天军, 邹立维, 陈晓龙.
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/homepage/posts/4a17b156/</url>
-    <content><![CDATA[<h2 id="frankenadrixiashomepage">Frankenadrixias'Homepage</h2>
-<p>欢迎来到 <a
-href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
-href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
-时遇到任何问题，你可以在<a
-href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
-中找到答案，也可以在 <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p><a
-href="https://www.oscs1024.com/project/Frankenadrixias/homepage?ref=badge_small"><img
-src="https://www.oscs1024.com/platform/badge/Frankenadrixias/homepage.svg?size=small"
-alt="OSCS Status" /></a> <span id="more"></span></p>
-<h2 id="前置安装">前置安装</h2>
-<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<p>安装公式渲染器，然后再<a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">安装
-pandoc</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
-<p>安装图片渲染器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-renderer-marked --save</span><br><span class="line">npm i hexo-asset-img --save</span><br></pre></td></tr></table></figure></p>
-<p>启用下列设置，资源图片将会被自动解析为其对应文章的路径。
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">marked<span class="punctuation">:</span></span><br><span class="line">  prependRoot<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">  postAsset<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如：image.jpg 位置为 /2022/01/02/blog-test/image.jpg，</span><br><span class="line">![](image.jpg) 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span>&gt;</span></span><br><span class="line">同时也可以用html方法：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span> 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">如果像设置图像的最小缩放宽度，可以用 style 样式：</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.image</span>&#123;<span class="attribute">min-width</span>: <span class="number">600px</span>&#125;    </span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">img</span>&#123;<span class="attribute">object-fit</span>: scale-down&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>创建公钥，安装 git 部署插件，部署到 github 服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  <span class="comment"># 创建的公钥rsa.pub在github网页的设置中需要同步</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d	<span class="comment"># 清除已有生成、生成、部署</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="具体细节">具体细节</h2>
-<p>新建博文 Create a new post<br />
-新创建的博文将会保存在 <code>./source/_posts/新建博文.md</code>
-目录下<br />
-More info: <a href="https://hexo.io/docs/writing.html">Writing</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></p>
-<p>运行本地服务器 Run server<br />
-More info: <a href="https://hexo.io/docs/server.html">Server</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-<p>生成静态页面 Generate static files<br />
-生成的静态界面位于 <code>./public/posts/新建博文.md</code> 目录下<br />
-More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-<p>部署到远程服务器 Deploy to remote sites<br />
-More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+    <title>Git操作教程</title>
+    <url>/homepage/posts/81a2f973/</url>
+    <content><![CDATA[<p>整理一下GitHub的使用方式以及相关的Git工具操作教程。 <span id="more"></span></p>
+<h3 id="git的安装与默认设置">git的安装与默认设置</h3>
+<p>设置默认用户信息，该命令只需要运行一次：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;your_name&quot;</span></span><br><span class="line">$ git config --global user.email your_email@example.com</span><br></pre></td></tr></table></figure>
+<h3 id="从远程仓库克隆与更新">从远程仓库克隆与更新</h3>
+<p>首先新建一个空文件夹作为要克隆的仓库目录，右键
+<code>git bash here</code> ，配置基础数据：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init  <span class="comment"># 初始化git仓库</span></span><br><span class="line">$ git status  <span class="comment"># 查看git仓库状态</span></span><br></pre></td></tr></table></figure>
+<p>从2021年起，GitHub不再支持使用账户密码进行Git操作，需要使用个人访问令牌（Personal
+Access Token）或SSH密钥来替代。</p>
+<p>输入以下命令生成SSH密钥，并在GitHub的设置中进行配置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span>  <span class="comment"># 生成rsa密钥</span></span><br><span class="line">$ ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span>  <span class="comment"># 生成ed25519密钥，和上面rsa密钥选一种即可</span></span><br><span class="line">$ <span class="built_in">cat</span> ~/.ssh/id_rsa.pub  <span class="comment"># 查看公钥内容</span></span><br></pre></td></tr></table></figure>
+<p>密钥生成后，公钥的本机保存位置为
+<code>C:/user/user_name/.ssh/id_rsa.pub</code>，测试是否能成功连接到 Git
+平台：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com  <span class="comment"># 测试密钥是否配置成功</span></span><br></pre></td></tr></table></figure>
+<p>如果看到类似如下信息，说明配置成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi username! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<p>打开要克隆的远程仓库，在页面的Code选项中点击网址并复制（注意使用ssh方法同步需要点击ssh链接）</p>
+<p><img src="git-1.png" width="100%" alt="pic1"></p>
+<p>输入刚刚复制的网址，完成仓库克隆：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/&lt;user_name&gt;/&lt;repo_name&gt;.git</span><br><span class="line">$ git remote add &lt;remote_name&gt; &lt;remote_URL&gt;  <span class="comment"># 添加一个远程仓库，设置别名，方便上传</span></span><br><span class="line">$ git remote add origin https://github.com/USERNAME/REPONAME.git  <span class="comment"># 举例，常用origin代替远程仓库，URL可以是不同的协议，如HTTPS或SSH</span></span><br></pre></td></tr></table></figure>
+<p>当需要更新代码时，首先拉取远程仓库内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+<p>代码编写完毕后，推送到远程仓库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add  <span class="comment"># 将修改后的文件添加到本地仓库的暂存区（Index）</span></span><br><span class="line">$ git commit -m <span class="string">&quot;COMMENT&quot;</span>  <span class="comment"># 将暂存区的内容提交到本地仓库，附带修改记录</span></span><br><span class="line">$ git push -u origin master</span><br><span class="line">$ git <span class="built_in">log</span>  <span class="comment"># 查看日志</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>blog</category>
       </categories>
       <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/posts/933a2506/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
-<p>行内代码： <code>print(hello world)</code></p>
-<p>行间代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(data.head())</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
+        <tag>code</tag>
       </tags>
   </entry>
   <entry>
@@ -460,6 +401,140 @@ installer</a>，<strong>版本选择3.1.x（更高版本目前有不兼容情况
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/homepage/posts/4a17b156/</url>
+    <content><![CDATA[<h2 id="frankenadrixiashomepage">Frankenadrixias'Homepage</h2>
+<p>欢迎来到 <a
+href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
+href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
+时遇到任何问题，你可以在<a
+href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
+中找到答案，也可以在 <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p><a
+href="https://www.oscs1024.com/project/Frankenadrixias/homepage?ref=badge_small"><img
+src="https://www.oscs1024.com/platform/badge/Frankenadrixias/homepage.svg?size=small"
+alt="OSCS Status" /></a> <span id="more"></span></p>
+<h2 id="前置安装">前置安装</h2>
+<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>安装公式渲染器，然后再<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">安装
+pandoc</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
+<p>安装图片渲染器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-renderer-marked --save</span><br><span class="line">npm i hexo-asset-img --save</span><br></pre></td></tr></table></figure></p>
+<p>启用下列设置，资源图片将会被自动解析为其对应文章的路径。
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">marked<span class="punctuation">:</span></span><br><span class="line">  prependRoot<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">  postAsset<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如：image.jpg 位置为 /2022/01/02/blog-test/image.jpg，</span><br><span class="line">![](image.jpg) 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span>&gt;</span></span><br><span class="line">同时也可以用html方法：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span> 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">如果像设置图像的最小缩放宽度，可以用 style 样式：</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.image</span>&#123;<span class="attribute">min-width</span>: <span class="number">600px</span>&#125;    </span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">img</span>&#123;<span class="attribute">object-fit</span>: scale-down&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>从2021年8月13日起，GitHub不再支持使用账户密码进行Git操作，需要使用个人访问令牌（Personal
+Access Token）或SSH密钥来替代。<br />
+</p>
+<p>创建公钥，安装 git 部署插件，部署到 github 服务器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  <span class="comment"># 创建的公钥rsa.pub在github网页的设置中需要同步</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d	<span class="comment"># 清除已有生成、生成、部署</span></span><br></pre></td></tr></table></figure>
+<h2 id="具体细节">具体细节</h2>
+<p>新建博文 Create a new post<br />
+新创建的博文将会保存在 <code>./source/_posts/新建博文.md</code>
+目录下<br />
+More info: <a href="https://hexo.io/docs/writing.html">Writing</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>运行本地服务器 Run server<br />
+More info: <a href="https://hexo.io/docs/server.html">Server</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>生成静态页面 Generate static files<br />
+生成的静态界面位于 <code>./public/posts/新建博文.md</code> 目录下<br />
+More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<p>部署到远程服务器 Deploy to remote sites<br />
+More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/posts/933a2506/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
+<p>行内代码： <code>print(hello world)</code></p>
+<p>行间代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(data.head())</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码教程与注意事项</title>
+    <url>/homepage/posts/c880c6a1/</url>
+    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
+<hr />
+<style>
+    img{object-fit: scale-down}
+</style>
+<h2 id="markdown-相关">Markdown 相关</h2>
+<p>Markdown 中的公式编辑教程：<a
+href="https://www.jianshu.com/p/25f0139637b7">https://www.jianshu.com/p/25f0139637b7</a></p>
+<h2 id="python相关">Python相关</h2>
+<h3 id="matplotlib">Matplotlib</h3>
+<p>默认颜色和对应名称：</p>
+<p><img src="img1.png" width="100%" alt="pic1"></p>
+<p>xxxxxxxxxx ​python</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;.&#x27;</span>：点(point marker)</span><br><span class="line"><span class="string">&#x27;,&#x27;</span>：像素点(pixel marker)</span><br><span class="line"><span class="string">&#x27;o&#x27;</span>：圆形(circle marker)</span><br><span class="line"><span class="string">&#x27;v&#x27;</span>：朝下三角形(triangle_down marker)</span><br><span class="line"><span class="string">&#x27;^&#x27;</span>：朝上三角形(triangle_up marker)</span><br><span class="line"><span class="string">&#x27;&lt;&#x27;</span>：朝左三角形(triangle_left marker)</span><br><span class="line"><span class="string">&#x27;&gt;&#x27;</span>：朝右三角形(triangle_right marker)</span><br><span class="line"><span class="string">&#x27;1&#x27;</span>：朝下三叉(tri_down marker)</span><br><span class="line"><span class="string">&#x27;2&#x27;</span>：朝下三叉(tri_up marker)</span><br><span class="line"><span class="string">&#x27;3&#x27;</span>：朝下三叉(tri_left marker)</span><br><span class="line"><span class="string">&#x27;4&#x27;</span>：朝下三叉(tri_right marker)</span><br><span class="line"><span class="string">&#x27;s&#x27;</span>：正方形(square marker)</span><br><span class="line"><span class="string">&#x27;p&#x27;</span>：五边形(pentagon marker)</span><br><span class="line"><span class="string">&#x27;*&#x27;</span>：五角星(star marker)</span><br><span class="line"><span class="string">&#x27;h&#x27;</span>：竖直六边形(hexagon1 marker)</span><br><span class="line"><span class="string">&#x27;H&#x27;</span>：水平六边形(hexagon2 marker)</span><br><span class="line"><span class="string">&#x27;+&#x27;</span>：加号(plus marker)</span><br><span class="line"><span class="string">&#x27;x&#x27;</span>：乘号(x marker)</span><br><span class="line"><span class="string">&#x27;D&#x27;</span>：菱形(diamond marker)</span><br><span class="line"><span class="string">&#x27;d&#x27;</span>：小型菱形(thin_diamond marker)</span><br><span class="line"><span class="string">&#x27;|&#x27;</span>：垂直线(vline marker)</span><br><span class="line"><span class="string">&#x27;_&#x27;</span>：水平线(hline marker)</span><br></pre></td></tr></table></figure>
+<p>常用线形：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;-&#x27;</span>: 实线(solid line style)</span><br><span class="line"><span class="string">&#x27;--&#x27;</span>: 虚线(dashed line style)</span><br><span class="line"><span class="string">&#x27;-.&#x27;</span>: 点划线(dash-dot line style)</span><br><span class="line"><span class="string">&#x27;:&#x27;</span>: 点线(dotted line style)</span><br></pre></td></tr></table></figure>
+<h4 id="绘制变量相关性图">绘制变量相关性图</h4>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算变量的相关性和p值，展示散点图、直方图和相关系数热力图</span></span><br><span class="line">df_corr = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line">cmap = plt.get_cmap(<span class="string">&#x27;RdBu&#x27;</span>)</span><br><span class="line">new_colors = cmap(np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">2000</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加相关系数和背景颜色</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">draw_corr</span>(<span class="params">x_var, y_var, **kwargs</span>):</span><br><span class="line">    coef, p_val = stats.pearsonr(x_var, y_var)[<span class="number">0</span>], stats.pearsonr(x_var, y_var)[<span class="number">1</span>]  <span class="comment"># 计算相关系数和p值</span></span><br><span class="line">    p_str = <span class="string">&#x27;***&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.001</span> <span class="keyword">else</span> <span class="string">&#x27;**&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.01</span> <span class="keyword">else</span> <span class="string">&#x27;*&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.05</span> <span class="keyword">else</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    label = <span class="string">&#x27;&#123;0:.3f&#125;&#x27;</span>.<span class="built_in">format</span>(coef) + <span class="string">&#x27;\n&#x27;</span> + p_str  <span class="comment"># 添加标签</span></span><br><span class="line">    color = <span class="built_in">tuple</span>(new_colors[<span class="built_in">int</span>((<span class="built_in">round</span>(coef, <span class="number">3</span>) + <span class="number">1</span>) * <span class="number">1000</span>)])  <span class="comment"># 计算并添加颜色</span></span><br><span class="line">    ax = plt.gca()</span><br><span class="line">    ax.annotate(label, xy=(<span class="number">0.3</span>, <span class="number">0.3</span>), size=<span class="number">24</span>, xycoords=ax.transAxes)</span><br><span class="line">    ax.patch.set_facecolor(color)  <span class="comment"># 设置 ax 区域背景颜色</span></span><br><span class="line">    ax.patch.set_alpha(<span class="number">0.7</span>)  <span class="comment"># 设置 ax 区域颜色透明度</span></span><br><span class="line"></span><br><span class="line">pg = sns.PairGrid(data=df_corr, height=<span class="number">2</span>)</span><br><span class="line">pg.map_lower(sns.regplot, color=<span class="string">&#x27;k&#x27;</span>, ci=<span class="number">95</span>, scatter_kws=&#123;<span class="string">&#x27;s&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;lw&#x27;</span>: <span class="number">0.3</span>, <span class="string">&#x27;alpha&#x27;</span>: <span class="number">0.6</span>&#125;,</span><br><span class="line">             line_kws=&#123;<span class="string">&#x27;lw&#x27;</span>: <span class="number">2</span>, <span class="string">&quot;color&quot;</span>: <span class="string">&#x27;firebrick&#x27;</span>&#125;)  <span class="comment"># scatter, regplot, histplot, kdeplot</span></span><br><span class="line">pg.map_diag(sns.histplot, bins=<span class="number">10</span>, edgecolor=<span class="string">&#x27;w&#x27;</span>, kde=<span class="literal">True</span>, line_kws=&#123;<span class="string">&#x27;lw&#x27;</span>: <span class="number">2</span>&#125;)</span><br><span class="line">pg.map_upper(draw_corr)</span><br><span class="line">pg.tight_layout()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置子图的标签字体大小</span></span><br><span class="line">PairGrid_axes = pg.axes</span><br><span class="line"><span class="keyword">for</span> axes <span class="keyword">in</span> PairGrid_axes.flatten():</span><br><span class="line">    axes.tick_params(axis=<span class="string">&#x27;both&#x27;</span>, labelsize=<span class="number">16</span>)</span><br><span class="line">    axes.ticklabel_format(style=<span class="string">&#x27;sci&#x27;</span>, scilimits=(-<span class="number">1</span>, <span class="number">2</span>), axis=<span class="string">&#x27;both&#x27;</span>)</span><br><span class="line">    axes.xaxis.label.set_fontsize(<span class="number">20</span>)</span><br><span class="line">    axes.yaxis.label.set_fontsize(<span class="number">20</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h3 id="opencv-python">Opencv-python</h3>
+<p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>轨迹停留点算法思路</title>
     <url>/homepage/posts/e3e98ef4/</url>
     <content><![CDATA[<p>介绍一下轨迹停留点提取的相关算法 <span id="more"></span></p>
@@ -485,7 +560,7 @@ Noise，具有噪声的基于密度的空间聚类方法）算法将点集中具
 <h3 id="traj-dbscan算法">Traj-DBSCAN算法</h3>
 <p>Traj-DBSCAN算法出自论文：Robust and Hierarchical Stop Discovery in
 Sparse and Diverse Trajectories.</p>
-<p>其在DBSCAN的基础上，将邻居的计算从空间相邻改为时间线性相邻，而核心点计算则用停留时间代替周边点的数目。</p>
+<p>xxxxxxxxxx ​python</p>
 <p>TrajDBSCAN实现了“停留点集是子轨迹”的要求，其子轨迹内部所有点在空间上邻近，距离中心点小于距离阈值Eps，且子轨迹持续时长高于时间阈值MinTime，因此判断为轨迹在该处停留。</p>
 <p><img class="image" src="img_1.png" width=75% alt="pic2"></p>
 <p>在此基础上，Traj-DBSCAN还实现了识别多条轨迹的“公共停留点”以及层次化停留点分析。</p>
@@ -494,7 +569,12 @@ Sparse and Diverse Trajectories.</p>
 <p>取自论文：A Clustering-based Approach for Discovering Interesting
 Places in Trajectories</p>
 <p>先前的停留点挖掘思路通常要根据预定义的停留区来做停留检测，而该文则提出了一种基于速度的时空聚类方法，识别轨迹中的慢速区域，从而实现对轨迹上重要位置的挖掘。</p>
-<p>下图中的ABC是已知的候选停留点，而XY是实际停留但未标记出的的位置。</p>
+<p>xxxxxxxxxx # img_path为读取图片路径，save_path为保存图片路径​#
+读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径im
+= cv2.imread(img_path, 1)img = cv2.imdecode(np.fromfile(img_path,
+dtype=np.uint8), 1)​#
+保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，'.jpg'为保存文件格式cv2.imwrite(save_path,
+img)cv2.imencode('.jpg', img)[1].tofile(save_path)py</p>
 <p><img class="image" src="img_2.png" width="75%" alt="pic3"></p>
 <p>CB-SMoT算法是DBSCAN聚类算法的改进，有很多概念类似（如核心点、密度直达、密度可达等），其与DBSCAN的不同之处在于对邻域与核心点的定义不同。</p>
 <p><strong>CB-SMoT对邻域定义如下：</strong></p>
@@ -507,8 +587,8 @@ Places in Trajectories</p>
 3、对于该核心点的邻域点集中的其他未处理点重复步骤1-2，同时扩充相应的邻域点集、核心点集，邻域点集内所有点都处理完毕；<br />
 4、将核心点集加入驻留点集中，重新回到步骤1，直到所有点都处理完毕。</p>
 <ul>
-<li>input: Track Point Series <code>&#123;Track_df&#125;</code>, Time Threshold
-<code>Min_Time</code>, Distance Threshold <code>Distance</code></li>
+<li>xxxxxxxxxx import pandas as pd​data =
+pd.read_csv('data.csv')print(data.head())python</li>
 <li>output: Set of Stationary Points <code>&#123;Track_Stops&#125;</code></li>
 </ul>
 <p><img class="image" src="img_4.png" width="75%" alt="pic5"></p>
@@ -523,38 +603,6 @@ id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的�
       </categories>
       <tags>
         <tag>algorithm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>代码教程与注意事项</title>
-    <url>/homepage/posts/c880c6a1/</url>
-    <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
-<hr />
-<style>
-    img{object-fit: scale-down}
-</style>
-<h2 id="markdown-相关">Markdown 相关</h2>
-<p>Markdown 中的公式编辑教程：<a
-href="https://www.jianshu.com/p/25f0139637b7">https://www.jianshu.com/p/25f0139637b7</a></p>
-<h2 id="python相关">Python相关</h2>
-<h3 id="matplotlib">Matplotlib</h3>
-<p>默认颜色和对应名称：</p>
-<p><img src="img1.png" width="100%" alt="pic1"></p>
-<p>常用标记点形状：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;.&#x27;</span>：点(point marker)</span><br><span class="line"><span class="string">&#x27;,&#x27;</span>：像素点(pixel marker)</span><br><span class="line"><span class="string">&#x27;o&#x27;</span>：圆形(circle marker)</span><br><span class="line"><span class="string">&#x27;v&#x27;</span>：朝下三角形(triangle_down marker)</span><br><span class="line"><span class="string">&#x27;^&#x27;</span>：朝上三角形(triangle_up marker)</span><br><span class="line"><span class="string">&#x27;&lt;&#x27;</span>：朝左三角形(triangle_left marker)</span><br><span class="line"><span class="string">&#x27;&gt;&#x27;</span>：朝右三角形(triangle_right marker)</span><br><span class="line"><span class="string">&#x27;1&#x27;</span>：朝下三叉(tri_down marker)</span><br><span class="line"><span class="string">&#x27;2&#x27;</span>：朝下三叉(tri_up marker)</span><br><span class="line"><span class="string">&#x27;3&#x27;</span>：朝下三叉(tri_left marker)</span><br><span class="line"><span class="string">&#x27;4&#x27;</span>：朝下三叉(tri_right marker)</span><br><span class="line"><span class="string">&#x27;s&#x27;</span>：正方形(square marker)</span><br><span class="line"><span class="string">&#x27;p&#x27;</span>：五边形(pentagon marker)</span><br><span class="line"><span class="string">&#x27;*&#x27;</span>：五角星(star marker)</span><br><span class="line"><span class="string">&#x27;h&#x27;</span>：竖直六边形(hexagon1 marker)</span><br><span class="line"><span class="string">&#x27;H&#x27;</span>：水平六边形(hexagon2 marker)</span><br><span class="line"><span class="string">&#x27;+&#x27;</span>：加号(plus marker)</span><br><span class="line"><span class="string">&#x27;x&#x27;</span>：乘号(x marker)</span><br><span class="line"><span class="string">&#x27;D&#x27;</span>：菱形(diamond marker)</span><br><span class="line"><span class="string">&#x27;d&#x27;</span>：小型菱形(thin_diamond marker)</span><br><span class="line"><span class="string">&#x27;|&#x27;</span>：垂直线(vline marker)</span><br><span class="line"><span class="string">&#x27;_&#x27;</span>：水平线(hline marker)</span><br></pre></td></tr></table></figure>
-<p>常用线形：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;-&#x27;</span>: 实线(solid line style)</span><br><span class="line"><span class="string">&#x27;--&#x27;</span>: 虚线(dashed line style)</span><br><span class="line"><span class="string">&#x27;-.&#x27;</span>: 点划线(dash-dot line style)</span><br><span class="line"><span class="string">&#x27;:&#x27;</span>: 点线(dotted line style)</span><br></pre></td></tr></table></figure>
-<h4 id="绘制变量相关性图">绘制变量相关性图</h4>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算变量的相关性和p值，展示散点图、直方图和相关系数热力图</span></span><br><span class="line">df_corr = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line">cmap = plt.get_cmap(<span class="string">&#x27;RdBu&#x27;</span>)</span><br><span class="line">new_colors = cmap(np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">2000</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加相关系数和背景颜色</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">draw_corr</span>(<span class="params">x_var, y_var, **kwargs</span>):</span><br><span class="line">    coef, p_val = stats.pearsonr(x_var, y_var)[<span class="number">0</span>], stats.pearsonr(x_var, y_var)[<span class="number">1</span>]  <span class="comment"># 计算相关系数和p值</span></span><br><span class="line">    p_str = <span class="string">&#x27;***&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.001</span> <span class="keyword">else</span> <span class="string">&#x27;**&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.01</span> <span class="keyword">else</span> <span class="string">&#x27;*&#x27;</span> <span class="keyword">if</span> p_val &lt; <span class="number">0.05</span> <span class="keyword">else</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    label = <span class="string">&#x27;&#123;0:.3f&#125;&#x27;</span>.<span class="built_in">format</span>(coef) + <span class="string">&#x27;\n&#x27;</span> + p_str  <span class="comment"># 添加标签</span></span><br><span class="line">    color = <span class="built_in">tuple</span>(new_colors[<span class="built_in">int</span>((<span class="built_in">round</span>(coef, <span class="number">3</span>) + <span class="number">1</span>) * <span class="number">1000</span>)])  <span class="comment"># 计算并添加颜色</span></span><br><span class="line">    ax = plt.gca()</span><br><span class="line">    ax.annotate(label, xy=(<span class="number">0.3</span>, <span class="number">0.3</span>), size=<span class="number">24</span>, xycoords=ax.transAxes)</span><br><span class="line">    ax.patch.set_facecolor(color)  <span class="comment"># 设置 ax 区域背景颜色</span></span><br><span class="line">    ax.patch.set_alpha(<span class="number">0.7</span>)  <span class="comment"># 设置 ax 区域颜色透明度</span></span><br><span class="line"></span><br><span class="line">pg = sns.PairGrid(data=df_corr, height=<span class="number">2</span>)</span><br><span class="line">pg.map_lower(sns.regplot, color=<span class="string">&#x27;k&#x27;</span>, ci=<span class="number">95</span>, scatter_kws=&#123;<span class="string">&#x27;s&#x27;</span>: <span class="number">20</span>, <span class="string">&#x27;lw&#x27;</span>: <span class="number">0.3</span>, <span class="string">&#x27;alpha&#x27;</span>: <span class="number">0.6</span>&#125;,</span><br><span class="line">             line_kws=&#123;<span class="string">&#x27;lw&#x27;</span>: <span class="number">2</span>, <span class="string">&quot;color&quot;</span>: <span class="string">&#x27;firebrick&#x27;</span>&#125;)  <span class="comment"># scatter, regplot, histplot, kdeplot</span></span><br><span class="line">pg.map_diag(sns.histplot, bins=<span class="number">10</span>, edgecolor=<span class="string">&#x27;w&#x27;</span>, kde=<span class="literal">True</span>, line_kws=&#123;<span class="string">&#x27;lw&#x27;</span>: <span class="number">2</span>&#125;)</span><br><span class="line">pg.map_upper(draw_corr)</span><br><span class="line">pg.tight_layout()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置子图的标签字体大小</span></span><br><span class="line">PairGrid_axes = pg.axes</span><br><span class="line"><span class="keyword">for</span> axes <span class="keyword">in</span> PairGrid_axes.flatten():</span><br><span class="line">    axes.tick_params(axis=<span class="string">&#x27;both&#x27;</span>, labelsize=<span class="number">16</span>)</span><br><span class="line">    axes.ticklabel_format(style=<span class="string">&#x27;sci&#x27;</span>, scilimits=(-<span class="number">1</span>, <span class="number">2</span>), axis=<span class="string">&#x27;both&#x27;</span>)</span><br><span class="line">    axes.xaxis.label.set_fontsize(<span class="number">20</span>)</span><br><span class="line">    axes.yaxis.label.set_fontsize(<span class="number">20</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<h3 id="opencv-python">Opencv-python</h3>
-<p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
       </tags>
   </entry>
   <entry>
