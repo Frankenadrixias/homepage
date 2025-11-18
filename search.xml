@@ -1,178 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/homepage/posts/4a17b156/</url>
-    <content><![CDATA[<h2 id="frankenadrixiashomepage">Frankenadrixias'Homepage</h2>
-<p>欢迎来到 <a
-href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
-href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
-时遇到任何问题，你可以在<a
-href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
-中找到答案，也可以在 <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p><a
-href="https://www.oscs1024.com/project/Frankenadrixias/homepage?ref=badge_small"><img
-src="https://www.oscs1024.com/platform/badge/Frankenadrixias/homepage.svg?size=small"
-alt="OSCS Status" /></a> <span id="more"></span></p>
-<h2 id="前置安装">前置安装</h2>
-<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<p>安装公式渲染器，然后再<a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">安装
-pandoc</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
-<p>安装图片渲染器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-renderer-marked --save</span><br><span class="line">npm i hexo-asset-img --save</span><br></pre></td></tr></table></figure></p>
-<p>启用下列设置，资源图片将会被自动解析为其对应文章的路径。
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">marked<span class="punctuation">:</span></span><br><span class="line">  prependRoot<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">  postAsset<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如：image.jpg 位置为 /2022/01/02/blog-test/image.jpg，</span><br><span class="line">![](image.jpg) 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span>&gt;</span></span><br><span class="line">同时也可以用html方法：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span> 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">如果像设置图像的最小缩放宽度，可以用 style 样式：</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.image</span>&#123;<span class="attribute">min-width</span>: <span class="number">600px</span>&#125;    </span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">img</span>&#123;<span class="attribute">object-fit</span>: scale-down&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>从2021年8月13日起，GitHub不再支持使用账户密码进行Git操作，需要使用个人访问令牌（Personal
-Access Token）或SSH密钥来替代。<br />
-</p>
-<p>创建公钥，安装 git 部署插件，部署到 github 服务器</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  <span class="comment"># 创建的公钥rsa.pub在github网页的设置中需要同步</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d	<span class="comment"># 清除已有生成、生成、部署</span></span><br></pre></td></tr></table></figure>
-<h2 id="具体细节">具体细节</h2>
-<p>新建博文 Create a new post<br />
-新创建的博文将会保存在 <code>./source/_posts/新建博文.md</code>
-目录下<br />
-More info: <a href="https://hexo.io/docs/writing.html">Writing</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></p>
-<p>运行本地服务器 Run server<br />
-More info: <a href="https://hexo.io/docs/server.html">Server</a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-<p>生成静态页面 Generate static files<br />
-生成的静态界面位于 <code>./public/posts/新建博文.md</code> 目录下<br />
-More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-<p>部署到远程服务器 Deploy to remote sites<br />
-More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git操作教程</title>
-    <url>/homepage/posts/81a2f973/</url>
-    <content><![CDATA[<p>整理一下GitHub的使用方式以及相关的Git工具操作教程。 <span id="more"></span></p>
-<h3 id="git的安装与默认设置">git的安装与默认设置</h3>
-<p>设置默认用户信息，该命令只需要运行一次：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;your_name&quot;</span></span><br><span class="line">$ git config --global user.email your_email@example.com</span><br></pre></td></tr></table></figure>
-<h3 id="从远程仓库克隆与更新">从远程仓库克隆与更新</h3>
-<p>首先新建一个空文件夹作为要克隆的仓库目录，右键
-<code>git bash here</code> ，配置基础数据：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init  <span class="comment"># 初始化git仓库</span></span><br><span class="line">$ git status  <span class="comment"># 查看git仓库状态</span></span><br></pre></td></tr></table></figure>
-<p>从2021年起，GitHub不再支持使用账户密码进行Git操作，需要使用个人访问令牌（Personal
-Access Token）或SSH密钥来替代。</p>
-<p>输入以下命令生成SSH密钥，并在GitHub的设置中进行配置：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span>  <span class="comment"># 生成rsa密钥</span></span><br><span class="line">$ ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span>  <span class="comment"># 生成ed25519密钥，和上面rsa密钥选一种即可</span></span><br><span class="line">$ <span class="built_in">cat</span> ~/.ssh/id_rsa.pub  <span class="comment"># 查看公钥内容</span></span><br></pre></td></tr></table></figure>
-<p>密钥生成后，公钥的本机保存位置为
-<code>C:/user/user_name/.ssh/id_rsa.pub</code>，测试是否能成功连接到 Git
-平台：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com  <span class="comment"># 测试密钥是否配置成功</span></span><br></pre></td></tr></table></figure>
-<p>如果看到类似如下信息，说明配置成功：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi username! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-<p>打开要克隆的远程仓库，在页面的Code选项中点击网址并复制（注意使用ssh方法同步需要点击ssh链接）</p>
-<p><img src="git-1.png" width="100%" alt="pic1"></p>
-<p>输入刚刚复制的网址，完成仓库克隆：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/&lt;user_name&gt;/&lt;repo_name&gt;.git</span><br><span class="line">$ git remote add &lt;remote_name&gt; &lt;remote_URL&gt;  <span class="comment"># 添加一个远程仓库，设置别名，方便上传</span></span><br><span class="line">$ git remote add origin https://github.com/USERNAME/REPONAME.git  <span class="comment"># 举例，常用origin代替远程仓库，URL可以是不同的协议，如HTTPS或SSH</span></span><br></pre></td></tr></table></figure>
-<p>当需要更新代码时，首先拉取远程仓库内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
-<p>代码编写完毕后，推送到远程仓库：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add  <span class="comment"># 将修改后的文件添加到本地仓库的暂存区（Index）</span></span><br><span class="line">$ git commit -m <span class="string">&quot;COMMENT&quot;</span>  <span class="comment"># 将暂存区的内容提交到本地仓库，附带修改记录</span></span><br><span class="line">$ git push -u origin master</span><br><span class="line">$ git <span class="built_in">log</span>  <span class="comment"># 查看日志</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python-Dataframe SQL教程</title>
-    <url>/homepage/posts/e4bc4527/</url>
-    <content><![CDATA[<p>在 Python 中，对<code>pandas.Dataframe</code>进行 SQL
-查询主要有两种操作方式，分别为<code>pandas</code>的基本操作语句，以及<code>pandasql</code>库提供的直接对<code>Dataframe</code>进行
-SQL 查询的操作。</p>
-<span id="more"></span>
-<p>虽然 Python
-内置了<code>sqlite</code>数据库模块，但是其与<code>Dataframe</code>交互不方便，需要将原始数据插入<code>sqlite</code>后才可以使用
-SQL 语句进行查询操作，因此一般还是用上述两种方法来完成 SQL 查询。</p>
-<p><code>sqlite</code>的操作流程：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line">conn = sqlite3.connect(<span class="string">&#x27;example.db&#x27;</span>)</span><br><span class="line"><span class="comment"># 连接后创建一个 Cursor 对象并调用其 execute() 方法来执行 SQL 命令</span></span><br><span class="line">c = conn.cursor()</span><br><span class="line"><span class="comment"># 创建表</span></span><br><span class="line">c.execute(<span class="string">&#x27;&#x27;&#x27;CREATE TABLE stocks(date text, trans text, symbol text, qty real, price real)&#x27;&#x27;&#x27;</span>)</span><br><span class="line"><span class="comment"># 添加一行数据</span></span><br><span class="line">c.execute(<span class="string">&quot;INSERT INTO stocks VALUES (&#x27;2006-01-05&#x27;,&#x27;BUY&#x27;,&#x27;RHAT&#x27;,100,35.14)&quot;</span>)</span><br><span class="line"><span class="comment"># 保存修改</span></span><br><span class="line">conn.commit()</span><br><span class="line"><span class="comment"># 关闭连接</span></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-<p><strong>两种方式的优缺点：</strong></p>
-<p>Pandas 基本操作语句</p>
-<ul>
-<li>优点：不需要额外安装第三方库，大多数场景内置函数都可以满足需求</li>
-<li>缺点：在有些数据处理计算中不如 SQL
-语言简洁易读（如大量的<code>.groupby()</code>、<code>.sum()</code>或者<code>.count()</code>之类），且无法实现部分复杂功能</li>
-</ul>
-<p>Pandasql 库</p>
-<ul>
-<li>优点：直接使用 SQL 语句完成查询操作，易读性高且可移植性好</li>
-<li>缺点：</li>
-</ul>
-<h2 id="pandasql-库">Pandasql 库</h2>
-<p><code>pandasql</code>允许您使用 SQL
-语法查询<code>pandas.DataFrame</code>。它的工作原理与<code>R.pandasql</code>中的<code>sqldf</code>类似。<code>pandasql</code>试图为刚接触
-Python
-或<code>pandas</code>的人提供一种更熟悉的操作和清理数据的方法。</p>
-<h3 id="安装方式">安装方式</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install pandasql</span><br></pre></td></tr></table></figure>
-<p>相关文档：<a
-href="https://pypi.org/project/pandasql/">https://pypi.org/project/pandasql/</a></p>
-<h3 id="使用方法">使用方法</h3>
-<p><code>pandasql</code>中使用的主要函数是<code>sqldf</code>。<code>sqldf</code>接受
-2 个参数：</p>
-<ul>
-<li>一个 SQL 查询字符串</li>
-<li>一组会话/环境变量（<code>locals()</code>或<code>globals()</code>）</li>
-</ul>
-<p>一般使用时我们会定义一个简短的 lambda 表达式来使用这个函数：
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pandasql <span class="keyword">import</span> sqldf</span><br><span class="line">pysqldf = <span class="keyword">lambda</span> q: sqldf(q, <span class="built_in">globals</span>())</span><br></pre></td></tr></table></figure></p>
-<h3 id="查询实例">查询实例</h3>
-<p><code>pandasql</code>使用 SQLite
-语法，将自动检测所有的<code>pandas.DataFrame</code>名称。可以像查询任何常规
-SQL 表一样查询它们。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pandasql <span class="keyword">import</span> sqldf, load_meat, load_births</span><br><span class="line">pysqldf = <span class="keyword">lambda</span> q: sqldf(q, <span class="built_in">globals</span>())</span><br><span class="line">meat, births = load_meat(), load_births()</span><br><span class="line"><span class="built_in">print</span> pysqldf(<span class="string">&quot;SELECT * FROM meat LIMIT 10;&quot;</span>).head()</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">                   date  beef  veal pork  lamb_and_mutton  broilers  other_chicken  turkey</span><br><span class="line"><span class="number">0</span>   <span class="number">1944</span>-<span class="number">01</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">751</span>    <span class="number">85</span> <span class="number">1280</span>               <span class="number">89</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br><span class="line"><span class="number">1</span>   <span class="number">1944</span>-<span class="number">02</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">713</span>    <span class="number">77</span> <span class="number">1169</span>               <span class="number">72</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br><span class="line"><span class="number">2</span>   <span class="number">1944</span>-<span class="number">03</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">741</span>    <span class="number">90</span> <span class="number">1128</span>               <span class="number">75</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br><span class="line"><span class="number">3</span>   <span class="number">1944</span>-<span class="number">04</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">650</span>    <span class="number">89</span>  <span class="number">978</span>               <span class="number">66</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br><span class="line"><span class="number">4</span>   <span class="number">1944</span>-<span class="number">05</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">681</span>   <span class="number">106</span> <span class="number">1029</span>               <span class="number">78</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br></pre></td></tr></table></figure>
-<p><strong>Where 条件语句：</strong> <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">q = <span class="string">&quot;&quot;&quot;SELECT date, veal, lamb_and_mutton</span></span><br><span class="line"><span class="string">       FROM meat</span></span><br><span class="line"><span class="string">       WHERE lamb_and_mutton &gt;= veal</span></span><br><span class="line"><span class="string">       ORDER BY date DESC;&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span> pysqldf(q).head()</span><br></pre></td></tr></table></figure> <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">                  date  veal  lamb_and_mutton</span><br><span class="line"><span class="number">0</span>  <span class="number">2012</span>-<span class="number">11</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">10.1</span>             <span class="number">12.4</span></span><br><span class="line"><span class="number">1</span>  <span class="number">2012</span>-<span class="number">10</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">10.3</span>             <span class="number">14.2</span></span><br><span class="line"><span class="number">2</span>  <span class="number">2012</span>-<span class="number">09</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">8.8</span>             <span class="number">12.5</span></span><br><span class="line"><span class="number">3</span>  <span class="number">2012</span>-<span class="number">08</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">10.1</span>             <span class="number">14.2</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>Join 连接语句：</strong> <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">q = <span class="string">&quot;&quot;&quot;SELECT m.date, m.beef, b.births</span></span><br><span class="line"><span class="string">       FROM meats m</span></span><br><span class="line"><span class="string">       INNER JOIN births b</span></span><br><span class="line"><span class="string">       ON m.date = b.date;&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span> pysqldf(q).head()</span><br></pre></td></tr></table></figure> <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">                    date    beef  births</span><br><span class="line"><span class="number">403</span>  <span class="number">2012</span>-<span class="number">07</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2200.8</span>  <span class="number">368450</span></span><br><span class="line"><span class="number">404</span>  <span class="number">2012</span>-<span class="number">08</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2367.5</span>  <span class="number">359554</span></span><br><span class="line"><span class="number">405</span>  <span class="number">2012</span>-<span class="number">09</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2016.0</span>  <span class="number">361922</span></span><br><span class="line"><span class="number">406</span>  <span class="number">2012</span>-<span class="number">10</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2343.7</span>  <span class="number">347625</span></span><br><span class="line"><span class="number">407</span>  <span class="number">2012</span>-<span class="number">11</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2206.6</span>  <span class="number">320195</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>Aggregation 聚合语句：</strong> <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">q = <span class="string">&quot;&quot;&quot;SELECT strftime(&#x27;%Y&#x27;, date) AS year, SUM(beef) AS beef_total</span></span><br><span class="line"><span class="string">       FROM meat</span></span><br><span class="line"><span class="string">       GROUP BY year;&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span> pysqldf(q).head()</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">   year  beef_total</span><br><span class="line"><span class="number">0</span>  <span class="number">1944</span>        <span class="number">8801</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1945</span>        <span class="number">9936</span></span><br><span class="line"><span class="number">2</span>  <span class="number">1946</span>        <span class="number">9010</span></span><br><span class="line"><span class="number">3</span>  <span class="number">1947</span>       <span class="number">10096</span></span><br><span class="line"><span class="number">4</span>  <span class="number">1948</span>        <span class="number">8766</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="注意事项">注意事项</h3>
-<h4 id="no-such-table报错">no such table报错</h4>
-<p><code>pandasql</code>在执行时是读取在内存中的<code>dataframe</code>名称，因此执行的
-SQL
-语句一定要放在主程序中，或者将<code>dataframe</code>设为全局变量。</p>
-<h4 id="处理不规范的字段名">处理不规范的字段名</h4>
-<p>当表的名字或列的名字中，含有空格或关键字等一些特殊字符时，我们需要用<code>[]</code>将表名引起来，告诉语法分析器<code>[]</code>号内的才是一个完整的名称。比如<code>SELECT * FROM [Order Details]</code></p>
-<h2 id="pandas-基本操作语句">Pandas 基本操作语句</h2>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">df=pd.read_csv(<span class="string">&quot;&quot;</span>) <span class="comment">#默认输入csv文件路径</span></span><br><span class="line">df.head() <span class="comment">#读取前5行数据（输入数字就取对应开始的行数）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1.select操作：select 列名 from 表A limit 5</span></span><br><span class="line">df[[<span class="string">&quot;&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="string">&quot;&quot;</span>]].head(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.where条件：select 列名 from 表名 where 条件=&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># 使用括号的方式进行 连接多个条件</span></span><br><span class="line">condition=(df[<span class="string">&quot;列名&quot;</span>]==<span class="string">&quot;&quot;</span>)&amp;(df[<span class="string">&quot;列名&quot;</span>]==<span class="string">&quot;&quot;</span>)&amp;(df[<span class="string">&quot;列名&quot;</span>]==<span class="string">&quot;&quot;</span>)</span><br><span class="line">condition.value_count()</span><br><span class="line">df[condition].head(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.in和not in：select * from 表A where 列名 in(&#x27;1&#x27;,&#x27;2&#x27;)</span></span><br><span class="line">df[<span class="string">&quot;列名&quot;</span>].unique()   <span class="comment"># 去重</span></span><br><span class="line"><span class="comment"># in</span></span><br><span class="line">df[df[<span class="string">&quot;列名&quot;</span>].isin((<span class="number">1</span>,<span class="number">2</span>))].head()</span><br><span class="line"><span class="comment"># not in:df取反符号为~</span></span><br><span class="line">df[~df[<span class="string">&quot;列名&quot;</span>].isin((<span class="number">1</span>,<span class="number">2</span>))].head()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.1group by：select sum(),maen() from person group by sex</span></span><br><span class="line">df.groupby(<span class="string">&quot;sex&quot;</span>).agg(&#123;列名：np.<span class="built_in">sum</span>,<span class="string">&quot;列名&quot;</span>:np.mean,<span class="string">&quot;列名&quot;</span>:np.mean&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.2.多个列的聚合：select sum（）,mean() from person group by sex,department</span></span><br><span class="line">df.groupby([<span class="string">&quot;sex&quot;</span>,<span class="string">&quot;department&quot;</span>]).agg(&#123;列名：np.<span class="built_in">sum</span>,<span class="string">&quot;列名&quot;</span>:np.mean,<span class="string">&quot;列名&quot;</span>:np.mean&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.join数据关联：select * from table1 a1 join table2 a2 on a1.列名=a2.列名 limit 5</span></span><br><span class="line">df2=pd.read_csv()</span><br><span class="line">df2.head(<span class="number">5</span>)  <span class="comment"># 查看前5行数据</span></span><br><span class="line">df_merged=pd.merge(left=df1,right=df2,on=<span class="string">&quot;列名&quot;</span>)</span><br><span class="line">df_merged.head(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6.Union数据合并，当两个表的数据列一致时使用union。</span></span><br><span class="line"><span class="comment"># SQL:selet city，rank from 表1 union all select city，，rank from 表2</span></span><br><span class="line"><span class="comment"># 同样的df也需要有相同的列名，假设df1和df2的列名是一致的</span></span><br><span class="line">pd.concat([df1,df2])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 7.order limnit先排序后分页</span></span><br><span class="line"><span class="comment"># sql：select * from 表1 order by 列名 limit 5</span></span><br><span class="line">df.sort_values(<span class="string">&quot;列名&quot;</span>,ascending=<span class="literal">False</span>).head(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 8.取每个分组group的top n：mysql不支持，oracle使用rownum</span></span><br><span class="line"><span class="comment"># 根据列名1，列名2分组，取列名3的top2</span></span><br><span class="line">df.groupby([<span class="string">&quot;列名1&quot;</span>,<span class="string">&quot;列名2&quot;</span>]).apply(<span class="keyword">lambda</span> df:df.sort_values(<span class="string">&quot;列名3&quot;</span>,ascending=<span class="literal">False</span>).head(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 9.update数据更新：update 表1 set 列名1=value where 条件</span></span><br><span class="line">df.info() <span class="comment">#查看df的信息</span></span><br><span class="line">condition=df[<span class="string">&quot;列名&quot;</span>].isna()</span><br><span class="line">condition.values_counts()</span><br><span class="line">df[condition]=value</span><br><span class="line">df[<span class="string">&quot;列名&quot;</span>].isna().values_counts()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 10.delete删除数据：delete from 表1 where 列名=0</span></span><br><span class="line"><span class="comment"># df取反条件的值付给新的df</span></span><br><span class="line">df_new=df[df[<span class="string">&quot;列名&quot;</span>]!=<span class="number">0</span>]</span><br><span class="line">df_new[df_new[<span class="string">&quot;列名&quot;</span>]=<span class="number">0</span>] <span class="comment">#可以得到0条数据</span></span><br></pre></td></tr></table></figure>
-<p>参考：<a
-href="https://blog.csdn.net/qq_42692386/article/details/113886419">https://blog.csdn.net/qq_42692386/article/details/113886419</a></p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CMIP6数据下载相关</title>
     <url>/homepage/posts/b9f1380d/</url>
     <content><![CDATA[<p>最近的研究有关于CMIP6，其中在数据下载方面有很多需要注意的点，本文将系统性的介绍一下。
@@ -298,6 +126,178 @@ DOI: 10.12006/j.issn.1673-1719.2019.077 周天军, 邹立维, 陈晓龙.
       </categories>
       <tags>
         <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git操作教程</title>
+    <url>/homepage/posts/81a2f973/</url>
+    <content><![CDATA[<p>整理一下GitHub的使用方式以及相关的Git工具操作教程。 <span id="more"></span></p>
+<h3 id="git的安装与默认设置">git的安装与默认设置</h3>
+<p>设置默认用户信息，该命令只需要运行一次：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;your_name&quot;</span></span><br><span class="line">$ git config --global user.email your_email@example.com</span><br></pre></td></tr></table></figure>
+<h3 id="从远程仓库克隆与更新">从远程仓库克隆与更新</h3>
+<p>首先新建一个空文件夹作为要克隆的仓库目录，右键
+<code>git bash here</code> ，配置基础数据：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init  <span class="comment"># 初始化git仓库</span></span><br><span class="line">$ git status  <span class="comment"># 查看git仓库状态</span></span><br></pre></td></tr></table></figure>
+<p>从2021年起，GitHub不再支持使用账户密码进行Git操作，需要使用个人访问令牌（Personal
+Access Token）或SSH密钥来替代。</p>
+<p>输入以下命令生成SSH密钥，并在GitHub的设置中进行配置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span>  <span class="comment"># 生成rsa密钥</span></span><br><span class="line">$ ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span>  <span class="comment"># 生成ed25519密钥，和上面rsa密钥选一种即可</span></span><br><span class="line">$ <span class="built_in">cat</span> ~/.ssh/id_rsa.pub  <span class="comment"># 查看公钥内容</span></span><br></pre></td></tr></table></figure>
+<p>密钥生成后，公钥的本机保存位置为
+<code>C:/user/user_name/.ssh/id_rsa.pub</code>，测试是否能成功连接到 Git
+平台：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com  <span class="comment"># 测试密钥是否配置成功</span></span><br></pre></td></tr></table></figure>
+<p>如果看到类似如下信息，说明配置成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi username! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<p>打开要克隆的远程仓库，在页面的Code选项中点击网址并复制（注意使用ssh方法同步需要点击ssh链接）</p>
+<p><img src="git-1.png" width="100%" alt="pic1"></p>
+<p>输入刚刚复制的网址，完成仓库克隆：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/&lt;user_name&gt;/&lt;repo_name&gt;.git</span><br><span class="line">$ git remote add &lt;remote_name&gt; &lt;remote_URL&gt;  <span class="comment"># 添加一个远程仓库，设置别名，方便上传</span></span><br><span class="line">$ git remote add origin https://github.com/USERNAME/REPONAME.git  <span class="comment"># 举例，常用origin代替远程仓库，URL可以是不同的协议，如HTTPS或SSH</span></span><br></pre></td></tr></table></figure>
+<p>当需要更新代码时，首先拉取远程仓库内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+<p>代码编写完毕后，推送到远程仓库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add  <span class="comment"># 将修改后的文件添加到本地仓库的暂存区（Index）</span></span><br><span class="line">$ git commit -m <span class="string">&quot;COMMENT&quot;</span>  <span class="comment"># 将暂存区的内容提交到本地仓库，附带修改记录</span></span><br><span class="line">$ git push -u origin master</span><br><span class="line">$ git <span class="built_in">log</span>  <span class="comment"># 查看日志</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python-Dataframe SQL教程</title>
+    <url>/homepage/posts/e4bc4527/</url>
+    <content><![CDATA[<p>在 Python 中，对<code>pandas.Dataframe</code>进行 SQL
+查询主要有两种操作方式，分别为<code>pandas</code>的基本操作语句，以及<code>pandasql</code>库提供的直接对<code>Dataframe</code>进行
+SQL 查询的操作。</p>
+<span id="more"></span>
+<p>虽然 Python
+内置了<code>sqlite</code>数据库模块，但是其与<code>Dataframe</code>交互不方便，需要将原始数据插入<code>sqlite</code>后才可以使用
+SQL 语句进行查询操作，因此一般还是用上述两种方法来完成 SQL 查询。</p>
+<p><code>sqlite</code>的操作流程：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line">conn = sqlite3.connect(<span class="string">&#x27;example.db&#x27;</span>)</span><br><span class="line"><span class="comment"># 连接后创建一个 Cursor 对象并调用其 execute() 方法来执行 SQL 命令</span></span><br><span class="line">c = conn.cursor()</span><br><span class="line"><span class="comment"># 创建表</span></span><br><span class="line">c.execute(<span class="string">&#x27;&#x27;&#x27;CREATE TABLE stocks(date text, trans text, symbol text, qty real, price real)&#x27;&#x27;&#x27;</span>)</span><br><span class="line"><span class="comment"># 添加一行数据</span></span><br><span class="line">c.execute(<span class="string">&quot;INSERT INTO stocks VALUES (&#x27;2006-01-05&#x27;,&#x27;BUY&#x27;,&#x27;RHAT&#x27;,100,35.14)&quot;</span>)</span><br><span class="line"><span class="comment"># 保存修改</span></span><br><span class="line">conn.commit()</span><br><span class="line"><span class="comment"># 关闭连接</span></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
+<p><strong>两种方式的优缺点：</strong></p>
+<p>Pandas 基本操作语句</p>
+<ul>
+<li>优点：不需要额外安装第三方库，大多数场景内置函数都可以满足需求</li>
+<li>缺点：在有些数据处理计算中不如 SQL
+语言简洁易读（如大量的<code>.groupby()</code>、<code>.sum()</code>或者<code>.count()</code>之类），且无法实现部分复杂功能</li>
+</ul>
+<p>Pandasql 库</p>
+<ul>
+<li>优点：直接使用 SQL 语句完成查询操作，易读性高且可移植性好</li>
+<li>缺点：</li>
+</ul>
+<h2 id="pandasql-库">Pandasql 库</h2>
+<p><code>pandasql</code>允许您使用 SQL
+语法查询<code>pandas.DataFrame</code>。它的工作原理与<code>R.pandasql</code>中的<code>sqldf</code>类似。<code>pandasql</code>试图为刚接触
+Python
+或<code>pandas</code>的人提供一种更熟悉的操作和清理数据的方法。</p>
+<h3 id="安装方式">安装方式</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install pandasql</span><br></pre></td></tr></table></figure>
+<p>相关文档：<a
+href="https://pypi.org/project/pandasql/">https://pypi.org/project/pandasql/</a></p>
+<h3 id="使用方法">使用方法</h3>
+<p><code>pandasql</code>中使用的主要函数是<code>sqldf</code>。<code>sqldf</code>接受
+2 个参数：</p>
+<ul>
+<li>一个 SQL 查询字符串</li>
+<li>一组会话/环境变量（<code>locals()</code>或<code>globals()</code>）</li>
+</ul>
+<p>一般使用时我们会定义一个简短的 lambda 表达式来使用这个函数：
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pandasql <span class="keyword">import</span> sqldf</span><br><span class="line">pysqldf = <span class="keyword">lambda</span> q: sqldf(q, <span class="built_in">globals</span>())</span><br></pre></td></tr></table></figure></p>
+<h3 id="查询实例">查询实例</h3>
+<p><code>pandasql</code>使用 SQLite
+语法，将自动检测所有的<code>pandas.DataFrame</code>名称。可以像查询任何常规
+SQL 表一样查询它们。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pandasql <span class="keyword">import</span> sqldf, load_meat, load_births</span><br><span class="line">pysqldf = <span class="keyword">lambda</span> q: sqldf(q, <span class="built_in">globals</span>())</span><br><span class="line">meat, births = load_meat(), load_births()</span><br><span class="line"><span class="built_in">print</span> pysqldf(<span class="string">&quot;SELECT * FROM meat LIMIT 10;&quot;</span>).head()</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">                   date  beef  veal pork  lamb_and_mutton  broilers  other_chicken  turkey</span><br><span class="line"><span class="number">0</span>   <span class="number">1944</span>-<span class="number">01</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">751</span>    <span class="number">85</span> <span class="number">1280</span>               <span class="number">89</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br><span class="line"><span class="number">1</span>   <span class="number">1944</span>-<span class="number">02</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">713</span>    <span class="number">77</span> <span class="number">1169</span>               <span class="number">72</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br><span class="line"><span class="number">2</span>   <span class="number">1944</span>-<span class="number">03</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">741</span>    <span class="number">90</span> <span class="number">1128</span>               <span class="number">75</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br><span class="line"><span class="number">3</span>   <span class="number">1944</span>-<span class="number">04</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">650</span>    <span class="number">89</span>  <span class="number">978</span>               <span class="number">66</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br><span class="line"><span class="number">4</span>   <span class="number">1944</span>-<span class="number">05</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">681</span>   <span class="number">106</span> <span class="number">1029</span>               <span class="number">78</span>      <span class="title class_">None</span>           <span class="title class_">None</span>    <span class="title class_">None</span></span><br></pre></td></tr></table></figure>
+<p><strong>Where 条件语句：</strong> <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">q = <span class="string">&quot;&quot;&quot;SELECT date, veal, lamb_and_mutton</span></span><br><span class="line"><span class="string">       FROM meat</span></span><br><span class="line"><span class="string">       WHERE lamb_and_mutton &gt;= veal</span></span><br><span class="line"><span class="string">       ORDER BY date DESC;&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span> pysqldf(q).head()</span><br></pre></td></tr></table></figure> <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">                  date  veal  lamb_and_mutton</span><br><span class="line"><span class="number">0</span>  <span class="number">2012</span>-<span class="number">11</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">10.1</span>             <span class="number">12.4</span></span><br><span class="line"><span class="number">1</span>  <span class="number">2012</span>-<span class="number">10</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">10.3</span>             <span class="number">14.2</span></span><br><span class="line"><span class="number">2</span>  <span class="number">2012</span>-<span class="number">09</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>   <span class="number">8.8</span>             <span class="number">12.5</span></span><br><span class="line"><span class="number">3</span>  <span class="number">2012</span>-<span class="number">08</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">10.1</span>             <span class="number">14.2</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>Join 连接语句：</strong> <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">q = <span class="string">&quot;&quot;&quot;SELECT m.date, m.beef, b.births</span></span><br><span class="line"><span class="string">       FROM meats m</span></span><br><span class="line"><span class="string">       INNER JOIN births b</span></span><br><span class="line"><span class="string">       ON m.date = b.date;&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span> pysqldf(q).head()</span><br></pre></td></tr></table></figure> <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">                    date    beef  births</span><br><span class="line"><span class="number">403</span>  <span class="number">2012</span>-<span class="number">07</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2200.8</span>  <span class="number">368450</span></span><br><span class="line"><span class="number">404</span>  <span class="number">2012</span>-<span class="number">08</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2367.5</span>  <span class="number">359554</span></span><br><span class="line"><span class="number">405</span>  <span class="number">2012</span>-<span class="number">09</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2016.0</span>  <span class="number">361922</span></span><br><span class="line"><span class="number">406</span>  <span class="number">2012</span>-<span class="number">10</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2343.7</span>  <span class="number">347625</span></span><br><span class="line"><span class="number">407</span>  <span class="number">2012</span>-<span class="number">11</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>  <span class="number">2206.6</span>  <span class="number">320195</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>Aggregation 聚合语句：</strong> <figure class="highlight py"><table><tr><td class="code"><pre><span class="line">q = <span class="string">&quot;&quot;&quot;SELECT strftime(&#x27;%Y&#x27;, date) AS year, SUM(beef) AS beef_total</span></span><br><span class="line"><span class="string">       FROM meat</span></span><br><span class="line"><span class="string">       GROUP BY year;&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span> pysqldf(q).head()</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">   year  beef_total</span><br><span class="line"><span class="number">0</span>  <span class="number">1944</span>        <span class="number">8801</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1945</span>        <span class="number">9936</span></span><br><span class="line"><span class="number">2</span>  <span class="number">1946</span>        <span class="number">9010</span></span><br><span class="line"><span class="number">3</span>  <span class="number">1947</span>       <span class="number">10096</span></span><br><span class="line"><span class="number">4</span>  <span class="number">1948</span>        <span class="number">8766</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="注意事项">注意事项</h3>
+<h4 id="no-such-table报错">no such table报错</h4>
+<p><code>pandasql</code>在执行时是读取在内存中的<code>dataframe</code>名称，因此执行的
+SQL
+语句一定要放在主程序中，或者将<code>dataframe</code>设为全局变量。</p>
+<h4 id="处理不规范的字段名">处理不规范的字段名</h4>
+<p>当表的名字或列的名字中，含有空格或关键字等一些特殊字符时，我们需要用<code>[]</code>将表名引起来，告诉语法分析器<code>[]</code>号内的才是一个完整的名称。比如<code>SELECT * FROM [Order Details]</code></p>
+<h2 id="pandas-基本操作语句">Pandas 基本操作语句</h2>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">df=pd.read_csv(<span class="string">&quot;&quot;</span>) <span class="comment">#默认输入csv文件路径</span></span><br><span class="line">df.head() <span class="comment">#读取前5行数据（输入数字就取对应开始的行数）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1.select操作：select 列名 from 表A limit 5</span></span><br><span class="line">df[[<span class="string">&quot;&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="string">&quot;&quot;</span>]].head(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.where条件：select 列名 from 表名 where 条件=&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># 使用括号的方式进行 连接多个条件</span></span><br><span class="line">condition=(df[<span class="string">&quot;列名&quot;</span>]==<span class="string">&quot;&quot;</span>)&amp;(df[<span class="string">&quot;列名&quot;</span>]==<span class="string">&quot;&quot;</span>)&amp;(df[<span class="string">&quot;列名&quot;</span>]==<span class="string">&quot;&quot;</span>)</span><br><span class="line">condition.value_count()</span><br><span class="line">df[condition].head(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3.in和not in：select * from 表A where 列名 in(&#x27;1&#x27;,&#x27;2&#x27;)</span></span><br><span class="line">df[<span class="string">&quot;列名&quot;</span>].unique()   <span class="comment"># 去重</span></span><br><span class="line"><span class="comment"># in</span></span><br><span class="line">df[df[<span class="string">&quot;列名&quot;</span>].isin((<span class="number">1</span>,<span class="number">2</span>))].head()</span><br><span class="line"><span class="comment"># not in:df取反符号为~</span></span><br><span class="line">df[~df[<span class="string">&quot;列名&quot;</span>].isin((<span class="number">1</span>,<span class="number">2</span>))].head()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.1group by：select sum(),maen() from person group by sex</span></span><br><span class="line">df.groupby(<span class="string">&quot;sex&quot;</span>).agg(&#123;列名：np.<span class="built_in">sum</span>,<span class="string">&quot;列名&quot;</span>:np.mean,<span class="string">&quot;列名&quot;</span>:np.mean&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.2.多个列的聚合：select sum（）,mean() from person group by sex,department</span></span><br><span class="line">df.groupby([<span class="string">&quot;sex&quot;</span>,<span class="string">&quot;department&quot;</span>]).agg(&#123;列名：np.<span class="built_in">sum</span>,<span class="string">&quot;列名&quot;</span>:np.mean,<span class="string">&quot;列名&quot;</span>:np.mean&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.join数据关联：select * from table1 a1 join table2 a2 on a1.列名=a2.列名 limit 5</span></span><br><span class="line">df2=pd.read_csv()</span><br><span class="line">df2.head(<span class="number">5</span>)  <span class="comment"># 查看前5行数据</span></span><br><span class="line">df_merged=pd.merge(left=df1,right=df2,on=<span class="string">&quot;列名&quot;</span>)</span><br><span class="line">df_merged.head(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6.Union数据合并，当两个表的数据列一致时使用union。</span></span><br><span class="line"><span class="comment"># SQL:selet city，rank from 表1 union all select city，，rank from 表2</span></span><br><span class="line"><span class="comment"># 同样的df也需要有相同的列名，假设df1和df2的列名是一致的</span></span><br><span class="line">pd.concat([df1,df2])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 7.order limnit先排序后分页</span></span><br><span class="line"><span class="comment"># sql：select * from 表1 order by 列名 limit 5</span></span><br><span class="line">df.sort_values(<span class="string">&quot;列名&quot;</span>,ascending=<span class="literal">False</span>).head(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 8.取每个分组group的top n：mysql不支持，oracle使用rownum</span></span><br><span class="line"><span class="comment"># 根据列名1，列名2分组，取列名3的top2</span></span><br><span class="line">df.groupby([<span class="string">&quot;列名1&quot;</span>,<span class="string">&quot;列名2&quot;</span>]).apply(<span class="keyword">lambda</span> df:df.sort_values(<span class="string">&quot;列名3&quot;</span>,ascending=<span class="literal">False</span>).head(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 9.update数据更新：update 表1 set 列名1=value where 条件</span></span><br><span class="line">df.info() <span class="comment">#查看df的信息</span></span><br><span class="line">condition=df[<span class="string">&quot;列名&quot;</span>].isna()</span><br><span class="line">condition.values_counts()</span><br><span class="line">df[condition]=value</span><br><span class="line">df[<span class="string">&quot;列名&quot;</span>].isna().values_counts()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 10.delete删除数据：delete from 表1 where 列名=0</span></span><br><span class="line"><span class="comment"># df取反条件的值付给新的df</span></span><br><span class="line">df_new=df[df[<span class="string">&quot;列名&quot;</span>]!=<span class="number">0</span>]</span><br><span class="line">df_new[df_new[<span class="string">&quot;列名&quot;</span>]=<span class="number">0</span>] <span class="comment">#可以得到0条数据</span></span><br></pre></td></tr></table></figure>
+<p>参考：<a
+href="https://blog.csdn.net/qq_42692386/article/details/113886419">https://blog.csdn.net/qq_42692386/article/details/113886419</a></p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/homepage/posts/4a17b156/</url>
+    <content><![CDATA[<h2 id="frankenadrixiashomepage">Frankenadrixias'Homepage</h2>
+<p>欢迎来到 <a
+href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看<a
+href="https://hexo.io/docs/">文档</a>以了解更多信息。如果你在使用 Hexo
+时遇到任何问题，你可以在<a
+href="https://hexo.io/docs/troubleshooting.html">故障排除</a>
+中找到答案，也可以在 <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p><a
+href="https://www.oscs1024.com/project/Frankenadrixias/homepage?ref=badge_small"><img
+src="https://www.oscs1024.com/platform/badge/Frankenadrixias/homepage.svg?size=small"
+alt="OSCS Status" /></a> <span id="more"></span></p>
+<h2 id="前置安装">前置安装</h2>
+<p>安装 nodejs，然后通过 npm 安装 hexo <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>安装公式渲染器，然后再<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">安装
+pandoc</a> <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></p>
+<p>安装图片渲染器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-renderer-marked --save</span><br><span class="line">npm i hexo-asset-img --save</span><br></pre></td></tr></table></figure></p>
+<p>启用下列设置，资源图片将会被自动解析为其对应文章的路径。
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">marked<span class="punctuation">:</span></span><br><span class="line">  prependRoot<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">  postAsset<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">例如：image.jpg 位置为 /2022/01/02/blog-test/image.jpg，</span><br><span class="line">![](image.jpg) 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span>&gt;</span></span><br><span class="line">同时也可以用html方法：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span> 将会被解析为 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/2022/01/02/blog-test/image.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">如果像设置图像的最小缩放宽度，可以用 style 样式：</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.image</span>&#123;<span class="attribute">min-width</span>: <span class="number">600px</span>&#125;    </span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">img</span>&#123;<span class="attribute">object-fit</span>: scale-down&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>从2021年8月13日起，GitHub不再支持使用账户密码进行Git操作，需要使用个人访问令牌（Personal
+Access Token）或SSH密钥来替代。<br />
+</p>
+<p>创建公钥，安装 git 部署插件，部署到 github 服务器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#123;key_name&#125;  <span class="comment"># 创建的公钥rsa.pub在github网页的设置中需要同步</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d	<span class="comment"># 清除已有生成、生成、部署</span></span><br></pre></td></tr></table></figure>
+<h2 id="具体细节">具体细节</h2>
+<p>新建博文 Create a new post<br />
+新创建的博文将会保存在 <code>./source/_posts/新建博文.md</code>
+目录下<br />
+More info: <a href="https://hexo.io/docs/writing.html">Writing</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>运行本地服务器 Run server<br />
+More info: <a href="https://hexo.io/docs/server.html">Server</a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>生成静态页面 Generate static files<br />
+生成的静态界面位于 <code>./public/posts/新建博文.md</code> 目录下<br />
+More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<p>部署到远程服务器 Deploy to remote sites<br />
+More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -465,6 +465,44 @@ installer</a>，<strong>版本选择3.1.x（更高版本目前有不兼容情况
       </tags>
   </entry>
   <entry>
+    <title>一些闲聊</title>
+    <url>/homepage/posts/933a2506/</url>
+    <content><![CDATA[<p>随便写点东西</p>
+<h1 id="测试一下一级标题">测试一下一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<span id="more"></span>
+<p>以后应该会写更多东西吧，主要是先测试一下。</p>
+<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
+<p>一些个人基本信息在 <b>About</b> 里</p>
+<h2 id="列表测试">列表测试</h2>
+<ol type="1">
+<li>第1个</li>
+<li>第2个
+<ul>
+<li>2.1</li>
+<li>2.2</li>
+</ul></li>
+<li>第3个</li>
+</ol>
+<h2 id="代码测试">代码测试</h2>
+<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
+\tag{1} \]</span></p>
+<p>行内代码： <code>print(hello world)</code></p>
+<p>行间代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(data.head())</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>代码教程与注意事项</title>
     <url>/homepage/posts/c880c6a1/</url>
     <content><![CDATA[<p>代码教程与注意事项 <span id="more"></span></p>
@@ -488,6 +526,62 @@ href="https://www.jianshu.com/p/25f0139637b7">https://www.jianshu.com/p/25f01396
 <h3 id="opencv-python">Opencv-python</h3>
 <p>由于 imwrite 使用编码在 python3 中已经不适用，可用 imencode 代替</p>
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># img_path为读取图片路径，save_path为保存图片路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图片：若路径有中文则imread方法不成功，imdecode可以读取包含中文的路径</span></span><br><span class="line">im = cv2.imread(img_path, <span class="number">1</span>)</span><br><span class="line">img = cv2.imdecode(np.fromfile(img_path, dtype=np.uint8), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片：若路径有中文则该imread方法不成功，imdecode可以保存包含中文的路径，&#x27;.jpg&#x27;为保存文件格式</span></span><br><span class="line">cv2.imwrite(save_path, img)</span><br><span class="line">cv2.imencode(<span class="string">&#x27;.jpg&#x27;</span>, img)[<span class="number">1</span>].tofile(save_path)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多元回归分析</title>
+    <url>/homepage/posts/4ba92e57/</url>
+    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
+<span id="more"></span></p>
+<hr />
+<h3 id="多元线性回归">多元线性回归</h3>
+<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
+<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
+<span class="math inline">\(X\)</span>
+表示）的取值来估计另一个变量（因变量，用 <span
+class="math inline">\(Y\)</span> 表示）的值。</p>
+<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
+往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
+\,(p&gt;1)\)</span> 有关。对于自变量 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
+class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
+class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
+<span class="math inline">\(Y\)</span> 的分布函数。</p>
+<p>如果能够发掘 <span class="math inline">\(F(Y \vert
+x_1,x_2,...,x_p)\)</span> 随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span>
+取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
+<span class="math inline">\(X\)</span>
+之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
+<span class="math inline">\(Y\)</span> 的数学期望 <span
+class="math inline">\(E(Y)\)</span>。即若 <span
+class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
+class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
+class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
+class="math inline">\(Y\)</span> 关于 <span
+class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
+class="math inline">\(Y\)</span> 和 <span
+class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
+class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
+class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
+<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
+<span class="math inline">\(x_1,x_2,...,x_p\)</span>
+的线性函数时，有：</p>
+<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
+\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
+<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
+均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
+无关的未知参数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>blog</category>
@@ -565,100 +659,6 @@ id="计算轨迹的平均路径点移动距离与停留时间">计算轨迹的�
       </categories>
       <tags>
         <tag>algorithm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些闲聊</title>
-    <url>/homepage/posts/933a2506/</url>
-    <content><![CDATA[<p>随便写点东西</p>
-<h1 id="测试一下一级标题">测试一下一级标题</h1>
-<h2 id="这是二级标题">这是二级标题</h2>
-<h3 id="这是三级标题">这是三级标题</h3>
-<h4 id="这是四级标题">这是四级标题</h4>
-<span id="more"></span>
-<p>以后应该会写更多东西吧，主要是先测试一下。</p>
-<p>看看能不能写 <em>斜体字</em> 或者 <strong>粗体字</strong> ？</p>
-<p>一些个人基本信息在 <b>About</b> 里</p>
-<h2 id="列表测试">列表测试</h2>
-<ol type="1">
-<li>第1个</li>
-<li>第2个
-<ul>
-<li>2.1</li>
-<li>2.2</li>
-</ul></li>
-<li>第3个</li>
-</ol>
-<h2 id="代码测试">代码测试</h2>
-<p>行内公式： <span class="math inline">\(a + b = c\)</span></p>
-<p>行间公式：</p>
-<p><span class="math display">\[ x = \frac{\sqrt{-b \pm b^2-4ac}}{2a}
-\tag{1} \]</span></p>
-<p>行内代码： <code>print(hello world)</code></p>
-<p>行间代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(data.head())</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>default</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多元回归分析</title>
-    <url>/homepage/posts/4ba92e57/</url>
-    <content><![CDATA[<p>最近上时空数据分析与建模课，重新学习了一下多元线性回归分析的内容，计划在此做一个梳理，整理一下完整的流程与注意事项。
-<span id="more"></span></p>
-<hr />
-<h3 id="多元线性回归">多元线性回归</h3>
-<h4 id="多元线性回归的相关概念">1、多元线性回归的相关概念</h4>
-<p>在客观世界中普遍存在着变量和变量之间的关系，某一些关系是非确定性的，即无法用函数关系直接表达，但是其往往存在高度相关性，比如人的身高和体重，身高较高的人往往体重也较重。回归分析可以帮助我们从一个/组变量（自变量，用
-<span class="math inline">\(X\)</span>
-表示）的取值来估计另一个变量（因变量，用 <span
-class="math inline">\(Y\)</span> 表示）的值。</p>
-<p>在实际问题中，随机变量 <span class="math inline">\(Y\)</span>
-往往与多个普通变量 <span class="math inline">\(x_1,x_2,...,x_p
-\,(p&gt;1)\)</span> 有关。对于自变量 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的一组确定的值，<span
-class="math inline">\(Y\)</span> 有它的分布。我们可以用 <span
-class="math inline">\(F(Y \vert x_1,x_2,...,x_p)\)</span> 来表示当 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 取确定值时，所对应的
-<span class="math inline">\(Y\)</span> 的分布函数。</p>
-<p>如果能够发掘 <span class="math inline">\(F(Y \vert
-x_1,x_2,...,x_p)\)</span> 随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span>
-取值的变化规律，就可以完全确定 <span class="math inline">\(Y\)</span> 和
-<span class="math inline">\(X\)</span>
-之间的关系。然而上述步骤往往非常复杂，为了简化计算，我们可以做一种近似，去考察
-<span class="math inline">\(Y\)</span> 的数学期望 <span
-class="math inline">\(E(Y)\)</span>。即若 <span
-class="math inline">\(Y\)</span> 的数学期望存在，则其值随 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的取值而定，因而它是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数，记为 <span
-class="math inline">\(\mu_{Y \vert x_1,x_2,...,x_p}\)</span> 或 <span
-class="math inline">\(\mu(x_1,x_2,...,x_p)\)</span> 即为 <span
-class="math inline">\(Y\)</span> 关于 <span
-class="math inline">\(x\)</span> 的回归函数，从而将讨论 <span
-class="math inline">\(Y\)</span> 和 <span
-class="math inline">\(X\)</span> 之间的相关关系问题转化为讨论 <span
-class="math inline">\(E(Y) = \mu(x_1,x_2,...,x_p)\)</span> 与 <span
-class="math inline">\(x_1,x_2,...,x_p\)</span> 的函数关系问题。</p>
-<p>当 <span class="math inline">\(\mu (x_1,x_2,...,x_p)\)</span> 是
-<span class="math inline">\(x_1,x_2,...,x_p\)</span>
-的线性函数时，有：</p>
-<p><span class="math display">\[ Y = b_0 + b_1x_1 + ... + b_px_p +
-\epsilon, \, \epsilon \sim N(0, \sigma^2) \tag{1} \]</span></p>
-<p>其中 <span class="math inline">\(b_0,b_1,...,b_p, \sigma^2\)</span>
-均为与 <span class="math inline">\(x_1,x_2,...,x_p\)</span>
-无关的未知参数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
       </tags>
   </entry>
 </search>
